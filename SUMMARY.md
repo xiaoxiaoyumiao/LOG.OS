@@ -34,4 +34,9 @@
   * [Numerical Analysis](tools/matlab/numerical-analysis.md)
   * [Control Theory](tools/matlab/control-theory.md)
   * [Statistics](tools/matlab/statistics.md)
+* [PyTorch](tools/pytorch/README.md)
+  * [Introduction](tools/pytorch/introduction.md)
+  * [torch.nn](tools/pytorch/torch.nn.md)
+  * [torchtext](tools/pytorch/torchtext.md)
+  * [Miscellaneous](tools/pytorch/miscellaneous.md)
 
