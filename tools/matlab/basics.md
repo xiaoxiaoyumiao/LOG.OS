@@ -106,7 +106,6 @@ bitget(a,pos)
 ## 函数对象
 
 ```text
-
 % 函数句柄/函数对象/function_handle
 函数句柄的创建：
 方式①：直接加@
@@ -118,8 +117,6 @@ bitget(a,pos)
 ​
 方式③：str2func函数
 　　　　语法：@(参数列表)单行表达式
-　　　　fun3 = @(x, y)x.^2 + y.^2; 
+　　　　fun3 = @(x, y)x.^2 + y.^2;
 ```
-
-
 

@@ -1,6 +1,6 @@
 # Control Theory
 
-### 控制论函数
+## 控制论函数
 
 ```text
 ctrb(A,B)

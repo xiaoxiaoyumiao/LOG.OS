@@ -1,6 +1,6 @@
 # Plotting
 
-### 作图相关
+## 作图相关
 
 hold on将使用叠加作图，否则新的图会冲掉旧的图。使用hold off关掉。
 
@@ -17,6 +17,4 @@ ylabel("y");
 text(100, 70, [{['f = ', num2str(f_max)]}; {['A = ', num2str(A_max)]}; {['Ph = ', num2str(ph)]}])
 title(sprintf('IMF%d的频谱', k))
 ```
-
-
 

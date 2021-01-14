@@ -155,5 +155,3 @@ val = atoi(fail); // val = 0
 char *strstr( const char* str, const char* substr );
 ```
 
-
-
