@@ -6,6 +6,9 @@
 
 * [Formal Languages](theory/formal-languages/README.md)
   * [Regular Expressions](theory/formal-languages/regular-expressions.md)
+* [Language Processing](theory/language-processing/README.md)
+  * [Chapter 2 RE, Text Norm, Edit dist.](theory/language-processing/chapter-2-re-text-norm-edit-dist./README.md)
+    * [2.2 Words](theory/language-processing/chapter-2-re-text-norm-edit-dist./2.2-words.md)
 
 ## Programming Languages
 

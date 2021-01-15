@@ -33,6 +33,8 @@ Basic patterns: \(note: `//` is used to mark its content as a RE pattern but is 
     * `/.$/` matches a `.` at the end of a line
 * `\b` matches a word boundary, while `\B` matches a non-boundary
   * a word is a sequence of digits, underscores or letters
+* `|` is a **disjunction** operator matching with patterns at either side
+  * `/cat|dog/` matches `cat` or `dog`
 
 **DEF** **false positive** - incorrectly matched
 
@@ -41,6 +43,23 @@ Basic patterns: \(note: `//` is used to mark its content as a RE pattern but is 
 **DEF** increasing **precision** - minimizing false positives
 
 **DEF** increasing **recall** - minimizing false negatives
+
+* `s///` works as a **substitution** that replace a string with another
+  * `s/colour/color` replaces `colour` with `color`
+* If we need to refer to a particular subpart of a matching result we can use **number** operator:
+  * `s/([0-9]+)/<\1>` encloses every number with a `<>`. `\1` refers to the number captured by `()`.
+  * `/(.*) are \1/` will match `cats are cats` but not `cats are dogs`.
+* `()` serves as a **capture group**. strings matching the RE inside are stored in numbered registers. Data in registers can be referred to through number operators like `\1`, `\2`, etc.
+* sometimes we use `()` only to specify priority of operators. In that case we use a **non-capturing group** `(?:)`.
+  * `/(?:some|a few) people/`
+
+**DEF** **lookahead assertions** help to look ahead in the text without advancing the match cursor.
+
+* （这似乎已经不是形式语言中的正则表达式语法了）
+* `(?=pattern)` returns true if `pattern` occurs
+  * 理解时应当有 match cursor 的概念。简单来说就是 `pattern` 匹配到的东西不会作为结果的一部分，而且因为是在 look ahead，它完成匹配后被匹配串的匹配状态还是和匹配 `pattern` 前一样。\`
+* `(?!pattern)` returns true if `pattern` does not occur
+  * `/^(?!Volcano)[A-Za-z]+/` 匹配所有不是 `Volcano` 的单词。
 
 ## reference
 
