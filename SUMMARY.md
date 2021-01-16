@@ -9,6 +9,7 @@
 * [Language Processing](theory/language-processing/README.md)
   * [Chapter 2 RE, Text Norm, Edit dist.](theory/language-processing/chapter-2-re-text-norm-edit-dist./README.md)
     * [2.2 Words](theory/language-processing/chapter-2-re-text-norm-edit-dist./2.2-words.md)
+    * [2.3 Corpora](theory/language-processing/chapter-2-re-text-norm-edit-dist./2.3-corpora.md)
 
 ## Programming Languages
 
