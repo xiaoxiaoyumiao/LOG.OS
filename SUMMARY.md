@@ -6,6 +6,12 @@
 
 * [Formal Languages](theory/formal-languages/README.md)
   * [Regular Expressions](theory/formal-languages/regular-expressions.md)
+* [Language Processing](theory/language-processing/README.md)
+  * [Chapter 2 RE, Text Norm, Edit dist.](theory/language-processing/chapter-2-re-text-norm-edit-dist./README.md)
+    * [2.2 Words](theory/language-processing/chapter-2-re-text-norm-edit-dist./2.2-words.md)
+    * [2.3 Corpora](theory/language-processing/chapter-2-re-text-norm-edit-dist./2.3-corpora.md)
+    * [2.4 Text Normalization](theory/language-processing/chapter-2-re-text-norm-edit-dist./2.4-text-normalization.md)
+    * [2.5 Minimum Edit Distance](theory/language-processing/chapter-2-re-text-norm-edit-dist./2.5-minimum-edit-distance.md)
 
 ## Programming Languages
 
@@ -34,4 +40,9 @@
   * [Numerical Analysis](tools/matlab/numerical-analysis.md)
   * [Control Theory](tools/matlab/control-theory.md)
   * [Statistics](tools/matlab/statistics.md)
+* [PyTorch](tools/pytorch/README.md)
+  * [Introduction](tools/pytorch/introduction.md)
+  * [torch.nn](tools/pytorch/torch.nn.md)
+  * [torchtext](tools/pytorch/torchtext.md)
+  * [Miscellaneous](tools/pytorch/miscellaneous.md)
 
