@@ -11,6 +11,7 @@
     * [2.2 Words](theory/language-processing/chapter-2-re-text-norm-edit-dist./2.2-words.md)
     * [2.3 Corpora](theory/language-processing/chapter-2-re-text-norm-edit-dist./2.3-corpora.md)
     * [2.4 Text Normalization](theory/language-processing/chapter-2-re-text-norm-edit-dist./2.4-text-normalization.md)
+    * [2.5 Minimum Edit Distance](theory/language-processing/chapter-2-re-text-norm-edit-dist./2.5-minimum-edit-distance.md)
 
 ## Programming Languages
 
