@@ -11,7 +11,7 @@
 
 ## Installation
 
-OS：Windows 10 WSL    Linux version: Ubuntu 18.04.5 LTS
+OS：Windows 10 WSL Linux version: Ubuntu 18.04.5 LTS
 
 以下操作的效果：获取 LLVM 工程源码，编译并安装。
 
@@ -43,5 +43,5 @@ make check-all
 
 [\[2\] Building LLVM with CMake](https://llvm.org/docs/CMake.html#building-llvm-with-cmake)
 
-[\[3\] Getting Started with the LLVM System - An Example Using the LLVM Tool Chain](https://llvm.org/docs/GettingStarted.html#an-example-using-the-llvm-tool-chain) 
+[\[3\] Getting Started with the LLVM System - An Example Using the LLVM Tool Chain](https://llvm.org/docs/GettingStarted.html#an-example-using-the-llvm-tool-chain)
 

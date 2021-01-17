@@ -23,5 +23,3 @@ Terminology:
 
 ![](.gitbook/assets/16.png)
 
-
-

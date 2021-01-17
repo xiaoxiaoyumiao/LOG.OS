@@ -1,8 +1,8 @@
 # Statistics
 
-### 统计运算函数
+## 统计运算函数
 
-#### 统计量
+### 统计量
 
 ```text
 [n,y] = hist(x,k) # 直方图/频数表，x原始数据向量，k等分区间数；n为频数行向量，y为分割的各区间中点构成的行向量
@@ -15,7 +15,7 @@ skewness(x) # 偏度skewness
 kurtosis(x) # 峰度kurtosis
 ```
 
-#### 分布与密度函数
+### 分布与密度函数
 
 ```text
 # 分布的前缀：
@@ -45,7 +45,7 @@ unifrnd(a,b,m,n) % m行n列[a,b]区间上的随机数
 rand(m,n) % m行n列[0,1]区间上的随机数
 ```
 
-#### 回归
+### 回归
 
 ```text
 b = regress(y, X) % X由1和自变量构成，如X = [ ones(n,1), x]

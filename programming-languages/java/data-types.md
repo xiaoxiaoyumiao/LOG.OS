@@ -95,7 +95,3 @@ int[] c = Arrays.copyOf(a,newLength);//内容拷贝
 Arrays.toString(a)//数组打印
 ```
 
-#### 
-
-### 
-

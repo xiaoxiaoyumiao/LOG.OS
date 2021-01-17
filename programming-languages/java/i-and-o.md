@@ -28,5 +28,3 @@ PrintWriter out = new PrintWriter(filePathString,coding);
 String dir = System.getProperty("user.dir");
 ```
 
-### 
-

@@ -21,7 +21,7 @@ CMake 可以为项目生成一个与项目所在环境适配的 makefile 文件�
 
 ## Installation
 
-OS：Windows 10 WSL    Linux version: Ubuntu 18.04.5 LTS
+OS：Windows 10 WSL Linux version: Ubuntu 18.04.5 LTS
 
 以下命令的效果为：将所需的某一版本 CMake 源码下载到本地，编译并安装。
 
