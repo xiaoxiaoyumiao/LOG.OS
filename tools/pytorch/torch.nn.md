@@ -1,6 +1,6 @@
 # torch.nn
 
-### torch.nn 方法
+## torch.nn 方法
 
 ```text
 # 如何产生常用的层
@@ -22,6 +22,4 @@ train(mode = True)
 ModuleList(modules = None)
 把子模块放在一个列表里面，可以像列表一样访问。
 ```
-
-#### 
 

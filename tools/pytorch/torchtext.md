@@ -6,8 +6,6 @@ torchtext.data # 包含数据加载器，abstractions, iterators for text
 torchtext.datasets # 包含常用的NLP数据集加载器
 ```
 
-
-
 ```python
 Dataset(examples,fields,filter_pred=None)
 variables: sort_key,examples, fields
@@ -28,7 +26,7 @@ class torchtext.data.TabularDataset(path, format, fields, skip_header=False,    
     # format取{'CSV','TSV','JSON'}中的一个
 ```
 
-#### Iterator
+## Iterator
 
 ```python
 '''
