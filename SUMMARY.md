@@ -12,6 +12,8 @@
     * [2.3 Corpora](theory/language-processing/chapter-2-re-text-norm-edit-dist./2.3-corpora.md)
     * [2.4 Text Normalization](theory/language-processing/chapter-2-re-text-norm-edit-dist./2.4-text-normalization.md)
     * [2.5 Minimum Edit Distance](theory/language-processing/chapter-2-re-text-norm-edit-dist./2.5-minimum-edit-distance.md)
+  * [Chapter 3 N-gram Language Models](theory/language-processing/chapter-3-n-gram-language-models/README.md)
+    * [3.1 N-Grams](theory/language-processing/chapter-3-n-gram-language-models/3.1-n-grams.md)
 
 ## Programming Languages
 
