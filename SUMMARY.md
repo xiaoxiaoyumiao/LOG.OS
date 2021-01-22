@@ -49,5 +49,6 @@
   * [torchtext](tools/pytorch/torchtext.md)
   * [Miscellaneous](tools/pytorch/miscellaneous.md)
 * [Unity](tools/unity/README.md)
+  * [Geometry](tools/unity/geometry.md)
   * [Miscellaneous](tools/unity/miscellaneous.md)
 
