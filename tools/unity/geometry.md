@@ -49,3 +49,35 @@ public void PaintLine(Vector3 start, Vector3 end)
     }
 ```
 
+**几何变换**
+
+```text
+gameObject.transform.position = new Vector...
+```
+
+`transform.localScale`可以用来处理拉伸和缩放，缩放方式和对象的锚点有关（可以在inspector里查看）。
+
+这些属性的改变大概都是会影响到子对象的。不过在动态创建的时候似乎有办法避免：
+
+> 这个问题就涉及到instantiate这个方法的使用了。
+>
+> 正常的一个父物体A=（0.5,0.5,0.5） 子物体B（1,1,1）
+>
+> 如果我是使用instantiate\(B,A\) //实例化子物体B，同时指定B的父物体是A。
+>
+> 这时子物体B的localscale仍是（1,1,1），但是我发现B物体的absscale变了，现在是（0.5,0.5,0.5,）
+>
+> 但是我将实例化物体这一过程分成两部
+>
+> 首先Gameobject go = Instantiate（B）；
+>
+> 然后go.transform.parent = A;
+>
+> 这样子物体B的localscale会变成（2,2,2） ， 这样子就没有改变他的absscale。
+
+**Ray**
+
+使用Raycast可以方便地绘制射线、完成线和碰撞体的碰撞检测。
+
+[https://blog.csdn.net/u010718707/article/details/42111567](https://blog.csdn.net/u010718707/article/details/42111567)
+
