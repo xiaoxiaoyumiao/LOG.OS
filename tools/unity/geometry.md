@@ -8,7 +8,7 @@ sprite 资源的 pivot 可以自定义，通过这样来调整图片资源中心
 
 获取某个物体的 sprite 尺寸：
 
-```text
+```csharp
 float width = object.GetComponent<Renderer>().bounds.size.x;
 ```
 
@@ -26,7 +26,7 @@ float width = object.GetComponent<Renderer>().bounds.size.x;
 
 一段可用的代码：（材质和颜色都在inspector里配置，此外颜色似乎没发挥作用）
 
-```text
+```csharp
 public void PaintLine(Vector3 start, Vector3 end)
     {
         GameObject line = new GameObject();
@@ -51,7 +51,7 @@ public void PaintLine(Vector3 start, Vector3 end)
 
 **几何变换**
 
-```text
+```csharp
 gameObject.transform.position = new Vector...
 ```
 
@@ -79,5 +79,42 @@ gameObject.transform.position = new Vector...
 
 使用Raycast可以方便地绘制射线、完成线和碰撞体的碰撞检测。
 
-[https://blog.csdn.net/u010718707/article/details/42111567](https://blog.csdn.net/u010718707/article/details/42111567)
+{% embed url="https://blog.csdn.net/u010718707/article/details/42111567" %}
+
+**NavMesh寻路**
+
+```csharp
+UnityEngine.AI.NavMeshAgent
+private NavMeshAgent agent; // 用于获得一个寻路AI实例agent
+// in Start()
+agent = GetComponent<NavMeshAgent>(); 
+// ...
+agent.enabled = true; // 用于启用agent
+agent.SetDestination(point); // 用于设定本游戏对象的寻路目标
+agent.remainingDistance; // 用于获取剩余距离
+```
+
+**TileMap**
+
+{% embed url="https://blog.csdn.net/seemeno/article/details/93136806" %}
+
+一种处理栅格布局（如各种经典2D横版过关冒险游戏）地图的组件，基本元素是瓦片Tile，在代码中可以通过SetTile\(Vector3Int, Tile\)来往固定位置放瓦片。这里的固定位置是TileMap自己的一套坐标系，目前还不清楚是怎么计算的。2D情况下Vector3Int的z轴（第三维）取0。从Sprite加载Tile如下：
+
+```csharp
+Tile tile = ScriptableObject.CreateInstance<Tile>();
+Sprite tmp = Utility.GetSprite(SpriteType.RANDOM_ROAD);
+tile.sprite = tmp;
+```
+
+如何给unity的tileMap里的cell添加特定的属性。
+
+做法就是写一个类，继承至TileBase，然后这个类你可以写任何你可以自定义的函数。
+
+但值得注意的是，这里创建的是一个模板，我们依然无法让2个一样模板的tile状态不同。（？）
+
+{% embed url="https://www.cnblogs.com/beatless/p/11623709.html" %}
+
+有一个官方开发的2d-extras仓库用来扩展tilemap功能，例如规则瓦片、随机瓦片、动画瓦片
+
+当 tilemap 显示粉红色的时候，检查一下 tilemap 组件的材质属性。
 
