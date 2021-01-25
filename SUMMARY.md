@@ -15,6 +15,7 @@
   * [Chapter 3 N-gram Language Models](theory/language-processing/chapter-3-n-gram-language-models/README.md)
     * [3.1 N-Grams](theory/language-processing/chapter-3-n-gram-language-models/3.1-n-grams.md)
     * [3.2 Evaluating Language Models](theory/language-processing/chapter-3-n-gram-language-models/3.2-evaluating-language-models.md)
+    * [3.3 Generalization and Zeros](theory/language-processing/chapter-3-n-gram-language-models/3.3-generalization-and-zeros.md)
 
 ## Programming Languages
 
