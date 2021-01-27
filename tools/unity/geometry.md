@@ -118,3 +118,11 @@ tile.sprite = tmp;
 
 当 tilemap 显示粉红色的时候，检查一下 tilemap 组件的材质属性。
 
+**血条**
+
+有FillAmount和localScale两种手段，但前者会导致反复重绘，后者性能更优
+
+**对象的布局Layout**
+
+Inspector的rect transform可以看到有个方形图案指示的锚点位置设置，默认是锚点居中的，如果想填充父对象，可以选择在两个方向上stretch（最右下角的），并在右边的参数中把left right top bottom都改成0（这里和CSS很像）。高级布局需要借助layout，待补充
+
