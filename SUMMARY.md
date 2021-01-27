@@ -52,5 +52,6 @@
   * [Miscellaneous](tools/pytorch/miscellaneous.md)
 * [Unity](tools/unity/README.md)
   * [Geometry](tools/unity/geometry.md)
+  * [Assets and Scenes](tools/unity/assets-and-scenes.md)
   * [Miscellaneous](tools/unity/miscellaneous.md)
 
