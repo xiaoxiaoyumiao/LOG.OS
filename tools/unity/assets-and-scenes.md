@@ -24,11 +24,17 @@ public class test : MonoBehavior {
 }
 ```
 
-**注意对Prefab的嵌套可能出现子Prefab的关联丢失的问题**，[https://blog.csdn.net/zhenghongzhi6/article/details/84068691](https://blog.csdn.net/zhenghongzhi6/article/details/84068691) ； 似乎能解决这个问题的轮子[http://www.xuanyusong.com/archives/3042](http://www.xuanyusong.com/archives/3042)
+**注意对Prefab的嵌套可能出现子Prefab的关联丢失的问题：**
+
+{% embed url="https://blog.csdn.net/zhenghongzhi6/article/details/84068691" %}
+
+似乎能解决这个问题的轮子：
+
+{% embed url="http://www.xuanyusong.com/archives/3042" %}
 
 **资源加载**
 
-[https://www.cnblogs.com/zhepama/p/4362312.html](https://www.cnblogs.com/zhepama/p/4362312.html)
+{% embed url="https://www.cnblogs.com/zhepama/p/4362312.html" %}
 
 加载的资源必须在Assets/Resources路径下，查询（Load）时使用项目中该目录下的相对路径。例如Resources/Time.png会被项目加载成Resources目录下的一个资源Time，于是load时传一个”Time“就能索引到这个资源。
 
@@ -42,4 +48,55 @@ foreach (string ele in names)
 ```
 
 正规大型游戏更倾向采用在Runtime加载AssetBundle的方式，目前还没有试验过，待补完。
+
+**活跃场景及名字**
+
+```text
+ Scene scene = SceneManager.GetActiveScene ();
+        GUILayout.Label ("当前场景: " + scene.name);
+```
+
+**场景加载和进度条**
+
+{% embed url="https://blog.csdn.net/huang9012/article/details/38659011" %}
+
+{% embed url="https://blog.csdn.net/weixin\_42552233/article/details/81017332" %}
+
+{% embed url="https://www.cnblogs.com/hutuzhu/p/9804348.html" %}
+
+* 需要引用`UnityEngine.SceneManagement`
+* 同步加载用`SceneManager.LoadScene(sceneName)`
+* 异步加载用`SceneManager.LoadSceneAsync(sceneName)`，和协程结合使用可以实现进度条
+* 场景可以附加式加载，好像很牛逼，有空研究一下
+* 进度条加载页面实现：
+  * 这里涉及三个场景：原场景A，加载页面B，目标场景C
+  * 大体思路：场景A指定好目标场景（例如通过一个全局变量），加载场景B；场景B异步加载目标场景C，同时根据加载进度更新进度条UI；加载完成后进入场景C。有一些麻烦的细节：
+  * 异步加载会返回一个`AsyncOperation`对象operation，这个对象提供所有加载相关信息，如`operation.progress`获取0~1浮点数表示加载进度。为了保证进度条UI显示友好，需要在加载一开始关掉`operation.allowSceneActivation`，等进度条UI更新到100%再打开。由于关掉这个选项的缘故，场景的加载进度只会到0.9f，这一点在更新进度条UI进度时要注意。
+  * 最简单的进度条UI使用localScale实现一个矩形的长度变化即可。
+
+**数值文件的加载**
+
+一般文件的加载可以使用`string filePath = Application.streamingAssetsPath + "/CSVDemo.csv";`这个`streamingAssetsPath`是一个Unity会根据具体运行平台确定的路径，相应地文件要放在Unity的Assets/StreamingAssets目录中。
+
+CSV加载的轮子列表：
+
+{% embed url="https://www.cnblogs.com/lyh916/p/8588218.html" caption="亲测基本可用" %}
+
+{% embed url="https://www.cnblogs.com/wuzhang/p/wuzhang20150511.html" %}
+
+{% embed url="https://blog.csdn.net/musicvs/article/details/73135681" %}
+
+**数据存储方式**
+
+{% embed url="https://blog.csdn.net/billcyj/article/details/79888614" %}
+
+**运行时数据可持久化**
+
+推荐使用单例模式实现（不继承MonoBehavior）。
+
+{% embed url="https://blog.csdn.net/ycl295644/article/details/42458477?utm\_source=blogxgwz8" %}
+
+**存档实现**
+
+{% embed url="https://www.cnblogs.com/yoyocool/p/8527612.html" %}
 
