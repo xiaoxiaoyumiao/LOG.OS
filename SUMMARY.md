@@ -53,5 +53,6 @@
 * [Unity](tools/unity/README.md)
   * [Geometry](tools/unity/geometry.md)
   * [Assets and Scenes](tools/unity/assets-and-scenes.md)
+  * [Layers](tools/unity/layers.md)
   * [Miscellaneous](tools/unity/miscellaneous.md)
 

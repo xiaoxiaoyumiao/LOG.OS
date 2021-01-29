@@ -10,5 +10,7 @@ A few important examples of **internal** assets are as shown below −
 
 A few other important assets are Placeholder, Sprites and Models. These are used when you need quick placeholders so they may be replaced with proper graphics and models later.
 
+\*\*\*\*
 
+**This chapter is still in progress.**
 
