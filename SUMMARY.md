@@ -33,6 +33,8 @@
   * [I&O](programming-languages/java/i-and-o.md)
   * [Classes & Data Structures](programming-languages/java/classes-and-data-structures.md)
   * [Miscellaneous](programming-languages/java/miscellaneous.md)
+* [CMD](programming-languages/cmd/README.md)
+  * [Miscellaneous](programming-languages/cmd/miscellaneous.md)
 
 ## Tools
 
