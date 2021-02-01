@@ -24,6 +24,7 @@
 * [C](programming-languages/c-c++/README.md)
   * [String](programming-languages/c-c++/string.md)
   * [Miscellaneous](programming-languages/c-c++/miscellaneous.md)
+* [C51](programming-languages/c51.md)
 * [C++](programming-languages/c++.md)
 * [Java](programming-languages/java/README.md)
   * [Introduction](programming-languages/java/introduction.md)
