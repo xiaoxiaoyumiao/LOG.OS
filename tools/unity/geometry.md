@@ -79,7 +79,7 @@ gameObject.transform.position = new Vector...
 
 使用Raycast可以方便地绘制射线、完成线和碰撞体的碰撞检测。
 
-{% embed url="https://blog.csdn.net/u010718707/article/details/42111567" %}
+{% embed url="https://blog.csdn.net/u010718707/article/details/42111567" caption="" %}
 
 **NavMesh寻路**
 
@@ -96,7 +96,7 @@ agent.remainingDistance; // 用于获取剩余距离
 
 **TileMap**
 
-{% embed url="https://blog.csdn.net/seemeno/article/details/93136806" %}
+{% embed url="https://blog.csdn.net/seemeno/article/details/93136806" caption="" %}
 
 一种处理栅格布局（如各种经典2D横版过关冒险游戏）地图的组件，基本元素是瓦片Tile，在代码中可以通过SetTile\(Vector3Int, Tile\)来往固定位置放瓦片。这里的固定位置是TileMap自己的一套坐标系，目前还不清楚是怎么计算的。2D情况下Vector3Int的z轴（第三维）取0。从Sprite加载Tile如下：
 
@@ -112,7 +112,7 @@ tile.sprite = tmp;
 
 但值得注意的是，这里创建的是一个模板，我们依然无法让2个一样模板的tile状态不同。（？）
 
-{% embed url="https://www.cnblogs.com/beatless/p/11623709.html" %}
+{% embed url="https://www.cnblogs.com/beatless/p/11623709.html" caption="" %}
 
 有一个官方开发的2d-extras仓库用来扩展tilemap功能，例如规则瓦片、随机瓦片、动画瓦片
 

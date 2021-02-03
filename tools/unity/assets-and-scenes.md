@@ -1,6 +1,6 @@
 # Assets and Scenes
 
-#### Prefabs
+## Prefabs
 
 把一个游戏场景中的对象从hierarchy列表中拖回assets栏即可获得一个Prefab。为了动态spawn出游戏对象，可以在Monobehavior的子类中定义一个GameObject的field，并在编辑器中将其赋值为assets中的prefab（这个field的取值只能是prefab或gameobject），然后在update函数中使用Instantiate\(gameobject\)将其实例化：
 
@@ -26,15 +26,15 @@ public class test : MonoBehavior {
 
 **注意对Prefab的嵌套可能出现子Prefab的关联丢失的问题：**
 
-{% embed url="https://blog.csdn.net/zhenghongzhi6/article/details/84068691" %}
+{% embed url="https://blog.csdn.net/zhenghongzhi6/article/details/84068691" caption="" %}
 
 似乎能解决这个问题的轮子：
 
-{% embed url="http://www.xuanyusong.com/archives/3042" %}
+{% embed url="http://www.xuanyusong.com/archives/3042" caption="" %}
 
 **资源加载**
 
-{% embed url="https://www.cnblogs.com/zhepama/p/4362312.html" %}
+{% embed url="https://www.cnblogs.com/zhepama/p/4362312.html" caption="" %}
 
 加载的资源必须在Assets/Resources路径下，查询（Load）时使用项目中该目录下的相对路径。例如Resources/Time.png会被项目加载成Resources目录下的一个资源Time，于是load时传一个”Time“就能索引到这个资源。
 
@@ -58,11 +58,11 @@ foreach (string ele in names)
 
 **场景加载和进度条**
 
-{% embed url="https://blog.csdn.net/huang9012/article/details/38659011" %}
+{% embed url="https://blog.csdn.net/huang9012/article/details/38659011" caption="" %}
 
-{% embed url="https://blog.csdn.net/weixin\_42552233/article/details/81017332" %}
+{% embed url="https://blog.csdn.net/weixin\_42552233/article/details/81017332" caption="" %}
 
-{% embed url="https://www.cnblogs.com/hutuzhu/p/9804348.html" %}
+{% embed url="https://www.cnblogs.com/hutuzhu/p/9804348.html" caption="" %}
 
 * 需要引用`UnityEngine.SceneManagement`
 * 同步加载用`SceneManager.LoadScene(sceneName)`
@@ -82,21 +82,21 @@ CSV加载的轮子列表：
 
 {% embed url="https://www.cnblogs.com/lyh916/p/8588218.html" caption="亲测基本可用" %}
 
-{% embed url="https://www.cnblogs.com/wuzhang/p/wuzhang20150511.html" %}
+{% embed url="https://www.cnblogs.com/wuzhang/p/wuzhang20150511.html" caption="" %}
 
-{% embed url="https://blog.csdn.net/musicvs/article/details/73135681" %}
+{% embed url="https://blog.csdn.net/musicvs/article/details/73135681" caption="" %}
 
 **数据存储方式**
 
-{% embed url="https://blog.csdn.net/billcyj/article/details/79888614" %}
+{% embed url="https://blog.csdn.net/billcyj/article/details/79888614" caption="" %}
 
 **运行时数据可持久化**
 
 推荐使用单例模式实现（不继承MonoBehavior）。
 
-{% embed url="https://blog.csdn.net/ycl295644/article/details/42458477?utm\_source=blogxgwz8" %}
+{% embed url="https://blog.csdn.net/ycl295644/article/details/42458477?utm\_source=blogxgwz8" caption="" %}
 
 **存档实现**
 
-{% embed url="https://www.cnblogs.com/yoyocool/p/8527612.html" %}
+{% embed url="https://www.cnblogs.com/yoyocool/p/8527612.html" caption="" %}
 
