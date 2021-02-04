@@ -17,6 +17,9 @@
     * [3.2 Evaluating Language Models](theory/language-processing/chapter-3-n-gram-language-models/3.2-evaluating-language-models.md)
     * [3.3 Generalization and Zeros](theory/language-processing/chapter-3-n-gram-language-models/3.3-generalization-and-zeros.md)
     * [3.4 Smoothing](theory/language-processing/chapter-3-n-gram-language-models/3.4-smoothing.md)
+    * [3.5 Kneser-Ney Smoothing](theory/language-processing/chapter-3-n-gram-language-models/3.5-kneser-ney-smoothing.md)
+  * [Chapter 4 Naive Bayes and Sentiment Classification](theory/language-processing/chapter-4-naive-bayes-and-sentiment-classification/README.md)
+    * [4.1 Naive Bayes Classifiers](theory/language-processing/chapter-4-naive-bayes-and-sentiment-classification/4.1-naive-bayes-classifiers.md)
 
 ## Programming Languages
 
