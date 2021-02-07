@@ -20,6 +20,8 @@
     * [3.5 Kneser-Ney Smoothing](theory/language-processing/chapter-3-n-gram-language-models/3.5-kneser-ney-smoothing.md)
   * [Chapter 4 Naive Bayes and Sentiment Classification](theory/language-processing/chapter-4-naive-bayes-and-sentiment-classification/README.md)
     * [4.1 Naive Bayes Classifiers](theory/language-processing/chapter-4-naive-bayes-and-sentiment-classification/4.1-naive-bayes-classifiers.md)
+    * [4.6 Naive Bayes as a Language Model](theory/language-processing/chapter-4-naive-bayes-and-sentiment-classification/4.6-naive-bayes-as-a-language-model.md)
+    * [4.7 Evaluation: Precision, Recall, F-measure](theory/language-processing/chapter-4-naive-bayes-and-sentiment-classification/4.7-evaluation-precision-recall-f-measure.md)
 
 ## Programming Languages
 
