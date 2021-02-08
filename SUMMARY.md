@@ -65,4 +65,5 @@
   * [Miscellaneous](tools/unity/miscellaneous.md)
 * [Keil μvision4](tools/keil-mvision4.md)
 * [C8051Fxxx](tools/c8051fxxx.md)
+* [Weixin Applet](tools/weixin-applet.md)
 
