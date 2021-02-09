@@ -25,7 +25,8 @@
 
 ## Programming Languages
 
-* [Python](programming-languages/python.md)
+* [Python](programming-languages/python/README.md)
+  * [File System & I/O](programming-languages/python/file-system-and-i-o.md)
 * [C](programming-languages/c-c++/README.md)
   * [String](programming-languages/c-c++/string.md)
   * [Miscellaneous](programming-languages/c-c++/miscellaneous.md)
