@@ -27,6 +27,7 @@
 
 * [Python](programming-languages/python/README.md)
   * [File System & I/O](programming-languages/python/file-system-and-i-o.md)
+  * [String](programming-languages/python/string.md)
 * [C](programming-languages/c-c++/README.md)
   * [String](programming-languages/c-c++/string.md)
   * [Miscellaneous](programming-languages/c-c++/miscellaneous.md)
