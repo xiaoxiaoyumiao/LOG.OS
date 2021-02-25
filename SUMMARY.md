@@ -64,6 +64,7 @@
   * [torchtext](tools/pytorch/torchtext.md)
   * [Miscellaneous](tools/pytorch/miscellaneous.md)
 * [Unity](tools/unity/README.md)
+  * [Lifecycle](tools/unity/lifecycle.md)
   * [Geometry](tools/unity/geometry.md)
   * [Assets and Scenes](tools/unity/assets-and-scenes.md)
   * [Layers](tools/unity/layers.md)
