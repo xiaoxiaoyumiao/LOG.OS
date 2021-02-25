@@ -1,6 +1,6 @@
 # String
 
-#### 字符串操作
+## 字符串操作
 
 **格式化Format**
 
@@ -14,7 +14,7 @@
  4 1.1
  5 >>> print('%e' % 1.11)  # 默认6位小数，用科学计数法
  6 1.110000e+00
-    
+
 #format格式化，'something'.format(someData)
  1 >>> print('{} {}'.format('hello','world'))  # 不带字段
  2 hello world

@@ -22,7 +22,7 @@ build\(F7\) target options - output - create HEX file
 
 关于 HEX 文件的格式（待补完）
 
-{% embed url="https://en.wikipedia.org/wiki/Intel\_HEX" %}
+{% embed url="https://en.wikipedia.org/wiki/Intel\_HEX" caption="" %}
 
 ## 命令行编译
 
@@ -39,6 +39,4 @@ OH51 test
 这样就能编译出HEX文件。
 
 \`\`
-
-
 
