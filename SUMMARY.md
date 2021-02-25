@@ -31,7 +31,10 @@
 * [C](programming-languages/c-c++/README.md)
   * [String](programming-languages/c-c++/string.md)
   * [Miscellaneous](programming-languages/c-c++/miscellaneous.md)
-* [C51](programming-languages/c51.md)
+* [C51](programming-languages/c51/README.md)
+  * [Basics](programming-languages/c51/basics.md)
+  * [I/O](programming-languages/c51/i-o.md)
+  * [Miscellaneous](programming-languages/c51/miscellaneous.md)
 * [C++](programming-languages/c++.md)
 * [Java](programming-languages/java/README.md)
   * [Introduction](programming-languages/java/introduction.md)
@@ -66,6 +69,10 @@
   * [Layers](tools/unity/layers.md)
   * [Miscellaneous](tools/unity/miscellaneous.md)
 * [Keil μvision4](tools/keil-mvision4.md)
-* [C8051Fxxx](tools/c8051fxxx.md)
+* [Simplicity Studio](tools/simplicity-studio.md)
 * [Weixin Applet](tools/weixin-applet.md)
+
+## ARCHITECTURE
+
+* [C8051Fxxx](architecture/c8051fxxx.md)
 
