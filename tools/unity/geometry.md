@@ -1,6 +1,6 @@
 # Geometry
 
-**Sprite**
+## **Sprite**
 
 脚本中修改sprite的图片来源，只需获取SpriteRenderer组件，修改其sprite域即可。
 
@@ -12,17 +12,16 @@ sprite 资源的 pivot 可以自定义，通过这样来调整图片资源中心
 float width = object.GetComponent<Renderer>().bounds.size.x;
 ```
 
-**直线绘制**
+## **直线绘制**
 
-似乎至少有GL和LineRenderer两种搞法，具体待实验
+至少有 GL 和 `LineRenderer` 两种搞法。
 
-真是要了老命了……
+使用 `LineRenderer` 时的注意事项：
 
-* 一个游戏对象只能用一个lineRenderer，一个lineRenderer只能画一条线（当然可以是长的折线段或者近似出来的曲线）。
-* 绘制时使用的是世界坐标系。如果绘制坐标和物体相关，直接使用物体的transform坐标运算即可。
-* 因为linerenderer画出来的是3D对象，会因为未知原因导致被背景之类的遮挡。把背景的z坐标调大一些（比如10，反正一个恰当的正数），就可以看到画出来的线了。
-* 2D环境下需要恰当选择线的材质，一个可以运作的着色器是选择shader: Unlit - Color，然后在Tint中配色。
-  * update：不需要自建材质，应当使用unity自带的默认材质default-line，此时对线的color设置才可以生效。点击inspector中右侧小圆点，从弹出的列表里选择。
+* 一个游戏对象只能用一个 `lineRenderer` ，一个 `lineRenderer` 只能画一条线（当然可以是长的折线段或者近似出来的曲线）。
+* 绘制时使用的是世界坐标系。如果绘制坐标和物体相关，直接使用物体的 transform 坐标运算即可。
+* 因为 `lineRenderer` 画出来的是 3D 对象，会因为未知原因导致被背景之类的遮挡。把背景的z坐标调大一些（比如10，反正一个恰当的正数），就可以看到画出来的线了。
+* 2D环境下需要恰当选择线的材质，应当使用unity自带的默认材质default-line，此时对线的color设置才可以生效。点击inspector中右侧小圆点，从弹出的列表里选择。
 
 一段可用的代码：（材质和颜色都在inspector里配置，此外颜色似乎没发挥作用）
 
@@ -49,7 +48,7 @@ public void PaintLine(Vector3 start, Vector3 end)
     }
 ```
 
-**几何变换**
+## **几何变换**
 
 ```csharp
 gameObject.transform.position = new Vector...
@@ -75,13 +74,13 @@ gameObject.transform.position = new Vector...
 >
 > 这样子物体B的localscale会变成（2,2,2） ， 这样子就没有改变他的absscale。
 
-**Ray**
+## **Ray**
 
 使用Raycast可以方便地绘制射线、完成线和碰撞体的碰撞检测。
 
 {% embed url="https://blog.csdn.net/u010718707/article/details/42111567" %}
 
-**NavMesh寻路**
+## **NavMesh 寻路**
 
 ```csharp
 UnityEngine.AI.NavMeshAgent
@@ -94,7 +93,7 @@ agent.SetDestination(point); // 用于设定本游戏对象的寻路目标
 agent.remainingDistance; // 用于获取剩余距离
 ```
 
-**TileMap**
+## **TileMap**
 
 {% embed url="https://blog.csdn.net/seemeno/article/details/93136806" %}
 
@@ -114,15 +113,15 @@ tile.sprite = tmp;
 
 {% embed url="https://www.cnblogs.com/beatless/p/11623709.html" %}
 
-有一个官方开发的2d-extras仓库用来扩展tilemap功能，例如规则瓦片、随机瓦片、动画瓦片
+有一个官方开发的2d-extras仓库用来扩展 tilemap 功能，例如规则瓦片、随机瓦片、动画瓦片
 
 当 tilemap 显示粉红色的时候，检查一下 tilemap 组件的材质属性。
 
-**血条**
+## **血条实现**
 
-有FillAmount和localScale两种手段，但前者会导致反复重绘，后者性能更优
+有 FillAmount 和 localScale 两种手段，但前者会导致反复重绘，后者性能更优
 
-**对象的布局Layout**
+## **对象的布局 Layout**
 
 Inspector的rect transform可以看到有个方形图案指示的锚点位置设置，默认是锚点居中的，如果想填充父对象，可以选择在两个方向上stretch（最右下角的），并在右边的参数中把left right top bottom都改成0（这里和CSS很像）。高级布局需要借助layout，待补充
 

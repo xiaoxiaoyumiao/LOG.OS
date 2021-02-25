@@ -68,6 +68,7 @@
   * [Geometry](tools/unity/geometry.md)
   * [Assets and Scenes](tools/unity/assets-and-scenes.md)
   * [Layers](tools/unity/layers.md)
+  * [Camera](tools/unity/camera.md)
   * [Miscellaneous](tools/unity/miscellaneous.md)
 * [Keil μvision4](tools/keil-mvision4.md)
 * [Simplicity Studio](tools/simplicity-studio.md)
