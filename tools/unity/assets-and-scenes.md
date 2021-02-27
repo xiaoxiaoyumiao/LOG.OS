@@ -32,7 +32,7 @@ public class test : MonoBehavior {
 
 {% embed url="http://www.xuanyusong.com/archives/3042" caption="" %}
 
-**资源加载**
+## **资源加载**
 
 {% embed url="https://www.cnblogs.com/zhepama/p/4362312.html" caption="" %}
 
@@ -49,14 +49,14 @@ foreach (string ele in names)
 
 正规大型游戏更倾向采用在Runtime加载AssetBundle的方式，目前还没有试验过，待补完。
 
-**活跃场景及名字**
+## **活跃场景及名字**
 
 ```text
  Scene scene = SceneManager.GetActiveScene ();
         GUILayout.Label ("当前场景: " + scene.name);
 ```
 
-**场景加载和进度条**
+## **场景加载和进度条**
 
 {% embed url="https://blog.csdn.net/huang9012/article/details/38659011" caption="" %}
 
@@ -74,11 +74,11 @@ foreach (string ele in names)
   * 异步加载会返回一个`AsyncOperation`对象operation，这个对象提供所有加载相关信息，如`operation.progress`获取0~1浮点数表示加载进度。为了保证进度条UI显示友好，需要在加载一开始关掉`operation.allowSceneActivation`，等进度条UI更新到100%再打开。由于关掉这个选项的缘故，场景的加载进度只会到0.9f，这一点在更新进度条UI进度时要注意。
   * 最简单的进度条UI使用localScale实现一个矩形的长度变化即可。
 
-**数值文件的加载**
+## **数值文件的加载**
 
-一般文件的加载可以使用`string filePath = Application.streamingAssetsPath + "/CSVDemo.csv";`这个`streamingAssetsPath`是一个Unity会根据具体运行平台确定的路径，相应地文件要放在Unity的Assets/StreamingAssets目录中。
+一般文件的加载可以使用`string filePath = Application.streamingAssetsPath + "/CSVDemo.csv";`这个`streamingAssetsPath`是一个Unity会根据具体运行平台确定的路径，相应地文件要放在Unity的 Assets/StreamingAssets 目录中。
 
-CSV加载的轮子列表：
+CSV 加载的轮子列表：
 
 {% embed url="https://www.cnblogs.com/lyh916/p/8588218.html" caption="亲测基本可用" %}
 
@@ -86,17 +86,17 @@ CSV加载的轮子列表：
 
 {% embed url="https://blog.csdn.net/musicvs/article/details/73135681" caption="" %}
 
-**数据存储方式**
+## **数据存储方式**
 
 {% embed url="https://blog.csdn.net/billcyj/article/details/79888614" caption="" %}
 
-**运行时数据可持久化**
+## **运行时数据可持久化**
 
-推荐使用单例模式实现（不继承MonoBehavior）。
+推荐使用单例模式实现（不继承 MonoBehavior）。
 
 {% embed url="https://blog.csdn.net/ycl295644/article/details/42458477?utm\_source=blogxgwz8" caption="" %}
 
-**存档实现**
+## **存档实现**
 
 {% embed url="https://www.cnblogs.com/yoyocool/p/8527612.html" caption="" %}
 
