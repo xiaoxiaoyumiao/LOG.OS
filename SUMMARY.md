@@ -34,6 +34,7 @@
 * [C51](programming-languages/c51/README.md)
   * [Basics](programming-languages/c51/basics.md)
   * [I/O](programming-languages/c51/i-o.md)
+  * [MAP file / M51](programming-languages/c51/map-file-m51.md)
   * [Miscellaneous](programming-languages/c51/miscellaneous.md)
 * [C++](programming-languages/c++.md)
 * [Java](programming-languages/java/README.md)
