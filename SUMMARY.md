@@ -50,6 +50,7 @@
   * [String](programming-languages/javascript/string.md)
   * [Objects](programming-languages/javascript/objects.md)
   * [Class](programming-languages/javascript/class.md)
+  * [Iterator & Generator](programming-languages/javascript/iterator-and-generator.md)
   * [Miscellaneous](programming-languages/javascript/miscellaneous.md)
 * [CMD](programming-languages/cmd/README.md)
   * [Miscellaneous](programming-languages/cmd/miscellaneous.md)

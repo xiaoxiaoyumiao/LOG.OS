@@ -39,7 +39,23 @@ for (i = 0; i < cars.length; i++) {
 
 ## For-in
 
+For-in loops over properties of an object.
+
 ```javascript
+// loop over elements of an array
+var numbers = [45, 4, 9, 16, 25];
+
+var txt = "";
+var x;
+for (x in numbers) {
+  txt += numbers[x] + "<br>";
+}
+// or:
+for (let i in numbers) {
+  txt += numbers[i] + "<br>";
+}
+
+// loop over properties of an object
 var person = {fname:"Bill", lname:"Gates", age:62}; 
 
 var text = "";
@@ -48,4 +64,21 @@ for (x in person) {
     text += person[x]+" "; 
 } // text = "Bill Gates 62"
 ```
+
+## For-of
+
+For-of loops over values of an iterable object.
+
+```javascript
+let cars = ["BMW", "Volvo", "Mini"];
+let text = "";
+
+for (let x of cars) {
+  text += x + "<br>";
+}
+```
+
+## Reference
+
+\[1\] [https://www.w3schools.com/js/js\_loop\_forin.asp](https://www.w3schools.com/js/js_loop_forin.asp)
 
