@@ -44,6 +44,14 @@
   ```
 
   * 其他的 TYPE 取值意义还不清楚。
+* Program Size - 输出链接后程序对各个存储空间的使用情况。
+* ```text
+  Program Size: data=59.0 xdata=512 code=1022
+  ```
+* Warnings & Errors - 输出链接过程中产生的警告和错误信息。
+* ```text
+  LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
+  ```
 
 ## Reference
 

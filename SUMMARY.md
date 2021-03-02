@@ -45,6 +45,12 @@
   * [I&O](programming-languages/java/i-and-o.md)
   * [Classes & Data Structures](programming-languages/java/classes-and-data-structures.md)
   * [Miscellaneous](programming-languages/java/miscellaneous.md)
+* [JavaScript](programming-languages/javascript/README.md)
+  * [Control Flow](programming-languages/javascript/control-flow.md)
+  * [String](programming-languages/javascript/string.md)
+  * [Objects](programming-languages/javascript/objects.md)
+  * [Class](programming-languages/javascript/class.md)
+  * [Miscellaneous](programming-languages/javascript/miscellaneous.md)
 * [CMD](programming-languages/cmd/README.md)
   * [Miscellaneous](programming-languages/cmd/miscellaneous.md)
 
@@ -73,7 +79,8 @@
   * [Miscellaneous](tools/unity/miscellaneous.md)
 * [Keil μvision4](tools/keil-mvision4.md)
 * [Simplicity Studio](tools/simplicity-studio.md)
-* [Weixin Applet](tools/weixin-applet.md)
+* [Weixin Applet](tools/weixin-applet/README.md)
+  * [Project Structure](tools/weixin-applet/project-structure.md)
 
 ## ARCHITECTURE
 
