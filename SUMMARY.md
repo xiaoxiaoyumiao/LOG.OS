@@ -81,6 +81,7 @@
 * [Simplicity Studio](tools/simplicity-studio.md)
 * [Weixin Applet](tools/weixin-applet/README.md)
   * [Project Structure](tools/weixin-applet/project-structure.md)
+  * [Storage](tools/weixin-applet/storage.md)
 
 ## ARCHITECTURE
 
