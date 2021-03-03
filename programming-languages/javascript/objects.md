@@ -19,3 +19,5 @@ BaseClass.f1 = function(){//定义静态方法
 
 ref: [https://www.cnblogs.com/signheart/p/6599838.html](https://www.cnblogs.com/signheart/p/6599838.html)
 
+ES6 中提供了更简洁的 static 语法实现。
+

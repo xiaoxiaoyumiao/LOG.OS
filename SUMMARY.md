@@ -31,6 +31,8 @@
 * [C](programming-languages/c-c++/README.md)
   * [String](programming-languages/c-c++/string.md)
   * [Miscellaneous](programming-languages/c-c++/miscellaneous.md)
+* [C\#](programming-languages/c/README.md)
+  * [Miscellaneous](programming-languages/c/miscellaneous.md)
 * [C51](programming-languages/c51/README.md)
   * [Basics](programming-languages/c51/basics.md)
   * [I/O](programming-languages/c51/i-o.md)
