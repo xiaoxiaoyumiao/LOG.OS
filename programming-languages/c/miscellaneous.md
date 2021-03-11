@@ -14,4 +14,9 @@
     // After:  00010000000000000000000000000000
     ```
   * ref:  [Bitwise and shift operators - C\# reference \| Microsoft Docs](%20https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/bitwise-and-shift-operators#right-shift-operator-)
+* 关于字符串格式化的规则
+  * ref: [https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings?redirectedfrom=MSDN\#standard-format-specifiers](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings?redirectedfrom=MSDN#standard-format-specifiers)
+* 关于基本数据类型和 byte array 之间的转换
+  * 使用 BitConverter 类可以把 byte array 对象（用十六进制表示）打印出来。
+  * 使用 Encoding.UTF8.GetString\(array\) 可以把 byte array 对象按 UTF8 编码转换为字符串。
 

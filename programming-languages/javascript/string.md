@@ -27,6 +27,17 @@ parseInt(string [, radix])
 
 // 按换行分隔文本为行的列表
 "a\nb\r\nc".split(/\r?\n/)
+
+// 使用 TextEncoder 可以把字符串按照 utf-8 编码转换到 ArrayBuffer
+const encoder = new TextEncoder()
+const view = encoder.encode('€')
+console.log(view); // Uint8Array(3) [226, 130, 172]
+// 使用 TextDecoder 则可以反向操作
+let utf8decoder = new TextDecoder(); // default 'utf-8' or 'utf8'
+let u8arr = new Uint8Array([240, 160, 174, 183]);
+console.log(utf8decoder.decode(u8arr));
+
+
 ```
 
 ## Reference
@@ -37,5 +48,7 @@ parseInt(string [, radix])
 
 \[3\] [https://stackoverflow.com/questions/21895233/how-in-node-to-split-string-by-newline-n/21896652](https://stackoverflow.com/questions/21895233/how-in-node-to-split-string-by-newline-n/21896652)
 
+\[4\] [https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder](https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder)
 
+\[5\] [https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder](https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder)
 

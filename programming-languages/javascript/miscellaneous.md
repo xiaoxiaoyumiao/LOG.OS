@@ -25,4 +25,23 @@
 * 关于无符号整数
   * JS 没有无符号类型的说法，如果一定要把某个数强转为无符号整数，可以使用 &gt;&gt;&gt; 算符。它在右移时使用 0 填充高位，且一定返回无符号整数。
   * ref: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned\_right\_shift](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unsigned_right_shift)
+* 关于数组
+  * new Array\(x\) 似乎并不是被鼓励的语法。推荐直接使用 \[\] 初始化一个数组（或许更接近列表）。
+  * 拷贝 ArrayBuffer 内容的比较舒适的写法：
+  * ```text
+    function copy(src)  {
+        var dst = new ArrayBuffer(src.byteLength);
+        new Uint8Array(dst).set(new Uint8Array(src));
+        return dst;
+    }
+    ```
+* console.assert 打印的异常并不会被 try - catch 捕捉到。
+* 检查一个对象是否是一个函数
+  * ```text
+    if (typeof v === 'function') {
+        // do something
+    }
+    ```
+* 除了 TextEncoder / TextDecoder，Buffer 也可以方便地起到字符串和 ArrayBuffer 转换的效果。
+  * [https://nodejs.org/api/buffer.html\#buffer\_buf\_buffer](https://nodejs.org/api/buffer.html#buffer_buf_buffer)
 

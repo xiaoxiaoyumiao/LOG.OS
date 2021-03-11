@@ -32,11 +32,16 @@
   * [String](programming-languages/c-c++/string.md)
   * [Miscellaneous](programming-languages/c-c++/miscellaneous.md)
 * [C\#](programming-languages/c/README.md)
+  * [I/O](programming-languages/c/i-o.md)
   * [Miscellaneous](programming-languages/c/miscellaneous.md)
 * [C51](programming-languages/c51/README.md)
   * [Basics](programming-languages/c51/basics.md)
   * [I/O](programming-languages/c51/i-o.md)
+  * [Listing File / LST](programming-languages/c51/listing-file-lst.md)
+  * [Compiler Options](programming-languages/c51/compiler-options.md)
+  * [Assembler Options](programming-languages/c51/assembler-options.md)
   * [MAP file / M51](programming-languages/c51/map-file-m51.md)
+  * [Linker Options](programming-languages/c51/linker-options.md)
   * [Miscellaneous](programming-languages/c51/miscellaneous.md)
 * [C++](programming-languages/c++.md)
 * [Java](programming-languages/java/README.md)
@@ -53,12 +58,16 @@
   * [Objects](programming-languages/javascript/objects.md)
   * [Class](programming-languages/javascript/class.md)
   * [Iterator & Generator](programming-languages/javascript/iterator-and-generator.md)
+  * [import & export](programming-languages/javascript/import-and-export.md)
+  * [Promise](programming-languages/javascript/promise.md)
   * [Miscellaneous](programming-languages/javascript/miscellaneous.md)
 * [CMD](programming-languages/cmd/README.md)
   * [Miscellaneous](programming-languages/cmd/miscellaneous.md)
 
 ## Tools
 
+* [Linux](tools/linux/README.md)
+  * [Miscellaneous](tools/linux/miscellaneous.md)
 * [CMake](tools/cmake.md)
 * [LLVM](tools/llvm.md)
 * [MATLAB](tools/matlab/README.md)
@@ -86,6 +95,7 @@
   * [Project Structure](tools/weixin-applet/project-structure.md)
   * [Storage](tools/weixin-applet/storage.md)
   * [Miscellaneous](tools/weixin-applet/miscellaneous.md)
+* [Node.js & npm](tools/node.js-and-npm.md)
 
 ## ARCHITECTURE
 
