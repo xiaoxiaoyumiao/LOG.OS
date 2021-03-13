@@ -28,6 +28,7 @@
 * [Python](programming-languages/python/README.md)
   * [File System & I/O](programming-languages/python/file-system-and-i-o.md)
   * [String](programming-languages/python/string.md)
+  * [Miscellaneous](programming-languages/python/miscellaneous.md)
 * [C](programming-languages/c-c++/README.md)
   * [String](programming-languages/c-c++/string.md)
   * [Miscellaneous](programming-languages/c-c++/miscellaneous.md)
@@ -66,8 +67,13 @@
 
 ## Tools
 
-* [Linux](tools/linux/README.md)
+* [Bash Tools](tools/linux/README.md)
   * [Miscellaneous](tools/linux/miscellaneous.md)
+* [pip](tools/pip/README.md)
+  * [Miscellaneous](tools/pip/miscellaneous.md)
+* [Python Tools](tools/python-tools/README.md)
+  * [Virtual Environment](tools/python-tools/virtual-environment.md)
+  * [Dependency Parsing](tools/python-tools/dependency-parsing.md)
 * [CMake](tools/cmake.md)
 * [LLVM](tools/llvm.md)
 * [MATLAB](tools/matlab/README.md)
