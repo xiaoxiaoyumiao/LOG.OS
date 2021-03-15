@@ -75,7 +75,17 @@ String pattern = "some_pattern";
 isMatch = Pattern.matches(pattern,content);
 ```
 
+## Template Literals
+
+类似字符串格式化的语法糖，使用反引号可以创建一个 template literal，它能嵌入表达式。
+
+```text
+`string text ${expression} string text`
+```
+
 ## Reference
 
 [\[1\] JAVA 正则表达式实例](https://www.cnblogs.com/hshshs/p/8315904.html)
+
+\[2\] [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template\_literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals)
 

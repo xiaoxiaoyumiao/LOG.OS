@@ -12,6 +12,8 @@ Policy - Lazy Update
 
 懒狗更新 \(√\)
 
+记录时中英文混合，毫无一致性，哪种语言顺手就用哪个
+
 Terminology:
 
 * Dependency 描述本页面需要的前置知识。
