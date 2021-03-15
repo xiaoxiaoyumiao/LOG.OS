@@ -4,6 +4,7 @@
 
 ## THEORY
 
+* [Information Theory](theory/information-theory.md)
 * [Formal Languages](theory/formal-languages/README.md)
   * [Regular Expressions](theory/formal-languages/regular-expressions.md)
 * [Language Processing](theory/language-processing/README.md)
@@ -22,6 +23,9 @@
     * [4.1 Naive Bayes Classifiers](theory/language-processing/chapter-4-naive-bayes-and-sentiment-classification/4.1-naive-bayes-classifiers.md)
     * [4.6 Naive Bayes as a Language Model](theory/language-processing/chapter-4-naive-bayes-and-sentiment-classification/4.6-naive-bayes-as-a-language-model.md)
     * [4.7 Evaluation: Precision, Recall, F-measure](theory/language-processing/chapter-4-naive-bayes-and-sentiment-classification/4.7-evaluation-precision-recall-f-measure.md)
+  * [Chapter 5 Logistic Regression](theory/language-processing/chapter-5-logistic-regression/README.md)
+    * [5.3 The Cross-entropy Loss Function](theory/language-processing/chapter-5-logistic-regression/5.3-the-cross-entropy-loss-function.md)
+  * [Chapter 6 Vector Semantics and Embeddings](theory/language-processing/chapter-6-vector-semantics-and-embeddings.md)
 
 ## Programming Languages
 
@@ -62,6 +66,8 @@
   * [import & export](programming-languages/javascript/import-and-export.md)
   * [Promise](programming-languages/javascript/promise.md)
   * [Miscellaneous](programming-languages/javascript/miscellaneous.md)
+* [Bash](programming-languages/bash/README.md)
+  * [Control Flow](programming-languages/bash/untitled.md)
 * [CMD](programming-languages/cmd/README.md)
   * [Miscellaneous](programming-languages/cmd/miscellaneous.md)
 
@@ -74,6 +80,8 @@
 * [Python Tools](tools/python-tools/README.md)
   * [Virtual Environment](tools/python-tools/virtual-environment.md)
   * [Dependency Parsing](tools/python-tools/dependency-parsing.md)
+* [Anaconda](tools/anaconda.md)
+* [Git](tools/git.md)
 * [CMake](tools/cmake.md)
 * [LLVM](tools/llvm.md)
 * [MATLAB](tools/matlab/README.md)
@@ -83,6 +91,7 @@
   * [Numerical Analysis](tools/matlab/numerical-analysis.md)
   * [Control Theory](tools/matlab/control-theory.md)
   * [Statistics](tools/matlab/statistics.md)
+* [TensorFlow](tools/tensorflow.md)
 * [PyTorch](tools/pytorch/README.md)
   * [Introduction](tools/pytorch/introduction.md)
   * [torch.nn](tools/pytorch/torch.nn.md)
