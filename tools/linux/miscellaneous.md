@@ -1,28 +1,29 @@
 # Miscellaneous
 
-* oneko 命令
+* oneko
   * 可以在桌面生成一只会追逐鼠标的猫。
-* df 命令
-  * 查看分区总空间和剩余空间
+* man &lt;command&gt;
+  * 查看 command 的 manual。在查询各个工具的作用和参数时非常有用。
+  * 发挥类似作用的工具有 help 和 tldr，不过没有使用过。
+  * man 的输出使用了 less 分页，其众多操作方法和 vim 类同。
+    * 例如，使用 /&lt;pattern&gt; 搜索一个 pattern，并使用 n 和 N 向后或向前查找各个结果。
+    * ref: [https://superuser.com/questions/304065/how-do-i-search-for-a-word-or-a-phrase-in-the-linux-man-command-and-cycle-thro](https://superuser.com/questions/304065/how-do-i-search-for-a-word-or-a-phrase-in-the-linux-man-command-and-cycle-thro)
+* source / .
+  * source &lt;file&gt;
+  * source 将一个脚本加载到当前进程中执行。
+  * [https://stackoverflow.com/questions/13786499/what-is-the-difference-between-using-sh-and-source](https://stackoverflow.com/questions/13786499/what-is-the-difference-between-using-sh-and-source)
+* which &lt;command&gt;
+  * 查看 command 实际执行了位于何处的程序。
+* df 
+  * 查看分区总空间和剩余空间。加上 -h 可以将数目换算为 K，M 等易于阅读的单位。
   * df \[path\] 可以查看 path 的空间使用情况
-* find 命令
-  * -name &lt;pattern&gt; 提供待匹配的文件名 pattern
-  * -regex &lt;pattern&gt; 使用 EMACS regex 语法匹配文件路径（注意不是文件名）
-  * -maxdepth &lt;non-negative-number&gt; 控制搜索的最大深度
-  * -mindepth &lt;non-negative-number&gt; 控制搜索的最小深度
-  * -exec &lt;commands&gt; ; 对匹配到的每个文件执行 command
-    * 执行时将 command 中的 {} 替换为当前匹配到的文件
-    * exec 读入 command 内容时到分号为止
-    * 为了防止被 shell 替换，一般把 {} 和 ; 保护起来，如 '{}' 和 \;
-    * 一个能运作的例子：`find . -maxdepth 1 -name "*.lbl" -exec echo '{}' \;` 查找当前目录下所有后缀为 .lbl 的文件并打印文件名
-  * man find 中的 OPERATORS 一节提供了参数级别的搜索条件运算
-    * \(\) 可以提升运算的优先级，但要写成 \\( \\) 转义，且和其他参数之间以空格分隔
-    * -a 以与关系连接两个搜索条件，当且仅当左侧条件满足时计算右侧条件
-    * -o 以或关系连接两个搜索条件，当且仅当左侧条件不满足时计算右侧条件
-    * 一个能运作的例子：`find . -maxdepth 1 \( -name '*.typ' -o -name '*.lbl' \) -exec echo '{}' \;` 查找当前目录下所有后缀为 .typ 或 .lbl 的文件并打印文件名
-* kill &lt;pid&gt; 终止一个进程号为 pid 的进程
-* top 查看进程和 cpu 的使用情况（类似任务管理器）
-* 关于全局变量定义
+* kill &lt;pid&gt; 
+  * 终止一个进程号为 pid 的进程
+* top
+  * 查看进程和 cpu 的使用情况（类似任务管理器）
+* 关于环境变量定义
+  * TODO 请检查这是否应该移动到 [Bash](../../programming-languages/bash/) section。
+  * [https://www.serverlab.ca/tutorials/linux/administration-linux/how-to-set-environment-variables-in-linux/](https://www.serverlab.ca/tutorials/linux/administration-linux/how-to-set-environment-variables-in-linux/)
   * [https://blog.csdn.net/qq\_32863631/article/details/76348963](https://blog.csdn.net/qq_32863631/article/details/76348963)
 * nvidia-smi 显示显卡信息
   * CUDA version 指示驱动 API 版本，查看 CUDA toolkit 版本使用 cat /usr/local/cuda/version.txt
