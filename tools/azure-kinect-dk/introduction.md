@@ -17,9 +17,13 @@
 * Install the SDK
 * Set up the device and connect it with PC
 * Firmware update
-* Open Azure Kinect Viewer 
+* Open Azure Kinect Viewer and check the output
 
 ## Installation Reference
 
-[https://docs.microsoft.com/en-us/azure/kinect-dk/](https://docs.microsoft.com/en-us/azure/kinect-dk/)
+{% embed url="https://docs.microsoft.com/en-us/azure/kinect-dk/" %}
+
+## API Reference
+
+[https://microsoft.github.io/Azure-Kinect-Sensor-SDK/master/index.html](https://microsoft.github.io/Azure-Kinect-Sensor-SDK/master/index.html)
 

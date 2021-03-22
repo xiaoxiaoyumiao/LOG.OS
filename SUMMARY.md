@@ -66,6 +66,7 @@
   * [String](programming-languages/javascript/string.md)
   * [Objects](programming-languages/javascript/objects.md)
   * [Class](programming-languages/javascript/class.md)
+  * [ArrayBuffer & TypedArray](programming-languages/javascript/arraybuffer-and-typedarray.md)
   * [Iterator & Generator](programming-languages/javascript/iterator-and-generator.md)
   * [import & export](programming-languages/javascript/import-and-export.md)
   * [Promise](programming-languages/javascript/promise.md)
@@ -79,6 +80,7 @@
 
 * [Bash Tools](tools/linux/README.md)
   * [find](tools/linux/find.md)
+  * [tar](tools/linux/tar.md)
   * [Miscellaneous](tools/linux/miscellaneous.md)
 * [Vim](tools/vim/README.md)
   * [Miscellaneous](tools/vim/miscellaneous.md)
@@ -114,6 +116,7 @@
 * [Node.js & npm](tools/node.js-and-npm.md)
 * [Azure Kinect DK](tools/azure-kinect-dk/README.md)
   * [Introduction](tools/azure-kinect-dk/introduction.md)
+  * [First Application](tools/azure-kinect-dk/first-application.md)
 
 ## IDE
 

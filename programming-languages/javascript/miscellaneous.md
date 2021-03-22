@@ -43,5 +43,14 @@
     }
     ```
 * 除了 TextEncoder / TextDecoder，Buffer 也可以方便地起到字符串和 ArrayBuffer 转换的效果。
-  * [https://nodejs.org/api/buffer.html\#buffer\_buf\_buffer](https://nodejs.org/api/buffer.html#buffer_buf_buffer)
+  * ```text
+    const arrayBuffer = new ArrayBuffer(16);
+    const buffer = Buffer.from(arrayBuffer);
+    // buffer to string
+    buffer.toString(encoding, start, end);
+    ```
+
+    * [https://nodejs.org/api/buffer.html\#buffer\_buf\_buffer](https://nodejs.org/api/buffer.html#buffer_buf_buffer)
+* Array 的 forEach 方法可以方便地顺序遍历元素。
+  * [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Array/forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 

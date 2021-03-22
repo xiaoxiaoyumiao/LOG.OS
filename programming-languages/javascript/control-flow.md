@@ -65,6 +65,9 @@ for (x in person) {
 } // text = "Bill Gates 62"
 ```
 
+* 事实上 for - in 的迭代次序在应用于数组时并不一定依赖数组本身的索引顺序，所以如果要遍历一个数组，建议采用传统 for 或者 `Array.prototype.forEach` 或者下文的 for - of 。
+  * ref: [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
+
 ## For-of
 
 For-of loops over values of an iterable object.
