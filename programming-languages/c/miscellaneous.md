@@ -19,4 +19,7 @@
 * 关于基本数据类型和 byte array 之间的转换
   * 使用 BitConverter 类可以把 byte array 对象（用十六进制表示）打印出来。
   * 使用 Encoding.UTF8.GetString\(array\) 可以把 byte array 对象按 UTF8 编码转换为字符串。
+* 关于COM 口数据收发
+  * 使用 Serial Port 类
+  * [https://docs.microsoft.com/en-us/dotnet/api/system.io.ports.serialport?view=dotnet-plat-ext-5.0](https://docs.microsoft.com/en-us/dotnet/api/system.io.ports.serialport?view=dotnet-plat-ext-5.0)
 

@@ -136,5 +136,7 @@
 
 ## ARCHITECTURE
 
+* [USB Protocol](architecture/usb-protocol/README.md)
+  * [Miscellaneous](architecture/usb-protocol/miscellaneous.md)
 * [C8051Fxxx](architecture/c8051fxxx.md)
 
