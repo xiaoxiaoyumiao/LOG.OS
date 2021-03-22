@@ -19,7 +19,15 @@ nn.Dropout(dropout)
 
 train(mode = True)
 使模型进入训练模式。据称只对部分模型有影响。返回self.
+
+nn.Parameter
+是 Tensor 的子类，把 Tensor 封装为一个被认为是模型参数的对象。
+
+Container:
+
 ModuleList(modules = None)
 把子模块放在一个列表里面，可以像列表一样访问。
+
+
 ```
 
