@@ -30,6 +30,7 @@
   * [Chapter 5 Logistic Regression](theory/language-processing/chapter-5-logistic-regression/README.md)
     * [5.3 The Cross-entropy Loss Function](theory/language-processing/chapter-5-logistic-regression/5.3-the-cross-entropy-loss-function.md)
   * [Chapter 6 Vector Semantics and Embeddings](theory/language-processing/chapter-6-vector-semantics-and-embeddings.md)
+  * [Miscellaneous](theory/language-processing/miscellaneous.md)
 
 ## Programming Languages
 
