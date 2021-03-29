@@ -29,7 +29,8 @@
     * [4.7 Evaluation: Precision, Recall, F-measure](theory/language-processing/chapter-4-naive-bayes-and-sentiment-classification/4.7-evaluation-precision-recall-f-measure.md)
   * [Chapter 5 Logistic Regression](theory/language-processing/chapter-5-logistic-regression/README.md)
     * [5.3 The Cross-entropy Loss Function](theory/language-processing/chapter-5-logistic-regression/5.3-the-cross-entropy-loss-function.md)
-  * [Chapter 6 Vector Semantics and Embeddings](theory/language-processing/chapter-6-vector-semantics-and-embeddings.md)
+  * [Chapter 6 Vector Semantics and Embeddings](theory/language-processing/chapter-6-vector-semantics-and-embeddings/README.md)
+    * [6.1 Lexical Semantics](theory/language-processing/chapter-6-vector-semantics-and-embeddings/6.1-lexical-semantics.md)
   * [Miscellaneous](theory/language-processing/miscellaneous.md)
 
 ## Programming Languages
@@ -65,6 +66,7 @@
 * [JavaScript](programming-languages/javascript/README.md)
   * [Control Flow](programming-languages/javascript/control-flow.md)
   * [String](programming-languages/javascript/string.md)
+  * [Array](programming-languages/javascript/array.md)
   * [Objects](programming-languages/javascript/objects.md)
   * [Class](programming-languages/javascript/class.md)
   * [ArrayBuffer & TypedArray](programming-languages/javascript/arraybuffer-and-typedarray.md)
@@ -93,6 +95,7 @@
 * [Anaconda](tools/anaconda/README.md)
   * [Installation](tools/anaconda/installation.md)
   * [Virtual Environment](tools/anaconda/untitled.md)
+  * [Miscellaneous](tools/anaconda/miscellaneous.md)
 * [Git](tools/git.md)
 * [CMake](tools/cmake.md)
 * [LLVM](tools/llvm.md)
@@ -118,6 +121,8 @@
 * [Azure Kinect DK](tools/azure-kinect-dk/README.md)
   * [Introduction](tools/azure-kinect-dk/introduction.md)
   * [First Application](tools/azure-kinect-dk/first-application.md)
+* [adb](tools/untitled/README.md)
+  * [Basics](tools/untitled/basics.md)
 
 ## IDE
 
@@ -140,4 +145,5 @@
 * [USB Protocol](architecture/usb-protocol/README.md)
   * [Miscellaneous](architecture/usb-protocol/miscellaneous.md)
 * [C8051Fxxx](architecture/c8051fxxx.md)
+* [Android](architecture/android.md)
 
