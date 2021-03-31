@@ -24,11 +24,26 @@ console.log(uint8.join());
 console.log(uint8.join(''));
 // expected output: "1020304050"
 
+// reduce elements to a single value
+Array.prototype.reduce(callback( accumulator, currentValue, [, index[, array]] )[, initialValue])
 const array1 = [1, 2, 3, 4];
 const reducer = (accumulator, currentValue) => accumulator + currentValue;
 // 1 + 2 + 3 + 4
 console.log(array1.reduce(reducer));
 // expected output: 10
+
+const uint8 = new Uint8Array([0, 1, 2, 3]);
+function sum(previousValue, currentValue) {
+  return previousValue.toString() + "," + currentValue.toString();
+}
+console.log(uint8.reduce(sum));
+// expected output:  "0,1,2,3"
+
+// Take a slice of a given array. This is a shallow copy.
+Array.prototype.slice([begin[, end]])
+const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+console.log(animals.slice(2, 4));
+// expected output: Array ["camel", "duck"]
 ```
 
 ## Reference
@@ -36,4 +51,10 @@ console.log(array1.reduce(reducer));
 \[1\] [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Array/map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 
 \[2\] [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/TypedArray/join](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/join)
+
+\[3\] [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Array/Reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+
+\[4\] [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Array/slice](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
+
+
 

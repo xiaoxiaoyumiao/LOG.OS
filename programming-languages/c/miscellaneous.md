@@ -22,4 +22,7 @@
 * 关于COM 口数据收发
   * 使用 Serial Port 类
   * [https://docs.microsoft.com/en-us/dotnet/api/system.io.ports.serialport?view=dotnet-plat-ext-5.0](https://docs.microsoft.com/en-us/dotnet/api/system.io.ports.serialport?view=dotnet-plat-ext-5.0)
+* 关于预处理指令
+  * C\# 的预处理机制并不强大，可以使用的如 if else endif 等条件判断以及逻辑运算符。
+  * [https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/preprocessor-directives](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/preprocessor-directives)
 
