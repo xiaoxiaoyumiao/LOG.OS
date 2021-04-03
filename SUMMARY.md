@@ -126,6 +126,9 @@
   * [First Application](tools/azure-kinect-dk/first-application.md)
 * [adb](tools/untitled/README.md)
   * [Basics](tools/untitled/basics.md)
+* [Docker](tools/docker/README.md)
+  * [Installation](tools/docker/installation.md)
+  * [Basics](tools/docker/basics.md)
 
 ## IDE
 
@@ -140,6 +143,7 @@
 * [Simplicity Studio](ide/simplicity-studio.md)
 * [Weixin Applet](ide/weixin-applet/README.md)
   * [Project Structure](ide/weixin-applet/project-structure.md)
+  * [WXML](ide/weixin-applet/wxml.md)
   * [Storage](ide/weixin-applet/storage.md)
   * [Miscellaneous](ide/weixin-applet/miscellaneous.md)
 
@@ -153,4 +157,5 @@
   * [Miscellaneous](architecture/c8051fxxx/miscellaneous.md)
 * [Android](architecture/android/README.md)
   * [Bluetooth](architecture/android/bluetooth.md)
+* [WSL](architecture/wsl.md)
 
