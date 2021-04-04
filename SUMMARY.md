@@ -32,6 +32,8 @@
   * [Chapter 6 Vector Semantics and Embeddings](theory/language-processing/chapter-6-vector-semantics-and-embeddings/README.md)
     * [6.1 Lexical Semantics](theory/language-processing/chapter-6-vector-semantics-and-embeddings/6.1-lexical-semantics.md)
   * [Miscellaneous](theory/language-processing/miscellaneous.md)
+* [Algorithms](theory/algorithms/README.md)
+  * [Miscellaneous](theory/algorithms/miscellaneous.md)
 
 ## Programming Languages
 
