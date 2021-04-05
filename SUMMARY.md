@@ -2,6 +2,12 @@
 
 * [HOME](README.md)
 
+## LOGOS <a id="diary"></a>
+
+* [LOGOS](diary/logos/README.md)
+  * [2021](diary/logos/2021/README.md)
+    * [4](diary/logos/2021/4.md)
+
 ## THEORY
 
 * [Math Basics](theory/math-basics/README.md)
@@ -131,6 +137,8 @@
 * [Docker](tools/docker/README.md)
   * [Installation](tools/docker/installation.md)
   * [Basics](tools/docker/basics.md)
+* [SSH](tools/ssh/README.md)
+  * [Login to Remote with SSH Keys](tools/ssh/login-to-remote-with-ssh-keys.md)
 
 ## IDE
 
