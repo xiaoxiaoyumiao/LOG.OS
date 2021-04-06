@@ -5,6 +5,8 @@
 * 以 Linux 环境为例，其他 OS 上过程基本相同。
 * 基本运作原理是：通过 ssh-keygen 工具创建一对公私钥，把私钥保存在 local 机器上，把公钥保存在 host 机器上，从 local 登录到远程的 host 时，将私钥位置告知 ssh，ssh 利用给定的私钥完成认证。
 * TODO：ssh-agent 自启动
+  * [http://mah.everybody.org/docs/ssh\#run-ssh-agent](http://mah.everybody.org/docs/ssh#run-ssh-agent)
+  * [https://stackoverflow.com/questions/18880024/start-ssh-agent-on-login](https://stackoverflow.com/questions/18880024/start-ssh-agent-on-login)
 
 ```bash
 # ~/.ssh is a default directory that SSH looks into.

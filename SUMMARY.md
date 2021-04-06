@@ -95,6 +95,7 @@
   * [find](tools/linux/find.md)
   * [tar](tools/linux/tar.md)
   * [tmux](tools/linux/tmux.md)
+  * [scp](tools/linux/scp.md)
   * [Miscellaneous](tools/linux/miscellaneous.md)
 * [Vim](tools/vim/README.md)
   * [Miscellaneous](tools/vim/miscellaneous.md)
