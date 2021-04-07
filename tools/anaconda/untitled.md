@@ -46,7 +46,20 @@ conda create --prefix ./envs
 conda activate ./env
 ```
 
+## Work with Pip
+
+如果已经有了一个 conda 虚拟环境，但 conda install 能安装的包并不太齐全，而想用 pip 安装，可以考虑：
+
+```text
+conda install pip
+pip install -r requirements.txt
+```
+
+安装时注意自己调用的是不是虚拟环境里的 pip。
+
 ## Reference
 
-[https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
+\[1\] [https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
+
+\[2\] [https://stackoverflow.com/questions/41060382/using-pip-to-install-packages-to-anaconda-environment](https://stackoverflow.com/questions/41060382/using-pip-to-install-packages-to-anaconda-environment)
 

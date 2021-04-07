@@ -37,7 +37,11 @@ let utf8decoder = new TextDecoder(); // default 'utf-8' or 'utf8'
 let u8arr = new Uint8Array([240, 160, 174, 183]);
 console.log(utf8decoder.decode(u8arr));
 
-
+// 使用 template 语法可以方便地做到字符串格式化
+const five = 5;
+const ten = 10;
+// 注意两侧采用反引号括住，字符串中间使用 ${} 求值
+console.log(`Fifteen is ${five + ten} and not ${2 * five + ten}.`);
 ```
 
 ## Reference
@@ -51,4 +55,6 @@ console.log(utf8decoder.decode(u8arr));
 \[4\] [https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder](https://developer.mozilla.org/en-US/docs/Web/API/TextEncoder)
 
 \[5\] [https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder](https://developer.mozilla.org/en-US/docs/Web/API/TextDecoder)
+
+\[6\] [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Text\_formatting](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Text_formatting)
 

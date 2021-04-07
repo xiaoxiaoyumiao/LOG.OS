@@ -2,6 +2,12 @@
 
 * [HOME](README.md)
 
+## LOGOS <a id="diary"></a>
+
+* [LOGOS](diary/logos/README.md)
+  * [2021](diary/logos/2021/README.md)
+    * [4](diary/logos/2021/4.md)
+
 ## THEORY
 
 * [Math Basics](theory/math-basics/README.md)
@@ -29,7 +35,11 @@
     * [4.7 Evaluation: Precision, Recall, F-measure](theory/language-processing/chapter-4-naive-bayes-and-sentiment-classification/4.7-evaluation-precision-recall-f-measure.md)
   * [Chapter 5 Logistic Regression](theory/language-processing/chapter-5-logistic-regression/README.md)
     * [5.3 The Cross-entropy Loss Function](theory/language-processing/chapter-5-logistic-regression/5.3-the-cross-entropy-loss-function.md)
-  * [Chapter 6 Vector Semantics and Embeddings](theory/language-processing/chapter-6-vector-semantics-and-embeddings.md)
+  * [Chapter 6 Vector Semantics and Embeddings](theory/language-processing/chapter-6-vector-semantics-and-embeddings/README.md)
+    * [6.1 Lexical Semantics](theory/language-processing/chapter-6-vector-semantics-and-embeddings/6.1-lexical-semantics.md)
+  * [Miscellaneous](theory/language-processing/miscellaneous.md)
+* [Algorithms](theory/algorithms/README.md)
+  * [Miscellaneous](theory/algorithms/miscellaneous.md)
 
 ## Programming Languages
 
@@ -46,6 +56,7 @@
 * [C51](programming-languages/c51/README.md)
   * [Basics](programming-languages/c51/basics.md)
   * [I/O](programming-languages/c51/i-o.md)
+  * [Start Up Files](programming-languages/c51/start-up-files.md)
   * [Listing File / LST](programming-languages/c51/listing-file-lst.md)
   * [Compiler Options](programming-languages/c51/compiler-options.md)
   * [Assembler Options](programming-languages/c51/assembler-options.md)
@@ -64,7 +75,9 @@
 * [JavaScript](programming-languages/javascript/README.md)
   * [Control Flow](programming-languages/javascript/control-flow.md)
   * [String](programming-languages/javascript/string.md)
+  * [Array](programming-languages/javascript/array.md)
   * [Objects](programming-languages/javascript/objects.md)
+  * [Functions](programming-languages/javascript/functions.md)
   * [Class](programming-languages/javascript/class.md)
   * [ArrayBuffer & TypedArray](programming-languages/javascript/arraybuffer-and-typedarray.md)
   * [Iterator & Generator](programming-languages/javascript/iterator-and-generator.md)
@@ -81,6 +94,8 @@
 * [Bash Tools](tools/linux/README.md)
   * [find](tools/linux/find.md)
   * [tar](tools/linux/tar.md)
+  * [tmux](tools/linux/tmux.md)
+  * [scp](tools/linux/scp.md)
   * [Miscellaneous](tools/linux/miscellaneous.md)
 * [Vim](tools/vim/README.md)
   * [Miscellaneous](tools/vim/miscellaneous.md)
@@ -92,6 +107,7 @@
 * [Anaconda](tools/anaconda/README.md)
   * [Installation](tools/anaconda/installation.md)
   * [Virtual Environment](tools/anaconda/untitled.md)
+  * [Miscellaneous](tools/anaconda/miscellaneous.md)
 * [Git](tools/git.md)
 * [CMake](tools/cmake.md)
 * [LLVM](tools/llvm.md)
@@ -117,6 +133,13 @@
 * [Azure Kinect DK](tools/azure-kinect-dk/README.md)
   * [Introduction](tools/azure-kinect-dk/introduction.md)
   * [First Application](tools/azure-kinect-dk/first-application.md)
+* [adb](tools/untitled/README.md)
+  * [Basics](tools/untitled/basics.md)
+* [Docker](tools/docker/README.md)
+  * [Installation](tools/docker/installation.md)
+  * [Basics](tools/docker/basics.md)
+* [SSH](tools/ssh/README.md)
+  * [Login to Remote with SSH Keys](tools/ssh/login-to-remote-with-ssh-keys.md)
 
 ## IDE
 
@@ -131,10 +154,19 @@
 * [Simplicity Studio](ide/simplicity-studio.md)
 * [Weixin Applet](ide/weixin-applet/README.md)
   * [Project Structure](ide/weixin-applet/project-structure.md)
+  * [WXML](ide/weixin-applet/wxml.md)
   * [Storage](ide/weixin-applet/storage.md)
   * [Miscellaneous](ide/weixin-applet/miscellaneous.md)
 
 ## ARCHITECTURE
 
-* [C8051Fxxx](architecture/c8051fxxx.md)
+* [USB Protocol](architecture/usb-protocol/README.md)
+  * [Miscellaneous](architecture/usb-protocol/miscellaneous.md)
+* [BLE Protocol](architecture/ble-protocol/README.md)
+  * [Introduction](architecture/ble-protocol/introduction.md)
+* [C8051Fxxx](architecture/c8051fxxx/README.md)
+  * [Miscellaneous](architecture/c8051fxxx/miscellaneous.md)
+* [Android](architecture/android/README.md)
+  * [Bluetooth](architecture/android/bluetooth.md)
+* [WSL](architecture/wsl.md)
 

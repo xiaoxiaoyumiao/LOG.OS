@@ -53,4 +53,12 @@
     * [https://nodejs.org/api/buffer.html\#buffer\_buf\_buffer](https://nodejs.org/api/buffer.html#buffer_buf_buffer)
 * Array 的 forEach 方法可以方便地顺序遍历元素。
   * [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Array/forEach](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+* 关于随机数：使用`Math.random()` 生成
+* ```text
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
+  ```
+
+  * [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/Math/random](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random)
 

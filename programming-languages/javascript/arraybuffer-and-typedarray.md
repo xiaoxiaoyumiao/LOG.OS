@@ -52,6 +52,26 @@ for (let i = 0; i < int32View.length; i++) {
 
 `DataView` 和 `TypedArray` 都可以在从 `ArrayBuffer` 构造时指定 offset 和 length，即从原 buffer 相对起始位置偏移多少（字节）开始，覆盖多少（字节）的长度。这样就可以只针对 buffer 的特定数据段操作。但注意这种情况下 view 对象返回的 `byteLength` 和其 buffer 属性的 `byteLength` 并不会一致，其 buffer 属性保持着先前的 `ArrayBuffer` 的属性。
 
+## Methods
+
+大多数 Array 的方法 Typed Array 都有。此处列举一些 Typed Array 独有的方法。
+
+```javascript
+// set values of the current array starting from offset
+// to the values provided by array.
+// 默认使用 array 的所有值，且会在越界时报错。
+// 如果只想使用 array 的一部分值，可以考虑使用 slice 方法。
+typedarray.set(array[, offset])
+
+// create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(8);
+const uint8 = new Uint8Array(buffer);
+// Copy the values into the array starting at index 3
+uint8.set([1, 2, 3], 3);
+console.log(uint8);
+// expected output: Uint8Array [0, 0, 0, 1, 2, 3, 0, 0]
+```
+
 ## Reference
 
 \[1\] [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/ArrayBuffer](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
@@ -61,4 +81,6 @@ for (let i = 0; i < int32View.length; i++) {
 \[3\] [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed\_arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Typed_arrays)
 
 \[4\] [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/TypedArray](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)
+
+\[5\] [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global\_Objects/TypedArray/set](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/set)
 
