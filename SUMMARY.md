@@ -85,7 +85,9 @@
   * [Promise](programming-languages/javascript/promise.md)
   * [Miscellaneous](programming-languages/javascript/miscellaneous.md)
 * [Bash](programming-languages/bash/README.md)
-  * [Control Flow](programming-languages/bash/untitled.md)
+  * [3.2 Shell Commands](programming-languages/bash/3.2-shell-commands/README.md)
+    * [3.2.5 Compound Commands](programming-languages/bash/3.2-shell-commands/untitled.md)
+  * [6.2 Bash Startup Files](programming-languages/bash/bash-startups.md)
 * [CMD & PowerShell](programming-languages/cmd/README.md)
   * [Miscellaneous](programming-languages/cmd/miscellaneous.md)
 
