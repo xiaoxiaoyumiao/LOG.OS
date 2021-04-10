@@ -108,6 +108,10 @@ ProxyCommand /path/to/openSSH/ssh.exe -W %h:%p host
 
 \[8\] [https://www.tecmint.com/access-linux-server-using-a-jump-host/](https://www.tecmint.com/access-linux-server-using-a-jump-host/)
 
+\[9\] [https://blog.csdn.net/weixin\_42096901/article/details/105193366](https://blog.csdn.net/weixin_42096901/article/details/105193366)
+
+\[10\] [https://docs.microsoft.com/zh-cn/windows-server/administration/openssh/openssh\_overview](https://docs.microsoft.com/zh-cn/windows-server/administration/openssh/openssh_overview)
+
 
 
 
