@@ -27,8 +27,10 @@
   * [https://blog.csdn.net/qq\_32863631/article/details/76348963](https://blog.csdn.net/qq_32863631/article/details/76348963)
 * nvidia-smi 显示显卡信息
   * CUDA version 指示驱动 API 版本，查看 CUDA toolkit 版本使用 cat /usr/local/cuda/version.txt
+  * nvidia-smi -l \[second\] 命令可以每 \[second\] 秒（loop）打印一次显卡信息
   * [https://stackoverflow.com/questions/53422407/different-cuda-versions-shown-by-nvcc-and-nvidia-smi](https://stackoverflow.com/questions/53422407/different-cuda-versions-shown-by-nvcc-and-nvidia-smi)
   * [https://docs.nvidia.com/cuda/cuda-runtime-api/driver-vs-runtime-api.html](https://docs.nvidia.com/cuda/cuda-runtime-api/driver-vs-runtime-api.html)
+  * [https://blog.csdn.net/sinat\_26871259/article/details/82684582](https://blog.csdn.net/sinat_26871259/article/details/82684582)
 * 方便的目录栈：dirs, pushd, popd
   * [https://www.linuxprobe.com/linux-change-dir.html](https://www.linuxprobe.com/linux-change-dir.html)
 * tail：快速浏览文件内容
