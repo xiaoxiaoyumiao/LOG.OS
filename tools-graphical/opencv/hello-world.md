@@ -31,7 +31,11 @@ int main(int argc, char** argv)
 }
 ```
 
+注意：`imshow` 后面必须跟随一个 `waitKey` 或者 `pollKey` 函数，否则无法达到显示效果。传入一个正的参数可以设置显示一帧的延时。
+
 ## Reference
 
 \[1\] [https://docs.opencv.org/4.5.2/dd/d6e/tutorial\_windows\_visual\_studio\_opencv.html](https://docs.opencv.org/4.5.2/dd/d6e/tutorial_windows_visual_studio_opencv.html)
+
+\[2\] [https://docs.opencv.org/master/d7/dfc/group\_\_highgui.html\#ga453d42fe4cb60e5723281a89973ee563](https://docs.opencv.org/master/d7/dfc/group__highgui.html#ga453d42fe4cb60e5723281a89973ee563)
 

@@ -4,6 +4,7 @@
 * add Microsoft.Azure.Kinect.Sensor NuGet package to the project
 * include the header file in the project
 * please get used to the open and close primitives
+* 这里的 k4a 应该是 kinect for azure 的缩写
 
 ```c
 #include <stdio.h>

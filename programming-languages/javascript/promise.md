@@ -21,6 +21,7 @@
   * 即使通过 then 等方法添加回调函数时 Promise 已经进入 fulfilled 或 rejected 状态，回调函数仍然会被执行，因此不必担心异步函数执行和回调的竞争冒险问题。
   * 如果觉得 `promise.then(()=>{ return new Promise((resolve, reject)=>{ ... } ); })` 这种写法看起来很庞杂（特别是在实际执行函数体并不长或者 Promise 一定会进入某个确定状态的时候），可以考虑使用 Promise 的静态函数 reject 和 resolve，它们会直接返回一个解决到对应状态的 Promise 对象。
     * 当然对于 resolve 方法，如果它接受的返回值是一个带有 then 方法的对象（比如一个 Promise 对象），那么它返回的 Promise 对象会像 then 返回的 Promise 那样跟随这个对象的状态和结果。
+* Promise 另外提供了 any、allSettled、race 等静态方法，从而可以对多个 Promise 结果进行逻辑运算。
 
 ```text
 promise1

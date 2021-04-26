@@ -7,4 +7,10 @@
   * [https://stackoverflow.com/questions/55224016/importerror-libcublas-so-10-0-cannot-open-shared-object-file-no-such-file-or](https://stackoverflow.com/questions/55224016/importerror-libcublas-so-10-0-cannot-open-shared-object-file-no-such-file-or)
   * [https://github.com/tensorflow/tensorflow/issues/26182\#issuecomment-684993950](https://github.com/tensorflow/tensorflow/issues/26182#issuecomment-684993950)
   * [https://github.com/tensorflow/tensorflow/issues/28660](https://github.com/tensorflow/tensorflow/issues/28660)
+* tfhub 在大陆访问受限，可以使用 tfhub 在中国的镜像地址：
+
+```python
+# hub.Module("https://tfhub.dev/google/elmo/2")
+hub.Module("https://hub.tensorflow.google.cn/google/elmo/2")
+```
 
