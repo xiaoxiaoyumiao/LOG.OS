@@ -1,8 +1,6 @@
 # String
 
-#### 字符串操作
-
-**格式化Format**
+## **Format**
 
 格式化：%和format
 
@@ -28,8 +26,6 @@
 10 world hello world
 ```
 
-[https://www.cnblogs.com/fat39/p/7159881.html](https://www.cnblogs.com/fat39/p/7159881.html)
-
 | 数字 | 格式 | 输出 | 描述 |
 | :--- | :--- | :--- | :--- |
 | 3.1415926 | {:.2f} | 3.14 | 保留小数点后两位 |
@@ -45,4 +41,18 @@
 | 13 | {:&gt;10d} | 13 | 右对齐 \(默认, 宽度为10\) |
 | 13 | {:&lt;10d} | 13 | 左对齐 \(宽度为10\) |
 | 13 | {:^10d} | 13 | 中间对齐 \(宽度为10\) |
+
+## Pattern Matching
+
+TODO
+
+ref: \[1\]
+
+## Reference 
+
+\[1\] [https://docs.python.org/2/library/re.html](https://docs.python.org/2/library/re.html)
+
+\[2\] [https://www.cnblogs.com/fat39/p/7159881.html](https://www.cnblogs.com/fat39/p/7159881.html)
+
+
 

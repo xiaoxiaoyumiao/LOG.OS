@@ -44,14 +44,18 @@
 ## Programming Languages
 
 * [Python](programming-languages/python/README.md)
-  * [File System & I/O](programming-languages/python/file-system-and-i-o.md)
+  * [File System & I/O](programming-languages/python/file-system-and-i-o/README.md)
+    * [Serialization](programming-languages/python/file-system-and-i-o/serialization.md)
   * [String](programming-languages/python/string.md)
-  * [Aggregations](programming-languages/python/aggregations.md)
+  * [Containers](programming-languages/python/aggregations/README.md)
+    * [Emulating Containers](programming-languages/python/aggregations/emulating-containers.md)
   * [Function](programming-languages/python/function.md)
   * [Class & Object](programming-languages/python/class-and-object.md)
   * [Module & Package](programming-languages/python/module-and-package.md)
   * [Python Doc](programming-languages/python/python-doc.md)
   * [Iterator & Generator](programming-languages/python/iterator-and-generator.md)
+  * [Iterables](programming-languages/python/iterables.md)
+  * [Numerical](programming-languages/python/numerical.md)
   * [Miscellaneous](programming-languages/python/miscellaneous.md)
 * [C](programming-languages/c-c++/README.md)
   * [String](programming-languages/c-c++/string.md)
@@ -69,7 +73,9 @@
   * [MAP file / M51](programming-languages/c51/map-file-m51.md)
   * [Linker Options](programming-languages/c51/linker-options.md)
   * [Miscellaneous](programming-languages/c51/miscellaneous.md)
-* [C++](programming-languages/c++.md)
+* [C++](programming-languages/c++/README.md)
+  * [DLL](programming-languages/c++/dll.md)
+  * [Miscellaneous](programming-languages/c++/miscellaneous.md)
 * [Java](programming-languages/java/README.md)
   * [Introduction](programming-languages/java/introduction.md)
   * [Data Types](programming-languages/java/data-types.md)
@@ -120,10 +126,14 @@
 * [adb](tools/untitled/README.md)
   * [Basics](tools/untitled/basics.md)
 * [SSH](tools/ssh/README.md)
+  * [Introduction](tools/ssh/introduction.md)
   * [Login to Remote with SSH Keys](tools/ssh/login-to-remote-with-ssh-keys.md)
+  * [Port Forwarding](tools/ssh/port-forwarding.md)
 
 ## TOOLS - GRAPHICAL
 
+* [X11](tools-graphical/untitled-1.md)
+* [VNCServer](tools-graphical/vncserver.md)
 * [OpenCV](tools-graphical/opencv/README.md)
   * [Installation](tools-graphical/opencv/installation.md)
   * [Hello World](tools-graphical/opencv/hello-world.md)
@@ -182,6 +192,7 @@
 * [Docker](tools-virtualized/docker/README.md)
   * [Installation](tools-virtualized/docker/installation.md)
   * [Basics](tools-virtualized/docker/basics.md)
+* [VirtualBox](tools-virtualized/virtualbox.md)
 
 ## IDE
 
@@ -204,13 +215,19 @@
 
 ## ARCHITECTURE
 
+* [C++ Optimization](architecture/c++-optimization.md)
 * [USB Protocol](architecture/usb-protocol/README.md)
   * [Miscellaneous](architecture/usb-protocol/miscellaneous.md)
 * [BLE Protocol](architecture/ble-protocol/README.md)
   * [Introduction](architecture/ble-protocol/introduction.md)
+* [AVR](architecture/avr.md)
+* [Arduino](architecture/arduino/README.md)
+  * [Miscellaneous](architecture/arduino/miscellaneous.md)
 * [C8051Fxxx](architecture/c8051fxxx/README.md)
   * [Miscellaneous](architecture/c8051fxxx/miscellaneous.md)
 * [Android](architecture/android/README.md)
   * [Bluetooth](architecture/android/bluetooth.md)
 * [WSL](architecture/wsl.md)
+* [CI/CD Server from start](architecture/ci-cd-server-from-start/README.md)
+  * [Initialization](architecture/ci-cd-server-from-start/initialization.md)
 
