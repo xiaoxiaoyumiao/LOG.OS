@@ -1,6 +1,6 @@
 # torch.nn
 
-### torch.nn 方法
+## torch.nn 方法
 
 ```text
 # 如何产生常用的层
@@ -30,6 +30,4 @@ ModuleList(modules = None)
 
 
 ```
-
-#### 
 

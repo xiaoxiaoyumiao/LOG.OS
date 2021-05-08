@@ -1,10 +1,10 @@
 # C8051Fxxx
 
-#### Basics
+## Basics
 
 * MCS-51™ is a instruction set run on 8051.
 
-#### Flash Memory
+## Flash Memory
 
 * CPU is stalled during flash write / erase operations, but peripherals remain active. Interrupts are posted until completeness of flash operations and are serviced in priority order.
 * \(F340 specific\)Program memory consists of 64kiB of flash\(0x0000~0xFFFF\), organized into a set of 512B pages. The space from 0xFC00 to 0xFFFF is **reserved**.
@@ -12,11 +12,9 @@
   * 设计为取反或许是因为 flash erase 时置 1 的特性
   * \(F340 specific\) The page containing the Lock Byte is 0xFA00~0xFBFF\(that is, the last page of user space\).
 
-
-
 ![](../.gitbook/assets/image-20210131113200394.png)
 
-#### 外部晶振配置
+## 外部晶振配置
 
 * 有外部晶振回路，可接外部石英晶振、陶瓷晶振、RC振荡电路。
 * 引脚分布：外接晶振的时候XTAL1和XTAL2分别为P0.6和P0.7\(340/1/4/5/8\)或P0.2和P0.3\(342/3/6/7/9/A/B\)，IO模式应当配置为模拟输入\(analog input\)，需要在交叉开关中配置SKIP跳过相应引脚

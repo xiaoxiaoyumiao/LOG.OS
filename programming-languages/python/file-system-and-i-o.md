@@ -1,6 +1,6 @@
 # File System & I/O
 
-文件路径都是字符串，用/分割或者\\转义
+文件路径都是字符串，用/分割或者\转义
 
 os模块：
 
@@ -29,7 +29,7 @@ time.ctime(os.path.getctime(file))
 
 可采用os.walk\(\)和os.listdir\(\)两种方法，遍历指定文件夹下的文件。
 
- os.walk\(\)
+os.walk\(\)
 
 ```python
 for root, dirs, files in os.walk(".", topdown=False):
@@ -65,7 +65,7 @@ shutil.move(full_path, despath)
 shutil.copyfile(full_path, despath)
 ```
 
-#### 普通文件IO
+## 普通文件IO
 
 ```python
 fileHandler = open(name[, mode[, buffering]])#filehandler是一个文件File对象
@@ -85,7 +85,7 @@ f.write('string')
 f.close()
 ```
 
-#### 文件IO之指针定位
+## 文件IO之指针定位
 
 seek\(offset, from\)
 
