@@ -1,4 +1,4 @@
-# Weixin Applet
+# WeChat Mini Program DK
 
 #### 
 

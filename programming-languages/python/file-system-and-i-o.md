@@ -4,7 +4,7 @@
 
 os模块：
 
-```text
+```python
 os.getcwd() #返回当前工作路径
 os.chdir(path) #改变路径，参数是一个字符串
 os.remove(filename)#删除给定文件名的文件，参数是一个字符串
@@ -31,7 +31,7 @@ time.ctime(os.path.getctime(file))
 
 os.walk\(\)
 
-```text
+```python
 for root, dirs, files in os.walk(".", topdown=False):
     #...
 ```
@@ -48,7 +48,7 @@ os.listdir\(path\) 只遍历 path 一层目录下的文件而不进入子目录�
 
 sys模块：
 
-```text
+```python
 #sys.argv可以获取运行环境参数，[0]是被运行的脚本路径
 sys.exit()
 sys.hexversion#获取解释程序的版本值
@@ -60,14 +60,14 @@ print('something')#被输入到some file中
 
 shutil模块
 
-```text
+```python
 shutil.move(full_path, despath)
 shutil.copyfile(full_path, despath)
 ```
 
 ## 普通文件IO
 
-```text
+```python
 fileHandler = open(name[, mode[, buffering]])#filehandler是一个文件File对象
 ```
 
@@ -75,7 +75,7 @@ fileHandler = open(name[, mode[, buffering]])#filehandler是一个文件File对�
 * mode : mode 决定了打开文件的模式：只读，写入，追加等。所有可取值见如下的完全列表。这个参数是非强制的，默认文件访问模式为只读\(r\)。w为从头写入并在不存在时创建新文件，a为追加并在不存在时创建新文件，
 * buffering : 如果 buffering 的值被设为 0，就不会有寄存。如果 buffering 的值取 1，访问文件时会寄存行。如果将 buffering 的值设为大于 1 的整数，表明了这就是的寄存区的缓冲大小。如果取负值，寄存区的缓冲大小则为系统默认。
 
-```text
+```python
 file.read([size_number])#读取全部文件
 file.readline()#返回一行
 file.readlines([size])#返回size行构成的列表
@@ -101,7 +101,7 @@ from ：偏移计算类型， 0-从文件开头往后推 1-当前位置往后推
 
 但这时候需要合适的进行解码）
 
-```text
+```python
 with open("xxxx.txt", "r", encoding= "utf-8") as f:
     print(f.read())    # helloworld
     f.seek(8)
