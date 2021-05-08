@@ -7,6 +7,7 @@
 * [LOGOS](diary/logos/README.md)
   * [2021](diary/logos/2021/README.md)
     * [4](diary/logos/2021/4.md)
+    * [5](diary/logos/2021/5.md)
 
 ## THEORY
 
@@ -51,6 +52,7 @@
     * [Emulating Containers](programming-languages/python/aggregations/emulating-containers.md)
   * [Function](programming-languages/python/function.md)
   * [Class & Object](programming-languages/python/class-and-object.md)
+  * [Type & Reflection](programming-languages/python/type-and-reflection.md)
   * [Module & Package](programming-languages/python/module-and-package.md)
   * [Python Doc](programming-languages/python/python-doc.md)
   * [Iterator & Generator](programming-languages/python/iterator-and-generator.md)
@@ -129,6 +131,7 @@
   * [Introduction](tools/ssh/introduction.md)
   * [Login to Remote with SSH Keys](tools/ssh/login-to-remote-with-ssh-keys.md)
   * [Port Forwarding](tools/ssh/port-forwarding.md)
+* [Jupyter Notebook](tools/untitled-1.md)
 
 ## TOOLS - GRAPHICAL
 
@@ -171,6 +174,7 @@
   * [Miscellaneous](tools-numerical/anaconda/miscellaneous.md)
 * [NumPy](tools-numerical/numpy/README.md)
   * [Array Basics](tools-numerical/numpy/array-basics.md)
+  * [Miscellaneous](tools-numerical/numpy/miscellaneous.md)
 * [TensorFlow](tools-numerical/tensorflow/README.md)
   * [Source Code](tools-numerical/tensorflow/source-code/README.md)
     * [Basics](tools-numerical/tensorflow/source-code/basics.md)
@@ -179,12 +183,17 @@
 * [PyTorch](tools-numerical/pytorch/README.md)
   * [Introduction](tools-numerical/pytorch/introduction.md)
   * [Tensor](tools-numerical/pytorch/tensor.md)
-  * [DataLoader](tools-numerical/pytorch/dataloader.md)
-  * [Model Building](tools-numerical/pytorch/model-building.md)
+  * [Dataset & DataLoader](tools-numerical/pytorch/dataloader.md)
+  * [Model Building](tools-numerical/pytorch/model-building/README.md)
+    * [torch.nn](tools-numerical/pytorch/model-building/torch.nn.md)
   * [Training](tools-numerical/pytorch/training.md)
-  * [torch.nn](tools-numerical/pytorch/torch.nn.md)
   * [torchtext](tools-numerical/pytorch/torchtext.md)
   * [Miscellaneous](tools-numerical/pytorch/miscellaneous.md)
+* [Auxiliary](tools-numerical/auxiliary/README.md)
+  * [nltk](tools-numerical/auxiliary/nltk.md)
+  * [transformers](tools-numerical/auxiliary/transformers/README.md)
+    * [tokenizer](tools-numerical/auxiliary/transformers/tokenizer.md)
+    * [Miscellaneous](tools-numerical/auxiliary/transformers/miscellaneous.md)
 
 ## TOOLS - VIRTUALIZED
 

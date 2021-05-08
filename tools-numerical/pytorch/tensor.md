@@ -4,6 +4,8 @@
 # use torch.tensor(data) to create a torch tensor from python list
 data = [[1,2],[3,4]]
 x_data = torch.tensor(data)
+# convert tensor to python list
+p_data = x_data.tolist()
 
 # use torch.from_numpy(data) to create a torch tensor from numpy array
 np_array = np.array(data)
@@ -69,17 +71,25 @@ t = torch.tensor([[[1, 2],
 torch.flatten(t, start_dim=1)
 # tensor([[1, 2, 3, 4],
 #         [5, 6, 7, 8]])
+
+# expand view of the tensor, repeating along singleton dims
+# no new memory allocated, just copying references
+# useful for aligning matrix to one with more dims
+tensor.expand(shape)
+>>> x = torch.tensor([[1], [2], [3]])
+>>> x.size()
+torch.Size([3, 1])
+>>> x.expand(3, 4)
+tensor([[ 1,  1,  1,  1],
+        [ 2,  2,  2,  2],
+        [ 3,  3,  3,  3]])
+>>> x.expand(-1, 4)   # -1 means not changing the size of that dimension
+tensor([[ 1,  1,  1,  1],
+        [ 2,  2,  2,  2],
+        [ 3,  3,  3,  3]])
 ```
 
-### Reduction Ops
-
-```python
-# argmax
-data = torch.tensor([1,2,100,3])
-torch.argmax(data) # tensor(2)
-```
-
-### Conditional Ops
+### Indexing & Slicing
 
 ```python
 # masked_select: construct a new tensor with selected elements by a mask
@@ -96,6 +106,35 @@ tensor([[False, False, False, False],
 >>> torch.masked_select(x, mask)
 tensor([ 1.2252,  0.5002,  0.6248,  2.0139])
 
+# scatter: equivalent to Tensor.scatter_
+# scatter data from src to tensor, position determined by dim and index
+# tensor[x_1...x_{dim-1}][index[x_1...x_n]][x_{dim+1}...x_n] = src[x_1...x_n]
+# if reduce is 'add' then '=' changes to '+='
+# if reduce is 'multiply' then '=' changes to '*='
+# useful for creating one-hot vectors
+torch.scatter(tensor, dim, index, src, reduce=None)
+
+# gather: gather data from input, position determined by dim and index
+# tensor[x_1...x_n] = input[x_1...x_{dim-1}][index[x_1...x_n]][x_{dim+1}...x_n]
+torch.gather(input, dim, index, *, sparse_grad=False, out=None)
+```
+
+### Reduction Ops
+
+```python
+# argmax
+data = torch.tensor([1,2,100,3])
+torch.argmax(data) # tensor(2)
+
+# sum, dim can be omitted(default to 0)
+torch.sum(input, dim, keepdim=False, *, dtype=None)
+```
+
+### Conditional Ops
+
+```python
+
+
 # a list of indices of which elements in inpus are non-zero
 torch.nonzero(input, *, out=None, as_tuple=False)s
 ```
@@ -107,4 +146,6 @@ torch.nonzero(input, *, out=None, as_tuple=False)s
 \[2\] [https://pytorch.org/docs/stable/torch.html](https://pytorch.org/docs/stable/torch.html)
 
 \[3\] [https://pytorch.org/tutorials/beginner/basics/tensorqs\_tutorial.html](https://pytorch.org/tutorials/beginner/basics/tensorqs_tutorial.html)
+
+\[4\] [https://pytorch.org/docs/master/generated/torch.Tensor.expand.html](https://pytorch.org/docs/master/generated/torch.Tensor.expand.html)
 

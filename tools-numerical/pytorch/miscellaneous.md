@@ -4,4 +4,5 @@
   * [https://github.com/pytorch/vision/issues/2132](https://github.com/pytorch/vision/issues/2132)
 * module.to\(\)
   * move to a specific device
+* print\(module\) 可以把一个模型的组成按照树的结构打印出来。 
 

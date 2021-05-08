@@ -1,5 +1,7 @@
 # File System & I/O
 
+## System
+
 文件路径都是字符串，用/分割或者\\转义
 
 os模块：
@@ -65,7 +67,14 @@ shutil.move(full_path, despath)
 shutil.copyfile(full_path, despath)
 ```
 
-#### 普通文件IO
+## std I/O
+
+```python
+# 常用的 end 参数，设置打印的结尾，默认为换行符
+print(data, end='')
+```
+
+## File I/O
 
 ```python
 fileHandler = open(name[, mode[, buffering]])#filehandler是一个文件File对象
@@ -76,12 +85,18 @@ fileHandler = open(name[, mode[, buffering]])#filehandler是一个文件File对�
 * buffering : 如果 buffering 的值被设为 0，就不会有寄存。如果 buffering 的值取 1，访问文件时会寄存行。如果将 buffering 的值设为大于 1 的整数，表明了这就是的寄存区的缓冲大小。如果取负值，寄存区的缓冲大小则为系统默认。
 
 ```python
-file.read([size_number])#读取全部文件
-file.readline()#返回一行
-file.readlines([size])#返回size行构成的列表
+# 读取文件内容， size_number 为可选的读入字节数上限
+file.read(size_number)
+# 返回一行
+file.readline()
+# 一次性读入文件全部内容，返回size行构成的列表
+file.readlines([size])
 for line in f:
     somefunc(line)#可以迭代
 f.write('string')
+# writelines 虽然叫这个名字，但实际上是不在元素间插入换行符的
+# 以下命令会把 str1str2 打印到文件
+f.writelines(['str1', 'str2'])
 f.close()
 ```
 

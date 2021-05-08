@@ -1,6 +1,6 @@
 # Class & Object
 
-类定义：
+## Class Definition
 
 ```python
 class className(Base):#如果要继承的话就写上Base，否则放空；支持重载
@@ -20,9 +20,9 @@ class className(Base):#如果要继承的话就写上Base，否则放空；支�
         #...
 ```
 
-## super 函数
+## super
 
-```text
+```python
 class FooParent(object):
     def __init__(self):
         self.parent = 'I\'m the parent.'
@@ -38,9 +38,11 @@ class FooChild(FooParent):
         print ('Child')
 ```
 
-## 函数重载 & 常用内置函数
+## Rewriting Internal Methods
 
-```text
+Refer to [Numerical](numerical.md#emulating-numbers)
+
+```python
 算术运算符的重载:
             方法名                  运算符和表达式      说明
             __add__(self,rhs)        self + rhs        加法
@@ -55,7 +57,7 @@ __str__(self) 返回字符串化的信息
 __repr__(self) 返回字符串的表示方法，一般自定义类中__str__会使用__repr__的内容
 ```
 
-## 静态方法
+## Static Method
 
 ```text
 class Myclass:
@@ -72,7 +74,7 @@ class Myclass:
         pass
 ```
 
-## del 语法
+## keyword: del
 
 目前只知道作用在变量上，相当于解除引用
 

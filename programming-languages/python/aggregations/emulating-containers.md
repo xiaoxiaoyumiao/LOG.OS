@@ -37,6 +37,12 @@ object.__getitem__(self, key)
 # as for the __getitem__() method.
 object.__setitem__(self, key, value)
 
+# This method is called when an iterator is required for a container. 
+# This method should return a new iterator object 
+# that can iterate over all the objects in the container. 
+# For mappings, it should iterate over the keys of the container.
+object.__iter__(self)
+
 ```
 
 ## Reference

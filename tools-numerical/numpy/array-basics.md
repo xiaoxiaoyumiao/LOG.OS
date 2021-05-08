@@ -131,7 +131,7 @@ for x in a.flat:
 
 ## Arithmetic Operations
 
-```text
+```python
 b = a.reshape(2,3)
 b = np.transpose(a,axes)#对换
 b = a.T() #转置
@@ -155,6 +155,8 @@ np.linalg.inv(a)
 
 np.sum(a, axis=None, dtype=None, out=None, keepdims=np._NoValue)
 ```
+
+See also [Python - Emulating numeric types](../../programming-languages/python/numerical.md#emulating-numbers).
 
 ## Reference
 

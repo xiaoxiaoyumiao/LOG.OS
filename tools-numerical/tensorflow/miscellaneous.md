@@ -14,3 +14,12 @@
 hub.Module("https://hub.tensorflow.google.cn/google/elmo/2")
 ```
 
+* reshape
+  * [https://www.tensorflow.org/api\_docs/python/tf/reshape](https://www.tensorflow.org/api_docs/python/tf/reshape)
+
+```text
+tf.reshape(
+    tensor, shape, name=None
+)
+```
+

@@ -1,6 +1,6 @@
 # Training
 
-```text
+```python
 def train(dataloader, model, loss_fn, optimizer):
     size = len(dataloader.dataset)
     for batch, (X, y) in enumerate(dataloader):

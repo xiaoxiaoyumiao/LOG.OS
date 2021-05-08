@@ -4,7 +4,7 @@
 
 ## Create a Project
 
-创建一个 Visual C++  的 Dynamic-Link Library \(DLL\) 项目。这里我们把项目命名为 SampleDll。项目创建时包含必要的头文件和一个 dllmain 文件。dllmain 文件类似如下代码：
+创建一个 Visual C++  的 Dynamic-Link Library \(DLL\) 项目。这里我们把项目命名为 SampleDll。项目创建时包含必要的头文件和一个 dllmain 文件。dllmain 文件包含类似如下代码：
 
 ```cpp
 // dllmain.cpp : Defines the entry point for the DLL application.
@@ -26,6 +26,8 @@ BOOL APIENTRY DllMain( HMODULE hModule,
     return TRUE;
 }
 ```
+
+DllMain 是一个实现可选的入口函数，使得用户可以处理 dll 的加载和卸载等事件。如果不实现，链接器会链接一个 dummy DllMain。\(ref: \[3\]\)
 
 ## Define Exported Functions
 
@@ -60,6 +62,8 @@ extern "C" SAMPLEDLL_API int add(int a, int b);
 \[1\] [https://docs.microsoft.com/en-us/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp?view=msvc-160](https://docs.microsoft.com/en-us/cpp/build/walkthrough-creating-and-using-a-dynamic-link-library-cpp?view=msvc-160)
 
 \[2\] [https://stackoverflow.com/questions/1041866/what-is-the-effect-of-extern-c-in-c](https://stackoverflow.com/questions/1041866/what-is-the-effect-of-extern-c-in-c)
+
+\[3\] [https://forums.codeguru.com/showthread.php?540463-what-does-dllmain-entry-point-do](https://forums.codeguru.com/showthread.php?540463-what-does-dllmain-entry-point-do)
 
 
 

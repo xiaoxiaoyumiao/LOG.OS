@@ -2,6 +2,7 @@
 
 * 方便地实现连接与进程解耦的程序
   * [https://www.ruanyifeng.com/blog/2019/10/tmux.html](https://www.ruanyifeng.com/blog/2019/10/tmux.html)
+  * [https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/](https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/)
 
 ```text
 # 直接运行 tmux 就可以创建一个新的会话
