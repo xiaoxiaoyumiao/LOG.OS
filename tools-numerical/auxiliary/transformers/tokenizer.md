@@ -1,8 +1,10 @@
-# tokenizer
+# Tokenizer
 
 tokenizer 的主要功能可以用 tokenize 和 encode 来描述。tokenize 将文本切分为 token，encode 则将（已切分或未切分的） token 按照词表转换为（或者说映射到）数值 id。tokenizer 的`tokenize` 和 `encode` 分别实现上述功能， `__call__` 方法基本上是 encode，并返回包含更多的控制信息的 `BatchEncoding` 对象。
 
 当 `__call__` 接收一个 `List[str]` 作为参数时，它默认会把参数理解为一个文本 batch，所以如果传入的是已切分的 token 序列，就需要设置 `is_split_into_words` 参数为真。但 `encode` 方法并不需要，它默认把 `List[str]` 理解为已切分的 token 序列。
+
+* **CAUTION** 即使设置了 `is_split_into_words` 参数，`__call__` 和 `encode` 并不识别 BERT tokenizer 切分出的 subword 前缀 `##` ，它们会把这个前缀再切分为两个井号。`convert_tokens_to_ids` 和 `convert_ids_to_tokens` 是能正确完成映射和逆映射的方法，但它不会增加文本首尾的特殊 token。请视实际需求选择方法。
 
 `encode` 有一个反向的方法 `decode` ，可以把已编码的 id 序列还原为文本字符串。但注意 tokenize 本身不是可逆的，tokenize 包含大小写归一化、OOV 单词处理等过程。对于 BERT tokenizer 等会做 subword 切分的 tokenizer，`decode` 可以帮助省去 subword 拼接的过程；`decode` 也会对标点进行合适的处理。
 
@@ -102,11 +104,34 @@ result = global_tokenizer(hamlet,
 print(result)
 {'input_ids': [101, 2000, 2022, 2030, 2025, 2000, 2022, 1010, 2008, 2003, 
 1996, 3160, 1012, 102]}
-​
 
+```
+
+由于 bert tokenizer 会把词切分为字词，因此 token 在文本中的 index 在 tokenize 后会发生变化（从单个 token 到一个 token 子序列的映射）。transformer 没有提供生成索引映射的接口，这一映射可以通过类似如下的逻辑维护：
+
+```python
+tokens = [ 101, ] # [CLS]
+index_mapping = []
+start, end = 1, 1
+for raw_token in sentence:
+    encoded = global_tokenizer.encode(raw_token, add_special_tokens=False)
+    tokens.extend(encoded)
+    end += len(encoded)
+    index_mapping.append((start, end))
+    start += len(encoded)
+tokens.append(102)    # [SEP]
+
+# get start index of token sub-sequence from 
+# tokenizing sentence[x] 
+index_as_start = lambda x: index_mapping[x][0]
+# get end index of token sub-sequence from 
+# tokenizing sentence[x] 
+index_as_end = lambda x: index_mapping[x][1]
 ```
 
 ## Reference
 
 \[1\] [https://huggingface.co/transformers/main\_classes/tokenizer.html](https://huggingface.co/transformers/main_classes/tokenizer.html)
+
+\[2\] [https://stackoverflow.com/questions/63413414/is-there-a-way-to-get-the-location-of-the-substring-from-which-a-certain-token-h](https://stackoverflow.com/questions/63413414/is-there-a-way-to-get-the-location-of-the-substring-from-which-a-certain-token-h)
 

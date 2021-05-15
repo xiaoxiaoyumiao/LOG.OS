@@ -48,6 +48,12 @@ F.log_softmax(data,dim=0)
 def cross_entropy(pred, soft_targets):
     return torch.mean(torch.sum(- soft_targets * F.log_softmax(pred), 1))
 
+# Clone a tensor. A differentiable 'assignment' operation.
+cuda = torch.device('cuda')  
+b = torch.tensor([1,2,3], device=cuda)
+c = b.clone()
+print(c)
+# output: tensor([1, 2, 3], device='cuda:0')
 ```
 
 ### Shape Manipulation

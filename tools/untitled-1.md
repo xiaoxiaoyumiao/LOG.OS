@@ -9,6 +9,27 @@ conda install -c conda-forge notebook
 pip install notebook
 ```
 
+## Trouble Shooting
+
+```text
+IntProgress not found. Please update jupyter and ipywidgets.
+```
+
+solution:
+
+```bash
+# step 1
+# conda
+conda install -c conda-forge ipywidgets
+# pip
+pip3 install ipywidgets --user
+
+# step 2
+jupyter nbextension enable --py widgetsnbextension
+```
+
+ref: [https://stackoverflow.com/questions/53247985/tqdm-4-28-1-in-jupyter-notebook-intprogress-not-found-please-update-jupyter-an](https://stackoverflow.com/questions/53247985/tqdm-4-28-1-in-jupyter-notebook-intprogress-not-found-please-update-jupyter-an)
+
 ## Basic Usage
 
 ```bash
