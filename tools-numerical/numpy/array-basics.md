@@ -153,7 +153,12 @@ np.linalg.det(a)
 np.linalg.solve(a)
 np.linalg.inv(a)
 
+# 取和
 np.sum(a, axis=None, dtype=None, out=None, keepdims=np._NoValue)
+
+# 取最小值
+numpy.amin(a, axis=None, out=None, keepdims=<no value>, 
+    initial=<no value>, where=<no value>)
 ```
 
 See also [Python - Emulating numeric types](../../programming-languages/python/numerical.md#emulating-numbers).
@@ -161,4 +166,6 @@ See also [Python - Emulating numeric types](../../programming-languages/python/n
 ## Reference
 
 \[1\] [https://numpy.org/devdocs/user/quickstart.html](https://numpy.org/devdocs/user/quickstart.html)
+
+\[2\] [https://numpy.org/doc/stable/reference/index.html](https://numpy.org/doc/stable/reference/index.html)
 

@@ -96,3 +96,5 @@ dict.keys()         # ret all keys(iterable)
 
 内建转换函数都是工厂函数。例如，`int(),long(),float(),complex(),str(), unicode(), basestring(),list(), tuple(), type(), dict(), bool(),set(), frozenset(),object() ,classmethod(),staticmethod(), super(), property(), file()`
 
+拓展知识可参考 [Iterables](../iterables.md).
+

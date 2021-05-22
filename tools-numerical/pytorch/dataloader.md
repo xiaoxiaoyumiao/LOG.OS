@@ -60,6 +60,10 @@ tensor([[1, 2, 3, 4],
         [1, 2, 3, 4]])
 ```
 
+`collate_fn` 参数是一个 DataLoader 用来将单个数据打包为 batch 的函数。默认情况下，如果数据集产生的形状不一致的 tensor 被 dataloader 尝试打包（实际使用的是 `torch.stack` ），就会报错。因此要么在产生数据时注意对齐长度，要么自己实现一个打包函数 `collate_fn` 。
+
+关于默认的 `collate_fn` 的实现，可以参考 ref: \[5\]。
+
 ## Reference
 
 \[1\] [https://pytorch.org/docs/stable/data.html\#module-torch.utils.data](https://pytorch.org/docs/stable/data.html#module-torch.utils.data)
@@ -69,4 +73,6 @@ tensor([[1, 2, 3, 4],
 \[3\] tutorial: writing custom datasets, dataloaders and transforms: [https://pytorch.org/tutorials/beginner/data\_loading\_tutorial.html](https://pytorch.org/tutorials/beginner/data_loading_tutorial.html)
 
 \[4\] guidelines for assigning num\_workers to DataLoader: [https://discuss.pytorch.org/t/guidelines-for-assigning-num-workers-to-dataloader/813](https://discuss.pytorch.org/t/guidelines-for-assigning-num-workers-to-dataloader/813)
+
+\[5\] [https://github.com/pytorch/pytorch/blob/master/torch/utils/data/\_utils/collate.py](https://github.com/pytorch/pytorch/blob/master/torch/utils/data/_utils/collate.py)
 
