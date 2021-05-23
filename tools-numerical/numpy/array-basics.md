@@ -40,6 +40,9 @@ np.fromfunction(lambda i, j: i == j, (3, 3), dtype=int)
 array([[ True, False, False],
        [False,  True, False],
        [False, False,  True]])
+       
+# use astype() to do type casting
+c = a.astype(np.float32)
 ```
 
 ## Properties
@@ -99,6 +102,16 @@ np.fromiter(iterable)
 ```
 
 ## Indexing, Slicing & Iterating
+
+执行 slicing 时，获取到的是 array 的一个 view；也就是说数据并不会被拷贝。
+
+对 array 对象进行切片时，事实上传入的是一个 python 的 `slice` 对象。当在多个维度上切片时，传入的是 `slice` 对象构成的一个元组。因此如果希望对多个 array 应用一个相同的切片，可以将索引本身保存为对象，然后用于索引。
+
+```python
+# a piece of example code
+roi = (slice(j, j+chunk), slice(i, i+chunk))
+float_image[roi] = dct_image[roi] * self.q_scaling * self.q_table
+```
 
 ```python
 a = np.array([[1,2],[3,4],[5,6]])

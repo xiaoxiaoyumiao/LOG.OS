@@ -28,6 +28,24 @@ void cv::Mat::convertTo	(	OutputArray 	m,
     double 	alpha = 1,
     double 	beta = 0 
     )		const
+    
+// initialize from a C array (The content will not be copied)
+double x[100][100];
+
+cv::Mat A(100, 100, CV_64F, x);
+
+// slicing (cropping)
+cv::Mat image(imagesource); 
+// Setup a rectangle to define your region of interest
+cv::Rect myROI(10, 10, 100, 100);
+// Crop the full image to that image contained by the rectangle myROI
+// Note that this doesn't copy the data
+cv::Mat croppedImage = image(myROI);
+
+// copying data (used for padding)
+cv::Mat image_padded(3, pad_size, CV_32FC1, cv::Scalar(0));
+cv::Rect roi( ... );
+small_image.copyTo(image_padded(roi));
 ```
 
 ## Mat Operations
@@ -55,5 +73,29 @@ void cv::dct	(	InputArray 	src,
 void cv::transpose	(	InputArray 	src,
     OutputArray 	dst 
     )		
+
+
+double cv::PSNR	(	InputArray 	src1,
+    InputArray 	src2,
+    double 	R = 255. 
+    )		
+
+void cv::split	(	const Mat & 	src,
+    Mat * 	mvbegin 
+    )	  
 ```
+
+## Reference
+
+\[1\] [https://stackoverflow.com/questions/44453088/how-to-convert-c-array-to-opencv-mat](https://stackoverflow.com/questions/44453088/how-to-convert-c-array-to-opencv-mat)
+
+\[2\] [https://stackoverflow.com/questions/8267191/how-to-crop-a-cvmat-in-opencv](https://stackoverflow.com/questions/8267191/how-to-crop-a-cvmat-in-opencv)
+
+\[3\] [https://stackoverflow.com/questions/30470020/opencv-zero-padding-of-mat](https://stackoverflow.com/questions/30470020/opencv-zero-padding-of-mat)
+
+\[4\] [https://stackoverflow.com/questions/10167534/how-to-find-out-what-type-of-a-mat-object-is-with-mattype-in-opencv](https://stackoverflow.com/questions/10167534/how-to-find-out-what-type-of-a-mat-object-is-with-mattype-in-opencv)
+
+
+
+
 
