@@ -62,6 +62,20 @@ if args.device == "gpu" and torch.cuda.is_available() == True:
 # then use global_device to create tensors and modules
 ```
 
+## Data Paralleling
+
+使用 `nn.DataParallel` 可以便捷地实现在batch 维度上的多设备并行。一个 batch 会被均匀分配到多个设备上，当 batch 大小不足够时则只会分配到部分设备上。
+
+```python
+model = Model(input_size, output_size)
+if torch.cuda.device_count() > 1:
+  print("Let's use", torch.cuda.device_count(), "GPUs!")
+  # dim = 0 [30, xxx] -> [10, ...], [10, ...], [10, ...] on 3 GPUs
+  model = nn.DataParallel(model)
+
+model.to(device)
+```
+
 ## Reference
 
 \[1\] [https://pytorch.org/docs/master/notes/cuda.html](https://pytorch.org/docs/master/notes/cuda.html)
@@ -73,4 +87,10 @@ if args.device == "gpu" and torch.cuda.is_available() == True:
 \[4\] [https://pytorch.org/docs/master/generated/torch.nn.Module.html\#torch.nn.Module.to](https://pytorch.org/docs/master/generated/torch.nn.Module.html#torch.nn.Module.to)
 
 \[5\] [https://discuss.pytorch.org/t/solved-make-sure-that-pytorch-using-gpu-to-compute/4870/14](https://discuss.pytorch.org/t/solved-make-sure-that-pytorch-using-gpu-to-compute/4870/14)
+
+\[6\] [https://discuss.pytorch.org/t/nn-dataparallel-and-batch-size-is-1/36789](https://discuss.pytorch.org/t/nn-dataparallel-and-batch-size-is-1/36789)
+
+\[7\] [https://pytorch.org/tutorials/beginner/blitz/data\_parallel\_tutorial.html](https://pytorch.org/tutorials/beginner/blitz/data_parallel_tutorial.html)
+
+\[8\] [https://pytorch.org/docs/stable/generated/torch.nn.DataParallel.html](https://pytorch.org/docs/stable/generated/torch.nn.DataParallel.html)
 

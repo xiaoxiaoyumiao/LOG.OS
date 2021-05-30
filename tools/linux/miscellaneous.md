@@ -38,4 +38,5 @@
   * 一般而言可以使用 tail 查看文件结尾的一段内容
   * tail -f（follow）参数可以将一个文件中追加写入的内容实时输出
   * ref：[https://www.cnblogs.com/fps2tao/p/8535519.html](https://www.cnblogs.com/fps2tao/p/8535519.html)
+  * ref：[https://serverfault.com/questions/1669/shell-command-to-monitor-changes-in-a-file/1670](https://serverfault.com/questions/1669/shell-command-to-monitor-changes-in-a-file/1670)
 

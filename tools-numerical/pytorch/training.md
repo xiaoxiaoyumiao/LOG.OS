@@ -1,6 +1,6 @@
 # Training
 
-简单来说，当一个 `requires_grad` 为 True ，也就是需要计算梯度的 tensor 的 `backward` 方法被调用时，它会对其所在的计算图执行梯度计算和传播。计算所得的梯度数据会累加在每个 tensor 的 grad 成员变量中。注意在使用时要视情况将 tensor 的梯度清零。
+简单来说，当一个 `requires_grad` 为 True ，也就是需要计算梯度的 tensor 的 `backward` 方法被调用时，它会对其所在的计算图执行梯度计算和传播。计算所得的梯度数据会累加在每个 tensor 的 grad 成员变量中。注意在使用时要视情况将 tensor 的梯度清零（ `zero_grad` ）。
 
 `torch.optim` 提供了梯度下降算法的简洁封装。使用 Optimizer 对象可以方便地管理一大批参数的梯度。特别是在整个网络已经封装在一个或若干个 Module 对象里时，使用 `parameters()` 方法就可以获取到一个网络的所有可学习（也就是需要计算梯度）的参数。把所有需要学习的参数传递给 Optimizer 的构造函数即可。常用的优化算法被实现为了它的各个子类。
 

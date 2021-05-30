@@ -105,3 +105,5 @@ if __name__ == "__main__":
 
 \[2\] [https://docs.opencv.org/master/db/d5b/tutorial\_py\_mouse\_handling.html](https://docs.opencv.org/master/db/d5b/tutorial_py_mouse_handling.html)
 
+\[3\] [https://docs.opencv.org/3.4/d3/d96/tutorial\_basic\_geometric\_drawing.html](https://docs.opencv.org/3.4/d3/d96/tutorial_basic_geometric_drawing.html)
+

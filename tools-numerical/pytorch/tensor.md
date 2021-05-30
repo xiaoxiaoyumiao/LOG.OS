@@ -17,6 +17,7 @@ rand_tensor = torch.rand(shape) # random float in (0,1)
 randint_tensor = torch.randint(low, high, shape) # random int in [low, high)
 ones_tensor = torch.ones(shape) # all ones
 zeros_tensor = torch.zeros(shape) # all zeros
+range_tensor = torch.arange(0, 5) # generate sequence [0, 5)
 
 # construct special tensors like a given tensor
 # (device, etc. will be inherited by default)
