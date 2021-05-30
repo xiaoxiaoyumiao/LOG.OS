@@ -38,7 +38,7 @@ cv::Mat A(100, 100, CV_64F, x);
 
 ## Scalar, Point & Rect
 
-Scalar is a cv wrapper for scalars like integers and floats.
+Scalar is a cv wrapper for scalars like integers, floats and colors.
 
 Point defines a point, and Rect defines a rectangle shape. 
 
@@ -55,6 +55,7 @@ cv::Mat image(imagesource);
 cv::Rect myROI(10, 10, 100, 100);
 // Crop the full image to that image contained by the rectangle myROI
 // Note that this doesn't copy the data
+// And keep in mind that Mat is row-major, so indexing in height dim first
 cv::Mat croppedImage = image(myROI);
 
 // copying data (used for padding). Notice we use the cv::Scalar here
@@ -66,6 +67,8 @@ small_image.copyTo(image_padded(roi));
 ## Mat Operations
 
 A complete list of useful array operation methods is defined in ref \[8\].
+
+A complete list of Mat methods is defined in ref \[10\].
 
 ```cpp
 #include <opencv2/imgproc.hpp>
@@ -83,8 +86,10 @@ void cv::resize	(	InputArray 	src,
 
 // '*' does matrix multiplication
 res = image1 * image2;
+// .dot does dot product
+double res = image1.dot(image2);
 // .mul does element-wise multiplication
-res = image1.mul(image2);
+cv::Mat res = image1.mul(image2);
 
 void cv::dct	(	InputArray 	src,
     OutputArray 	dst,
@@ -151,6 +156,8 @@ image.at<uint16_t>(row, col)
 \[8\] reference for core array operations: [https://docs.opencv.org/3.4/d2/de8/group\_\_core\_\_array.html](https://docs.opencv.org/3.4/d2/de8/group__core__array.html)
 
 \[9\] Some operations on Rect: [https://blog.csdn.net/qq\_28713863/article/details/79009825](https://blog.csdn.net/qq_28713863/article/details/79009825)
+
+\[10\] reference for Mat class methods: [https://docs.opencv.org/master/d3/d63/classcv\_1\_1Mat.html](https://docs.opencv.org/master/d3/d63/classcv_1_1Mat.html)
 
 
 
