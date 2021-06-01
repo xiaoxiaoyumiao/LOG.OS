@@ -38,7 +38,7 @@ public class test : MonoBehavior {
 
 加载的资源必须在Assets/Resources路径下，查询（Load）时使用项目中该目录下的相对路径。例如Resources/Time.png会被项目加载成Resources目录下的一个资源Time，于是load时传一个”Time“就能索引到这个资源。
 
-```text
+```csharp
 foreach (string ele in names)
 {
     Object pref = Resources.Load(string.Format(directory, ele), typeof(Sprite));
@@ -51,7 +51,7 @@ foreach (string ele in names)
 
 ## **活跃场景及名字**
 
-```text
+```csharp
  Scene scene = SceneManager.GetActiveScene ();
         GUILayout.Label ("当前场景: " + scene.name);
 ```
