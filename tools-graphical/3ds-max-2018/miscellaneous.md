@@ -55,6 +55,11 @@
 * Selection Set: 
   * This function can help create a set of objects to help re-selection become easier.
   * select objects - Toolbar - Create Selection Set - enter new name
+* UV mapping
+  * Use Unwrap UVW modifier for complex mesh and UVW map for simple primitives.
+  * Rough steps: add modifier - select edges and convert to seams - UV editor - peel the meshes split by seams - reshape peeled meshes to fit into the square grid - use the colored texture to ensure meshes are peeled properly - export UV mapping for composing custom textures
+  * [https://www.youtube.com/watch?v=SQak9sQh8uw](https://www.youtube.com/watch?v=SQak9sQh8uw)
+  * [https://www.youtube.com/watch?v=aMCWmnml0o0](https://www.youtube.com/watch?v=aMCWmnml0o0)
 
 ## Reference
 

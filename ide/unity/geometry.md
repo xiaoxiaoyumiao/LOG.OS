@@ -74,9 +74,7 @@ gameObject.transform.position = new Vector...
 >
 > 这样子物体B的localscale会变成（2,2,2） ， 这样子就没有改变他的absscale。
 
-## **Ray**
 
-使用Raycast可以方便地绘制射线、完成线和碰撞体的碰撞检测。
 
 {% embed url="https://blog.csdn.net/u010718707/article/details/42111567" %}
 

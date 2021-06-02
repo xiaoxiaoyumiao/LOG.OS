@@ -10,8 +10,7 @@
 * 2D中transform.lookAt和transform.forward并不造成平面上的旋转看齐而是直接消失，推测以z轴看齐导致图像与画面垂直。看齐应对transform的具体轴做修改，如transform.right = vector.
 * 关于贴图缺失
   * meta 文件包含了对资源文件的 GUID 描述，而 inspector 中的贴图信息都是基于 GUID 绑定的。每当 unity 为一个新的资源文件创建 meta 文件，就会分配一个新的 GUID。所以当发现 inspector 提示贴图缺失时，把缺失的贴图放入相同的目录位置并不能解决问题，必须导入原来的 meta 文件才是科学的。
-
-#### 自定义Inspector
-
-[https://blog.csdn.net/qq\_33337811/article/details/62042218](https://blog.csdn.net/qq_33337811/article/details/62042218)
+* 关于错误报告
+  * 如果 Unity 因为不明原因崩溃了，通过其留下的 Log 文件往往可以获得一些调试的线索。Log 文件的路径可参考官方文档。
+  * ref：[https://docs.unity3d.com/Manual/LogFiles.html](https://docs.unity3d.com/Manual/LogFiles.html)
 

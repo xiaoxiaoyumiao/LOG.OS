@@ -3,13 +3,22 @@
 ## Game Life
 
 ```csharp
-// 退出游戏
+// exit game
 #if UNITY_EDITOR
 	UnityEditor.EditorApplication.isPlaying = false;
 #else
 	Application.Quit();
 #endif
+
+// This function is called at the very last frame
+ OnApplicationQuit()
 ```
+
+ref: [https://answers.unity.com/questions/171688/detect-when-editor-stops-playing.html](https://answers.unity.com/questions/171688/detect-when-editor-stops-playing.html)
+
+## Initialization
+
+`Awake` 和 `Start` 是常用的实现组件初始化的函数。为了保证稳定性，尽量在 `Awake` 中实现一些变量的初始化。细节可参阅官方提供的生命周期。
 
 ## Basic Update
 
