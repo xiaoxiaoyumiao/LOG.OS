@@ -58,7 +58,7 @@
   * [Iterator & Generator](programming-languages/python/iterator-and-generator.md)
   * [Iterables](programming-languages/python/iterables.md)
   * [Numerical](programming-languages/python/numerical.md)
-  * [Miscellaneous](programming-languages/python/miscellaneous.md)
+  * [Miscellaneous](tools-numerical/auxiliary/transformers/miscellaneous.md)
 * [C](programming-languages/c-c++/README.md)
   * [String](programming-languages/c-c++/string.md)
   * [Miscellaneous](programming-languages/c-c++/miscellaneous.md)

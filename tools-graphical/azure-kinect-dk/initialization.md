@@ -9,8 +9,8 @@
 uint32_t count = k4a_device_get_installed_count();
 if (count == 0)
 {
-	printf("No k4a devices attached!\n");
-	return 1;
+    printf("No k4a devices attached!\n");
+    return 1;
 }
 
 k4a_device_t device = NULL;
@@ -36,8 +36,8 @@ k4a_device_t device = NULL;
 // K4A_FAILED is a MACRO determining if the result represents failure
 if (K4A_FAILED(k4a_device_open(K4A_DEVICE_DEFAULT, &device)))
 {
-	printf("Failed to open k4a device!\n");
-	return 1;
+    printf("Failed to open k4a device!\n");
+    return 1;
 }
 ```
 
@@ -53,7 +53,7 @@ size_t serial_size = 0;
 // In other unsuccessful situations it just returns failure.
 // We can pass NULL to the buffer argument without generating errors.
 k4a_device_get_serialnum(device, NULL, &serial_size);
-	
+
 // Allocate memory for the serial, then acquire it
 char *serial = (char*)(malloc(serial_size));
 k4a_device_get_serialnum(device, serial, &serial_size);

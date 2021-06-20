@@ -12,7 +12,7 @@ done
 # iterate on output lines of a command
 for i in $(command)
 do
-    
+
 done
 
 # for bash v3.0+: iterate on sequence

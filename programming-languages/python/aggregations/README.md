@@ -46,7 +46,7 @@ python 中的 `list` 、`tuple` 、`range` 类型可以表示一个序列。
 
 ### List / 列表
 
-sort 
+sort
 
 ```python
 # The syntax of the sort() method is:

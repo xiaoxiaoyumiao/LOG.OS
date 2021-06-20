@@ -10,7 +10,7 @@ class Car {
     this.name = name;
     this.year = year;
   }
-  
+
   // other methods
   run() {
    // ...
@@ -23,7 +23,7 @@ let myCar1 = new Car("Ford", 2014);
 
 ## Static
 
-{% embed url="https://javascript.info/static-properties-methods" %}
+{% embed url="https://javascript.info/static-properties-methods" caption="" %}
 
 ## Reference
 

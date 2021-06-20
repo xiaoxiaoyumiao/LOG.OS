@@ -15,7 +15,5 @@ type(a) == float # False
 # If classinfo is not a type or tuple of types and such tuples, 
 # a TypeError exception is raised.
 isinstance(object, classinfo)
-
-
 ```
 

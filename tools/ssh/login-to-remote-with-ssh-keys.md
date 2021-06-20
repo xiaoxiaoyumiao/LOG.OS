@@ -90,7 +90,7 @@ ssh -o ProxyCommand="ssh -W %h:%p host" user2@target
 ProxyCommand /path/to/openSSH/ssh.exe -W %h:%p host
 ```
 
-## Reference 
+## Reference
 
 \[1\] [https://upcloud.com/community/tutorials/use-ssh-keys-authentication/](https://upcloud.com/community/tutorials/use-ssh-keys-authentication/)
 
@@ -111,16 +111,4 @@ ProxyCommand /path/to/openSSH/ssh.exe -W %h:%p host
 \[9\] [https://blog.csdn.net/weixin\_42096901/article/details/105193366](https://blog.csdn.net/weixin_42096901/article/details/105193366)
 
 \[10\] [https://docs.microsoft.com/zh-cn/windows-server/administration/openssh/openssh\_overview](https://docs.microsoft.com/zh-cn/windows-server/administration/openssh/openssh_overview)
-
-
-
-
-
-
-
-
-
-
-
-
 

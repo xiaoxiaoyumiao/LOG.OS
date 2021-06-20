@@ -36,8 +36,6 @@ map(func, iterable, ...)
 # If func is None, the identity function is used.
 # Equivalent to (item for item in iterable if func(item))
 filter(function, iterable)
-
-
 ```
 
 ## Reference

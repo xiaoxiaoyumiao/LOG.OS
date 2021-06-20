@@ -4,7 +4,7 @@
 
 ## Create a Project
 
-创建一个 Visual C++  的 Dynamic-Link Library \(DLL\) 项目。这里我们把项目命名为 SampleDll。项目创建时包含必要的头文件和一个 dllmain 文件。dllmain 文件包含类似如下代码：
+创建一个 Visual C++ 的 Dynamic-Link Library \(DLL\) 项目。这里我们把项目命名为 SampleDll。项目创建时包含必要的头文件和一个 dllmain 文件。dllmain 文件包含类似如下代码：
 
 ```cpp
 // dllmain.cpp : Defines the entry point for the DLL application.
@@ -37,7 +37,7 @@ DllMain 是一个实现可选的入口函数，使得用户可以处理 dll 的�
 extern "C" __declspec( dllexport ) int add(int a, int b);
 ```
 
- 这里 extern "C" 的作用是告诉编译器使用 C 的规范来编译这个函数，使得函数可以被其他类 C 的语言调用。\(ref: \[2\]\)
+这里 extern "C" 的作用是告诉编译器使用 C 的规范来编译这个函数，使得函数可以被其他类 C 的语言调用。\(ref: \[2\]\)
 
 使用 dll 时，需要先声明将使用的 dll 中的函数，这些函数声明常常一起放在一个头文件里。为了方便使用，在使用 Visual Studio 生成 dll 时可以利用预处理指令，把所有需要导出的函数声明放在一个头文件里：
 
@@ -64,6 +64,4 @@ extern "C" SAMPLEDLL_API int add(int a, int b);
 \[2\] [https://stackoverflow.com/questions/1041866/what-is-the-effect-of-extern-c-in-c](https://stackoverflow.com/questions/1041866/what-is-the-effect-of-extern-c-in-c)
 
 \[3\] [https://forums.codeguru.com/showthread.php?540463-what-does-dllmain-entry-point-do](https://forums.codeguru.com/showthread.php?540463-what-does-dllmain-entry-point-do)
-
-
 

@@ -48,11 +48,9 @@ TODO
 
 ref: \[1\]
 
-## Reference 
+## Reference
 
 \[1\] [https://docs.python.org/2/library/re.html](https://docs.python.org/2/library/re.html)
 
 \[2\] [https://www.cnblogs.com/fat39/p/7159881.html](https://www.cnblogs.com/fat39/p/7159881.html)
-
-
 

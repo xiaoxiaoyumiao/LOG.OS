@@ -18,7 +18,7 @@
       >
       > This comes from [MIT](http://en.wikipedia.org/wiki/MIT)’s [CTSS \(Compatible Time-Sharing System\)](http://en.wikipedia.org/wiki/Compatible_Time-Sharing_System) and [Multics](http://en.wikipedia.org/wiki/Multics), where the idea that a command processing shell would be an ordinary program originated. CTSS had a program called RUNCOM \(for “run commands”\) and a script was called “a runcom” in the community where Unix originated, leading to the file extension `.rc` and generally to the `rc` abbreviation.
       >
-      > `rc` stuck as a name for any list of commands. \(by  [Gilles 'SO- stop being evil'](https://superuser.com/users/42315/gilles-so-stop-being-evil) edited by  [Scott](https://superuser.com/users/150988/scott)\)
+      > `rc` stuck as a name for any list of commands. \(by [Gilles 'SO- stop being evil'](https://superuser.com/users/42315/gilles-so-stop-being-evil) edited by [Scott](https://superuser.com/users/150988/scott)\)
   * 当 bash 以并非上述状态的 non-interactive shell 状态运行（例如只是执行一个脚本），bash 检查环境变量 `$BASH_ENV` 并把这个变量的值作为初始化文件的路径。
 * 当 bash 通过 `sh` 命令调用，会采取类似 `sh` 的行为：
   * 当 bash 以 login shell 状态运行，bash 顺次检查 `/etc/profile` 和 `~/.profile` 并执行。

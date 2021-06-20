@@ -58,5 +58,5 @@ if (depthImage != NULL)
 
 \[1\] [https://stackoverflow.com/questions/57222190/how-to-convert-k4a-image-t-to-opencv-matrix-azure-kinect-sensor-sdk](https://stackoverflow.com/questions/57222190/how-to-convert-k4a-image-t-to-opencv-matrix-azure-kinect-sensor-sdk)
 
-\[2\]  [https://github.com/microsoft/Azure-Kinect-Sensor-SDK/issues/968](https://github.com/microsoft/Azure-Kinect-Sensor-SDK/issues/968)
+\[2\] [https://github.com/microsoft/Azure-Kinect-Sensor-SDK/issues/968](https://github.com/microsoft/Azure-Kinect-Sensor-SDK/issues/968)
 

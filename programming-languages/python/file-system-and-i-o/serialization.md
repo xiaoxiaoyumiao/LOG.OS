@@ -36,7 +36,6 @@ data = eval(string)
 
 pickle.dump(data, file)
 data = pickle.load(file)
-
 ```
 
 ## Reference

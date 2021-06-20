@@ -29,7 +29,7 @@ object.__and__(self, other)
 object.__xor__(self, other)
 object.__or__(self, other)
 # These methods are called to implement the binary arithmetic operations 
-# (+, -, *, @, /, //, %, divmod(), pow(), **, <<, >>, &, ^, |). 
+# (+, -, *, @, /, //, %, divmod(), pow(), **, <<, >>, &, ^, |).
 ```
 
 ## Reference

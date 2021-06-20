@@ -22,7 +22,7 @@ config.color_format = K4A_IMAGE_FORMAT_COLOR_BGRA32;
 // config.color_resolution = K4A_COLOR_RESOLUTION_3072P;
 config.color_resolution = K4A_COLOR_RESOLUTION_720P;
 config.depth_mode = K4A_DEPTH_MODE_NFOV_UNBINNED;
-config.synchronized_images_only = true; 
+config.synchronized_images_only = true;
 ```
 
 准备好后可以开启设备：
@@ -44,15 +44,15 @@ k4a_capture_t capture;
 switch (k4a_device_get_capture(device, &capture, TIMEOUT_IN_MS))
 {
 case K4A_WAIT_RESULT_SUCCEEDED:
-	printf("Got capture.\n");
-	break;
+    printf("Got capture.\n");
+    break;
 case K4A_WAIT_RESULT_TIMEOUT:
-	printf("Timed out waiting for a capture\n");
-	continue;
-	break;
+    printf("Timed out waiting for a capture\n");
+    continue;
+    break;
 case K4A_WAIT_RESULT_FAILED:
-	printf("Failed to read a capture\n");
-	goto Exit;
+    printf("Failed to read a capture\n");
+    goto Exit;
 }
 
 // Use data stored in the capture

@@ -13,7 +13,7 @@
     // Before: 10000000000000000000000000000000
     // After:  00010000000000000000000000000000
     ```
-  * ref:  [Bitwise and shift operators - C\# reference \| Microsoft Docs](%20https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/bitwise-and-shift-operators#right-shift-operator-)
+  * ref:  [Bitwise and shift operators - C\# reference \| Microsoft Docs](https://github.com/deemolover/LOG.OS/tree/edf5bd6c0c47ffa5692978295b8e9304f51837c4/en-us/dotnet/csharp/language-reference/operators/bitwise-and-shift-operators/README.md#right-shift-operator-)
 * 关于字符串格式化的规则
   * ref: [https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings?redirectedfrom=MSDN\#standard-format-specifiers](https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings?redirectedfrom=MSDN#standard-format-specifiers)
 * 关于基本数据类型和 byte array 之间的转换

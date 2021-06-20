@@ -22,7 +22,7 @@ class MyDataset(Dataset):
         return len(self.data)
     def __getitem__(self, index):
         return self.data[index]
-        
+
 dataset = MyDataset()
 for sample in dataset:
     print(sample) # will print tensor([1,2,3,4]) for 12 times
@@ -51,7 +51,7 @@ def test_dataloader():
     for sample in dataloader:
         print(sample)
         break
-        
+
 test_dataloader() 
 # output:
 tensor([[1, 2, 3, 4],
