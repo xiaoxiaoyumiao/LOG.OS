@@ -8,6 +8,7 @@
   * [2021](diary/logos/2021/README.md)
     * [4](diary/logos/2021/4.md)
     * [5](diary/logos/2021/5.md)
+    * [6](diary/logos/2021/6.md)
 
 ## THEORY
 
@@ -54,6 +55,10 @@
     * [String](programming-languages/python/encoding-and-decoding/string.md)
     * [Serialization](programming-languages/python/encoding-and-decoding/serialization.md)
   * [Containers](programming-languages/python/aggregations/README.md)
+    * [Sets](programming-languages/python/aggregations/sets.md)
+    * [Sequences](programming-languages/python/aggregations/sequences.md)
+    * [Mappings](programming-languages/python/aggregations/mappings.md)
+    * [Collections](programming-languages/python/aggregations/collections.md)
     * [Emulating Containers](programming-languages/python/aggregations/emulating-containers.md)
   * [Function](programming-languages/python/function.md)
   * [Class & Object](programming-languages/python/class-and-object/README.md)
@@ -112,6 +117,8 @@
   * [Miscellaneous](programming-languages/bash/miscellaneous.md)
 * [CMD & PowerShell](programming-languages/cmd/README.md)
   * [Miscellaneous](programming-languages/cmd/miscellaneous.md)
+* [LaTeX](programming-languages/latex/README.md)
+  * [Miscellaneous](programming-languages/latex/miscellaneous.md)
 
 ## Tools
 
@@ -203,6 +210,7 @@
   * [Dataset & DataLoader](tools-numerical/pytorch/dataloader.md)
   * [Model Building](tools-numerical/pytorch/model-building/README.md)
     * [torch.nn](tools-numerical/pytorch/model-building/torch.nn.md)
+  * [Initialize Paramters](tools-numerical/pytorch/initialize-paramters.md)
   * [Training](tools-numerical/pytorch/training.md)
   * [Using CUDA Device](tools-numerical/pytorch/using-cuda-device.md)
   * [Save & Load](tools-numerical/pytorch/save-and-load.md)

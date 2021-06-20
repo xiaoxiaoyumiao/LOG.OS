@@ -2,9 +2,7 @@
 
 ## PyTorch Models
 
-### Inference
-
-TODO
+其本质就是一个 torch module，如果需要嵌入其他模型，正常地像其他 module 一样使用即可。
 
 ```python
 from transformers import BertTokenizer, BertForMaskedLM
@@ -20,10 +18,6 @@ outputs = model(**inputs, labels=labels)
 loss = outputs.loss
 logits = outputs.logits
 ```
-
-### Training & Fine-tuning
-
-TODO
 
 ## Reference
 

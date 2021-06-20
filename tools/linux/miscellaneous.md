@@ -1,5 +1,11 @@
 # Miscellaneous
 
+* cp
+  * 最常用的文件复制工具。
+  * 使用通配符\*可以匹配任意长度的任意字符串。
+  * 使用 {} 可以指定一个数字范围，在复制已编号的文件时非常有用。例如：
+    * `cp P10802{75..83}.JPG ~/Images` 
+  * ref：[https://serverfault.com/questions/370403/copy-a-range-of-files-in-command-line-zsh-bash](https://serverfault.com/questions/370403/copy-a-range-of-files-in-command-line-zsh-bash)
 * oneko
   * 可以在桌面生成一只会追逐鼠标的猫。
 * man &lt;command&gt;

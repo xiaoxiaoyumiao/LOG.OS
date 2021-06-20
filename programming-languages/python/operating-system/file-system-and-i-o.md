@@ -141,7 +141,10 @@ print('something')#被输入到some file中
 ```python
 shutil.move(full_path, despath)
 shutil.copyfile(full_path, despath)
+shutil.rmtree(dir) # 删除以给定目录为根节点的整个文件树（也就是一般意义上的删除一个目录）
 ```
 
-## 
+## Reference
+
+\[1\] [https://stackoverflow.com/questions/6996603/how-to-delete-a-file-or-folder](https://stackoverflow.com/questions/6996603/how-to-delete-a-file-or-folder)
 

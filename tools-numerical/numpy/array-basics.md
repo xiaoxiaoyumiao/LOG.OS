@@ -140,6 +140,21 @@ op_flags=['readwrite']
 #flat迭代
 for x in a.flat:
 	#...
+	
+# masked select:
+
+# do indexing directly:
+a = np.array([True, True, True, False, False])
+b = np.array([[1,2,3,4,5], [1,2,3,4,5]])
+b[:,a]
+# array([[1, 2, 3],
+#        [1, 2, 3]])
+# use .compress:
+numpy.compress(condition, a, axis=None, out=None)
+a = np.array([[1, 2], [3, 4], [5, 6]])
+np.compress([False, True, True], a, axis=0)
+# array([[3, 4],
+#        [5, 6]])
 ```
 
 ## Arithmetic Operations
@@ -181,4 +196,6 @@ See also [Python - Emulating numeric types](../../programming-languages/python/n
 \[1\] [https://numpy.org/devdocs/user/quickstart.html](https://numpy.org/devdocs/user/quickstart.html)
 
 \[2\] [https://numpy.org/doc/stable/reference/index.html](https://numpy.org/doc/stable/reference/index.html)
+
+\[3\] [https://stackoverflow.com/questions/19984102/select-elements-of-numpy-array-via-boolean-mask-array](https://stackoverflow.com/questions/19984102/select-elements-of-numpy-array-via-boolean-mask-array)
 

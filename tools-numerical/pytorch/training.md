@@ -43,6 +43,88 @@ def train(dataloader, model, loss_fn, optimizer):
             print(f"loss: {loss:>7f}  [{current:>5d}/{size:>5d}]")
 ```
 
+## 关于 update cycle 的实现
+
+有时希望使用一个较大的 batch 进行训练，但显存不支持对这么大的 batch 进行前向计算。由于 torch 解耦了梯度计算和梯度更新，可以通过将一个 batch 拆分成多个 mini-batch，在对多个 mini-batch 做梯度传播后再做一次优化器迭代（构成一个 update cycle）。梯度存储可能导致一些额外的显存开销，但和将整个 batch 的数据装入显存相比还是划算的。整体来说是时间换空间。以下代码是一个示例，通过控制参数初始化策略、随即数种子等不变，修改 update cycle 和 batch size 可以看到，这种实现和直接使用大 batch 计算的结果是一致的（可能存在浮点运算带来的误差，可忽略不计）：
+
+```python
+class FFNN(torch.nn.Module):
+    def __init__(self, input_size, num_hidden_layers, 
+            hidden_size, output_size, dropout):
+        """
+            :param input_size: input size
+            :param num_hidden_layers: count of hidden layers. 0 for MLP.
+        """
+        super().__init__()
+        ffnn_layer_list = []        
+        current_input_size = input_size        
+        for i in range(num_hidden_layers):
+            ffnn_layer_list.append(torch.nn.Linear(current_input_size, hidden_size, bias=True))
+            ffnn_layer_list.append(torch.nn.ReLU())
+            if dropout is not None:
+                ffnn_layer_list.append(torch.nn.Dropout(dropout))
+            current_input_size = hidden_size
+        ffnn_layer_list.append(torch.nn.Linear(current_input_size, output_size, bias=True))
+
+        self.ffnn = torch.nn.Sequential(*ffnn_layer_list)
+
+    def forward(self, x):
+        return self.ffnn(x)
+        
+seed = 42
+torch.manual_seed(seed)
+
+data_size = 64
+batch_size  = 8
+update_cycle = 1
+labels = [torch.tensor([x], dtype=torch.float32) for x in range(1,data_size)]
+examples = [ torch.cat([torch.tensor([0], dtype=torch.float32), torch.log(x), x*5]) for x in labels]
+print(labels[0].dtype, examples[0].dtype)
+class SimpleDataset(Dataset):
+    def __init__(self, data):
+        self.data = data
+        
+    def __len__(self):
+        return len(self.data)
+    
+    def __getitem__(self, index):
+        return self.data[index]
+
+# LABEL = [ batch_size, input_width, coef_width ] * coefs[coef_width, label_width]
+class SimpleModel(torch.nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.param = FFNN(3, 2, 5, 1, None)
+        
+    def forward(self, x):
+        return self.param(x)
+
+def loss_fn(output, label):
+    return torch.mean((label - output)**2, dim=0)
+
+dataset = SimpleDataset(list(zip(examples, labels)))
+dataloader = DataLoader(dataset, batch_size=batch_size)
+model = SimpleModel()
+for tensor in model.parameters():
+    torch.nn.init.uniform_(tensor)
+model.train()
+counter = 0
+optimizer = optim.AdamW(model.parameters())
+optimizer.zero_grad()
+for epoch in range(10):
+    for input, label in dataloader:
+        output = model(input)
+        loss = loss_fn(output, label)
+        loss = loss / update_cycle
+        loss.backward()
+        print(output)
+        counter += 1
+        if counter % update_cycle == 0:
+            
+            optimizer.step()
+            optimizer.zero_grad()
+```
+
 ## Reference
 
 \[1\] [https://pytorch.org/docs/stable/tensors.html](https://pytorch.org/docs/stable/tensors.html)
@@ -50,4 +132,8 @@ def train(dataloader, model, loss_fn, optimizer):
 \[2\] [https://pytorch.org/tutorials/beginner/basics/optimization\_tutorial.html](https://pytorch.org/tutorials/beginner/basics/optimization_tutorial.html)
 
 \[3\] [https://pytorch.org/docs/stable/generated/torch.nn.Module.html\#torch.nn.Module.train](https://pytorch.org/docs/stable/generated/torch.nn.Module.html#torch.nn.Module.train)
+
+\[4\] [https://discuss.pytorch.org/t/multiple-forward-before-backward-call/20893](https://discuss.pytorch.org/t/multiple-forward-before-backward-call/20893)
+
+\[5\] [https://medium.com/huggingface/training-larger-batches-practical-tips-on-1-gpu-multi-gpu-distributed-setups-ec88c3e51255](https://medium.com/huggingface/training-larger-batches-practical-tips-on-1-gpu-multi-gpu-distributed-setups-ec88c3e51255)
 
