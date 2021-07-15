@@ -77,10 +77,17 @@ public class ZhiShiKuUIChange : MonoBehaviour, IPointerEnterHandler, IPointerExi
 **键盘输入事件**
 
 ```csharp
+// key pressed down
 if (Input.GetKey(KeyCode.W))
 {
     // ...
 }
+
+// any key down
+if (Input.anyKey){
+    // ...
+}
+
 ```
 
 关于同时使用WASD和arrow控制的方案：

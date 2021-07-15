@@ -25,4 +25,11 @@
 * 关于预处理指令
   * C\# 的预处理机制并不强大，可以使用的如 if else endif 等条件判断以及逻辑运算符。
   * [https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/preprocessor-directives](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/preprocessor-directives)
-
+* 集合的元素添加
+  * ```text
+    // 添加单个元素
+    list1.Add(a)
+    // 添加另一个集合的所有元素
+    list1.AddRange(list2)
+    ```
+* 

@@ -32,6 +32,17 @@ ref: [https://answers.unity.com/questions/171688/detect-when-editor-stops-playin
 
 组件左上角的 checkbox 是 enable / disable 的选项。
 
+```text
+  public GameObject obj;
+   
+   //隐藏物体
+   obj.GetComponent<Renderer>().enabled = false;
+   
+   //显示物体
+   obj.GetComponent<Renderer>().enabled = true;
+
+```
+
 {% embed url="https://answers.unity.com/questions/26844/enabledisable-specific-components.html" %}
 
 ## Reference

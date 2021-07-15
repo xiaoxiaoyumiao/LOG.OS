@@ -9,6 +9,7 @@
     * [4](diary/logos/2021/4.md)
     * [5](diary/logos/2021/5.md)
     * [6](diary/logos/2021/6.md)
+    * [7](diary/logos/2021/7.md)
 
 ## THEORY
 

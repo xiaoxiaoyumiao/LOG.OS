@@ -2,9 +2,9 @@
 
 脚本中需要`using UnityEngine.UI`
 
-可以通过gameObject - UI对游戏对象添加UI组件，添加以后会自动在该对象下建立一个canvas类型的子对象，然后在这个canvas对象下建一个UI对象。canvas子对象可以有多个。
+可以通过 gameObject - UI 对游戏对象添加UI组件，添加以后会自动在该对象下建立一个canvas类型的子对象，然后在这个canvas对象下建一个UI对象。canvas子对象可以有多个。
 
-Image：遮罩可以使用Mask组件（未尝试过）
+Image：遮罩可以使用 Mask 组件。具有 Mask 组件的 Image 会成为其子 Image 的遮罩，即只显示子 Image 落在 Mask Image 的非透明区域内的部分。遮罩的策略可以设置，如没有子 Image 的位置是否显示 Mask Image 的内容。
 
 ```csharp
  // Label 定制字体

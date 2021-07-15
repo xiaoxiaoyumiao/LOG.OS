@@ -4,7 +4,42 @@
 
 {% embed url="https://blog.csdn.net/qq\_33337811/article/details/62042218" %}
 
+## 在Inspector中添加按钮
 
+```csharp
+using UnityEngine;
+using System.Collections;
+using UnityEditor;
+
+[CustomEditor(typeof(ObjectBuilderScript))]
+public class ObjectBuilderEditor : Editor
+{
+    public override void OnInspectorGUI()
+    {
+        DrawDefaultInspector();
+
+        ObjectBuilderScript myScript = (ObjectBuilderScript)target;
+        if(GUILayout.Button("Build Object"))
+        {
+            myScript.BuildObject();
+        }
+    }
+}
+```
+
+## 文件系统交互
+
+例如调出文件保存对话框，其标题为 `Save texture as PNG` ，默认文件名为贴图名，后缀为 .png ：
+
+```text
+var path = EditorUtility.SaveFilePanel(
+            "Save texture as PNG",
+            "",
+            texture.name + ".png",
+            "png");
+```
+
+类似地还有调出保存路径、警告对话框等接口。详见 ref: \[2\]。
 
 ## 序列化
 
@@ -20,4 +55,10 @@ public class BlockTypeParameter
     ...
 }
 ```
+
+## References
+
+\[1\] [https://learn.unity.com/tutorial/editor-scripting\#5c7f8528edbc2a002053b5f9](https://learn.unity.com/tutorial/editor-scripting#5c7f8528edbc2a002053b5f9)
+
+\[2\] [https://docs.unity3d.com/2019.4/Documentation/ScriptReference/EditorUtility.SaveFilePanel.html](https://docs.unity3d.com/2019.4/Documentation/ScriptReference/EditorUtility.SaveFilePanel.html)
 
