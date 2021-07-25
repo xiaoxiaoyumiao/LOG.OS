@@ -125,6 +125,12 @@ plt.rcParams["font.family"] = "Times New Roman"
 plt.rcParams["font.size"] = 15
 ```
 
+## Seaborn
+
+Seaborn 是一个基于 Matplotlib 封装的数据可视化库，可以更方便地完成一些风格化定制效果。
+
+TODO
+
 ## Reference
 
 \[1\] [https://matplotlib.org/stable/tutorials/introductory/pyplot.html](https://matplotlib.org/stable/tutorials/introductory/pyplot.html)

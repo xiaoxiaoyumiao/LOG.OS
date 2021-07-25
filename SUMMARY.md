@@ -136,6 +136,7 @@
   * [Virtual Environment](tools/python-tools/virtual-environment.md)
   * [Dependency Parsing](tools/python-tools/dependency-parsing.md)
   * [Plotting](tools/python-tools/plotting.md)
+  * [Sound](tools/python-tools/sound.md)
 * [Vim](tools/vim/README.md)
   * [Miscellaneous](tools/vim/miscellaneous.md)
 * [Git](tools/git.md)
@@ -228,6 +229,11 @@
     * [Tokenizer](tools-numerical/auxiliary/transformers/tokenizer.md)
     * [Models](tools-numerical/auxiliary/transformers/models.md)
     * [Miscellaneous](tools-numerical/auxiliary/transformers/miscellaneous.md)
+
+## TOOLS - MEDIA
+
+* [Praat](tools-media/praat/README.md)
+  * [Parselmouth](tools-media/praat/parselmouth.md)
 
 ## TOOLS - VIRTUALIZED
 

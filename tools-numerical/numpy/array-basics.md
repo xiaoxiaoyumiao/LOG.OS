@@ -1,6 +1,6 @@
 # Array Basics
 
-```text
+```python
 import numpy as np
 ```
 
