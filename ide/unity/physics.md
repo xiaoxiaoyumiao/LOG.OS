@@ -24,9 +24,9 @@ ref: [https://docs.unity3d.com/ScriptReference/Physics.Raycast.html](https://doc
 
 ref: [https://blog.csdn.net/u010718707/article/details/42111567](https://blog.csdn.net/u010718707/article/details/42111567)
 
-## 运动学刚体
+## Rigidbody
 
-运动学\(kinematic\)刚体不带物理碰撞效果，只计算运动学量（速度、位置等），碰撞时触发相应回调函数，相当于把碰撞交给开发者来 handle。
+刚体组件使得其附着的游戏对象参与 Unity 物理引擎的模拟。其赋予游戏对象常见的位置、速度、角度等物理属性，并支持重力、阻力等常见物理参数的配置。若该组件被设置为运动学的（kinematic），那么其不再参与动力学计算，所有外力、碰撞、约束等不再影响其运动，其运动完全由开发者脚本控制。动力学（dynamic）刚体则受到力、碰撞、约束的作用。对刚体物理量的操作（无论是动力学的还是运动学的）都在 FixedUpdate 中计算为宜。静态（static）刚体适用于始终保持静止的游戏对象。
 
 TODO 刚体的类型
 
@@ -38,7 +38,15 @@ TODO 刚体的类型
 
 ref: [https://docs.unity3d.com/ScriptReference/Rigidbody-velocity.html](https://docs.unity3d.com/ScriptReference/Rigidbody-velocity.html)
 
+ref: [https://docs.unity3d.com/ScriptReference/Rigidbody.html](https://docs.unity3d.com/ScriptReference/Rigidbody.html)
+
 ref: [https://answers.unity.com/questions/653793/cant-move-player-with-rigidbodyvelocity.html](https://answers.unity.com/questions/653793/cant-move-player-with-rigidbodyvelocity.html)
+
+## Collider
+
+碰撞体组件使得一个游戏对象可以触发碰撞事件。如果一个刚体需要发生碰撞，那么它应当具有碰撞体组件；但碰撞体却并不一定要是刚体，例如一些静态的地形。（按照 ref\[1\]，它会与一个全局的静态刚体关联。）常用的碰撞体有 BoxCollider\(2D\)，SphereCollider，PolygonCollider2D，CircleCollider2D 等。
+
+ref\[1\]: [https://docs.unity3d.com/ScriptReference/Collider2D-attachedRigidbody.html](https://docs.unity3d.com/ScriptReference/Collider2D-attachedRigidbody.html)
 
 ## 获取模型碰撞点的 UV 坐标
 
