@@ -43,6 +43,11 @@
   * [Miscellaneous](theory/language-processing/miscellaneous.md)
 * [Algorithms](theory/algorithms/README.md)
   * [Miscellaneous](theory/algorithms/miscellaneous.md)
+* [Network](theory/network/README.md)
+  * [Advanced Network](theory/network/advanced-network/README.md)
+    * [Latency, Bandwidth & Loss](theory/network/advanced-network/latency-bandwidth-and-loss.md)
+    * [Congestion Control](theory/network/advanced-network/congestion-control.md)
+    * [Miscellaneous](theory/network/advanced-network/miscellaneous.md)
 
 ## Programming Languages
 
@@ -275,6 +280,8 @@
   * [WXML](ide/weixin-applet/wxml.md)
   * [Storage](ide/weixin-applet/storage.md)
   * [Miscellaneous](ide/weixin-applet/miscellaneous.md)
+* [Android Studio](ide/android-studio/README.md)
+  * [Miscellaneous](ide/android-studio/miscellaneous.md)
 
 ## ARCHITECTURE
 
