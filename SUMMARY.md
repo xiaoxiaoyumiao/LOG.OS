@@ -47,6 +47,7 @@
   * [Advanced Network](theory/network/advanced-network/README.md)
     * [Latency, Bandwidth & Loss](theory/network/advanced-network/latency-bandwidth-and-loss.md)
     * [Congestion Control](theory/network/advanced-network/congestion-control.md)
+    * [Open vSwitch](theory/network/advanced-network/open-vswitch.md)
     * [Miscellaneous](theory/network/advanced-network/miscellaneous.md)
 
 ## Programming Languages
