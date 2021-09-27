@@ -247,7 +247,13 @@
 * [Docker](tools-virtualized/docker/README.md)
   * [Installation](tools-virtualized/docker/installation.md)
   * [Basics](tools-virtualized/docker/basics.md)
+  * [Miscellaneous](tools-virtualized/docker/miscellaneous.md)
 * [VirtualBox](tools-virtualized/virtualbox.md)
+* [ROS Kinetic](tools-virtualized/ros-kinetic/README.md)
+  * [Setup & ROS FS](tools-virtualized/ros-kinetic/setup-and-ros-fs.md)
+  * [Package](tools-virtualized/ros-kinetic/package.md)
+  * [Nodes, Topics, Services & Parameters](tools-virtualized/ros-kinetic/nodes-topics-services-and-parameters.md)
+  * [Defining Message & Service](tools-virtualized/ros-kinetic/defining-message-and-service.md)
 
 ## IDE
 
