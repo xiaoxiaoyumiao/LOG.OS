@@ -138,5 +138,7 @@ generate_messages(
 )
 ```
 
-完成以上配置后，在 workspace 根目录做一次 catkin make 即可完成编译。编译器将从描述文件生成可供不同语言引用的 header。
+完成以上配置后，在 workspace 根目录做一次 catkin make 即可完成编译。编译器将从描述文件生成可供不同语言引用的 header 或 package。
+
+> The C++ message header file will be generated in ~/catkin\_ws/devel/include/beginner\_tutorials/. The Python script will be created in ~/catkin\_ws/devel/lib/python2.7/dist-packages/beginner\_tutorials/msg. The lisp file appears in ~/catkin\_ws/devel/share/common-lisp/ros/beginner\_tutorials/msg/.
 

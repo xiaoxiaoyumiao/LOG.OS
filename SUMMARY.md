@@ -254,6 +254,8 @@
   * [Package](tools-virtualized/ros-kinetic/package.md)
   * [Nodes, Topics, Services & Parameters](tools-virtualized/ros-kinetic/nodes-topics-services-and-parameters.md)
   * [Defining Message & Service](tools-virtualized/ros-kinetic/defining-message-and-service.md)
+  * [Write Subscriber/Publisher](tools-virtualized/ros-kinetic/write-subscriber-publisher.md)
+  * [Write Server/Client](tools-virtualized/ros-kinetic/write-server-client.md)
 
 ## IDE
 

@@ -24,7 +24,7 @@ rosnode info [node_name] # 查询一个 node 的属性。
 rosnode ping [node_name] # ping 一个节点
 ```
 
-运行 node 的工具是 `rosrun` 。
+运行 node 的工具是 `rosrun` 。事实上 `rosrun` 的效果和直接运行节点对应的可执行文件并没有什么区别，其主要作用就是可以不用知道包和可执行文件的具体位置。后文使用 python 编写节点时也会看到 `rosrun some_package some_node.py` 这样的语句，和直接调用 python 解释器运行脚本的效果是一样的。（ref: \[5\]）
 
 ```text
 rosrun [package_name] [node_name] # 运行某个包中的某个节点。例如：
@@ -187,4 +187,6 @@ rosparam load [file_name] [namespace]
 \[3\] [http://wiki.ros.org/ROS/Tutorials/UnderstandingTopics](http://wiki.ros.org/ROS/Tutorials/UnderstandingTopics)
 
 \[4\] [http://wiki.ros.org/ROS/Tutorials/UnderstandingServicesParams](http://wiki.ros.org/ROS/Tutorials/UnderstandingServicesParams)
+
+\[5\] [https://answers.ros.org/question/339462/what-does-rosrun-do-internally/](https://answers.ros.org/question/339462/what-does-rosrun-do-internally/)
 
