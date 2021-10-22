@@ -72,6 +72,7 @@
     * [Sequences](programming-languages/python/aggregations/sequences.md)
     * [Mappings](programming-languages/python/aggregations/mappings.md)
     * [Collections](programming-languages/python/aggregations/collections.md)
+    * [Heap](programming-languages/python/aggregations/heap.md)
     * [Emulating Containers](programming-languages/python/aggregations/emulating-containers.md)
   * [Function](programming-languages/python/function.md)
   * [Class & Object](programming-languages/python/class-and-object/README.md)

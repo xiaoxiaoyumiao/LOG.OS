@@ -14,7 +14,7 @@ fileHandler = open(name[, mode[, buffering]])#filehandler是一个文件File对�
 ```
 
 * name : 一个包含了你要访问的文件名称的字符串值。
-* mode : mode 决定了打开文件的模式：只读，写入，追加等。所有可取值见如下的完全列表。这个参数是非强制的，默认文件访问模式为只读(r)。w为从头写入并在不存在时创建新文件，a为追加并在不存在时创建新文件，
+* mode : mode 决定了打开文件的模式：只读，写入，追加等。所有可取值见如下的完全列表。这个参数是非强制的，默认文件访问模式为只读\(r\)。w为从头写入并在不存在时创建新文件，a为追加并在不存在时创建新文件，
 * buffering : 如果 buffering 的值被设为 0，就不会有寄存。如果 buffering 的值取 1，访问文件时会寄存行。如果将 buffering 的值设为大于 1 的整数，表明了这就是的寄存区的缓冲大小。如果取负值，寄存区的缓冲大小则为系统默认。
 
 ```python
@@ -35,7 +35,7 @@ f.close()
 
 #### 文件IO之指针定位
 
-seek(offset, from)
+seek\(offset, from\)
 
 offset ：文件指针偏移量
 
@@ -43,7 +43,7 @@ from ：偏移计算类型， 0-从文件开头往后推 1-当前位置往后推
 
 对于汉字（utf-8），offset==3才算偏移了一个汉字。
 
-调用一次fin.read()之后，指针就移动到了全文末尾。（如果调用一次fin.seek(0)就又会回到开头）
+调用一次fin.read\(\)之后，指针就移动到了全文末尾。（如果调用一次fin.seek\(0\)就又会回到开头）
 
 这里注意用‘r'打开的文件是只能使用模式0的，用'r+'或者’rb‘打开成二进制文件才可以使用012.
 
@@ -58,7 +58,7 @@ with open("xxxx.txt", "r", encoding= "utf-8") as f:
 
 ## File System
 
-文件路径都是字符串，用/分割或者\\\转义
+文件路径都是字符串，用/分割或者\\转义
 
 `os` 模块：
 
@@ -87,7 +87,7 @@ time.ctime(os.path.getctime(file))
 
 可采用 `os.walk()` 和 `os.listdir()` 两种方法，遍历指定文件夹下的文件。
 
-&#x20;`os.walk()` 可以递归地遍历文件夹下所有的文件（包括目录和非目录）。
+ `os.walk()` 可以递归地遍历文件夹下所有的文件（包括目录和非目录）。
 
 ```python
 # top: string，需要遍历的目录的路径
@@ -146,4 +146,5 @@ shutil.rmtree(dir) # 删除以给定目录为根节点的整个文件树（也�
 
 ## Reference
 
-\[1] [https://stackoverflow.com/questions/6996603/how-to-delete-a-file-or-folder](https://stackoverflow.com/questions/6996603/how-to-delete-a-file-or-folder)
+\[1\] [https://stackoverflow.com/questions/6996603/how-to-delete-a-file-or-folder](https://stackoverflow.com/questions/6996603/how-to-delete-a-file-or-folder)
+
