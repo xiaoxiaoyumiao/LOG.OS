@@ -24,11 +24,11 @@ axes.set_ylabel('some numbers')
 plt.savefig('foo.png') # save instead of showing
 ```
 
-![naive case](../../.gitbook/assets/image%20%283%29.png)
+![naive case](<../../.gitbook/assets/image (3).png>)
 
 以下是  Matplotlib 中使用的主要术语。
 
-![](../../.gitbook/assets/image%20%282%29.png)
+![](<../../.gitbook/assets/image (2).png>)
 
 
 
@@ -66,7 +66,7 @@ for i, axs_row in enumerate(axs):
 plt.show()
 ```
 
-![subplots](../../.gitbook/assets/image%20%284%29.png)
+![subplots](<../../.gitbook/assets/image (4).png>)
 
 ## More Types of Plots
 
@@ -78,7 +78,7 @@ plt.scatter(x, y, s=None, c=None, marker=None, cmap=None,
     edgecolors=None, plotnonfinite=False, data=None, **kwargs)
 ```
 
-使用 `s` \(size\) 和 `c` \(color\) 参数可以控制散点图的散点大小和颜色。它们都既可以是一个标量也可以是一个数组，是标量时将作用于所有数据点，是数组时则与每个数据点顺次对应。
+使用 `s` (size) 和 `c` (color) 参数可以控制散点图的散点大小和颜色。它们都既可以是一个标量也可以是一个数组，是标量时将作用于所有数据点，是数组时则与每个数据点顺次对应。
 
 直方图可以使用 `hist` 方法绘制，只需指定数据和 bins：
 
@@ -90,6 +90,17 @@ plt.hist(x, bins=None, range=None, density=False, weights=None,
 ```
 
 bins 可以是一个数字（表示 bin 的数量），也可以是一个数列（定义所有 bins 的分界点，包括起止点）。range 指定绘制时数据的限定范围，范围外的数据会被忽略。
+
+对于已经统计好的频率分布，可以使用 `bar` 方法绘制直方图。
+
+```
+x = [1,2,3]
+y = [2,3,1]  
+plt.bar(x, y)                 
+plt.show()
+```
+
+![](<../../.gitbook/assets/image (5).png>)\`\`\`
 
 ## Styling
 
@@ -116,7 +127,7 @@ plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', borderaxespad=0.)
 plt.show()
 ```
 
-![](../../.gitbook/assets/image%20%281%29.png)
+![](<../../.gitbook/assets/image (1).png>)
 
 通过 `rcParams` 可以定制全局字体：
 
@@ -133,23 +144,23 @@ TODO
 
 ## Reference
 
-\[1\] [https://matplotlib.org/stable/tutorials/introductory/pyplot.html](https://matplotlib.org/stable/tutorials/introductory/pyplot.html)
+\[1] [https://matplotlib.org/stable/tutorials/introductory/pyplot.html](https://matplotlib.org/stable/tutorials/introductory/pyplot.html)
 
-\[2\] [https://matplotlib.org/stable/tutorials/introductory/usage.html](https://matplotlib.org/stable/tutorials/introductory/usage.html#parts-of-a-figure)
+\[2] [https://matplotlib.org/stable/tutorials/introductory/usage.html](https://matplotlib.org/stable/tutorials/introductory/usage.html#parts-of-a-figure)
 
-\[3\] [https://stackoverflow.com/questions/40734672/how-to-set-the-label-fonts-as-time-new-roman-by-drawparallels-in-python/40734893](https://stackoverflow.com/questions/40734672/how-to-set-the-label-fonts-as-time-new-roman-by-drawparallels-in-python/40734893)
+\[3] [https://stackoverflow.com/questions/40734672/how-to-set-the-label-fonts-as-time-new-roman-by-drawparallels-in-python/40734893](https://stackoverflow.com/questions/40734672/how-to-set-the-label-fonts-as-time-new-roman-by-drawparallels-in-python/40734893)
 
-\[4\] [https://matplotlib.org/stable/tutorials/intermediate/legend\_guide.html](https://matplotlib.org/stable/tutorials/intermediate/legend_guide.html)
+\[4] [https://matplotlib.org/stable/tutorials/intermediate/legend\_guide.html](https://matplotlib.org/stable/tutorials/intermediate/legend\_guide.html)
 
-\[5\] [https://matplotlib.org/stable/api/\_as\_gen/matplotlib.pyplot.scatter.html](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.scatter.html)
+\[5] [https://matplotlib.org/stable/api/\_as\_gen/matplotlib.pyplot.scatter.html](https://matplotlib.org/stable/api/\_as\_gen/matplotlib.pyplot.scatter.html)
 
-\[6\] [https://stackoverflow.com/questions/332289/how-do-you-change-the-size-of-figures-drawn-with-matplotlib](https://stackoverflow.com/questions/332289/how-do-you-change-the-size-of-figures-drawn-with-matplotlib)
+\[6] [https://stackoverflow.com/questions/332289/how-do-you-change-the-size-of-figures-drawn-with-matplotlib](https://stackoverflow.com/questions/332289/how-do-you-change-the-size-of-figures-drawn-with-matplotlib)
 
-\[7\] [https://matplotlib.org/stable/api/\_as\_gen/matplotlib.pyplot.hist.html](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.hist.html)
+\[7] [https://matplotlib.org/stable/api/\_as\_gen/matplotlib.pyplot.hist.html](https://matplotlib.org/stable/api/\_as\_gen/matplotlib.pyplot.hist.html)
 
-\[8\] [https://stackoverflow.com/questions/9622163/save-plot-to-image-file-instead-of-displaying-it-using-matplotlib](https://stackoverflow.com/questions/9622163/save-plot-to-image-file-instead-of-displaying-it-using-matplotlib)
+\[8] [https://stackoverflow.com/questions/9622163/save-plot-to-image-file-instead-of-displaying-it-using-matplotlib](https://stackoverflow.com/questions/9622163/save-plot-to-image-file-instead-of-displaying-it-using-matplotlib)
 
-\[9\] [https://matplotlib.org/stable/api/\_as\_gen/matplotlib.pyplot.plot.html\#matplotlib.pyplot.plot](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot)
+\[9] [https://matplotlib.org/stable/api/\_as\_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot](https://matplotlib.org/stable/api/\_as\_gen/matplotlib.pyplot.plot.html#matplotlib.pyplot.plot)
 
-
+\[10] [https://stackoverflow.com/questions/21195179/plot-a-histogram-from-a-dictionary](https://stackoverflow.com/questions/21195179/plot-a-histogram-from-a-dictionary)
 

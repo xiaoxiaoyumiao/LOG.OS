@@ -62,7 +62,7 @@ gameObject.transform.position = new Vector...
 >
 > 正常的一个父物体A=（0.5,0.5,0.5） 子物体B（1,1,1）
 >
-> 如果我是使用instantiate\(B,A\) //实例化子物体B，同时指定B的父物体是A。
+> 如果我是使用instantiate(B,A) //实例化子物体B，同时指定B的父物体是A。
 >
 > 这时子物体B的localscale仍是（1,1,1），但是我发现B物体的absscale变了，现在是（0.5,0.5,0.5,）
 >
@@ -109,20 +109,20 @@ TileMap 是一种处理栅格布局（如各种经典2D横版过关冒险游戏�
 
 绘制时瓦片旋转相关快捷键：（ref：[https://docs.unity3d.com/Manual/Tilemap-Painting.html](https://docs.unity3d.com/Manual/Tilemap-Painting.html)）
 
-| Shortcut Key | Function |
-| :--- | :--- |
-| \[ | Rotate the active Brush clockwise. |
-| \] | Rotate the active Brush anti-clockwise. |
-| Shift + \[ | Flip the active Brush along the x-axis. |
-| Shift + \] | Flip the active Brush along the y-axis. |
-| - \(Available when **Can Change Z Position** is enabled\) | Increase the z-position of the active Brush. This is only available when **Can Change Z Position** is enabled for the active Brush. |
-| = \(Available when **Can Change Z Position** is enabled\) | Decrease the z-position of the active Brush. This is only available when **Can Change Z Position** is enabled for the active Brush. |
+| Shortcut Key                                            | Function                                                                                                                            |
+| ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| \[                                                      | Rotate the active Brush clockwise.                                                                                                  |
+| ]                                                       | Rotate the active Brush anti-clockwise.                                                                                             |
+| Shift + \[                                              | Flip the active Brush along the x-axis.                                                                                             |
+| Shift + ]                                               | Flip the active Brush along the y-axis.                                                                                             |
+| - (Available when **Can Change Z Position** is enabled) | Increase the z-position of the active Brush. This is only available when **Can Change Z Position** is enabled for the active Brush. |
+| = (Available when **Can Change Z Position** is enabled) | Decrease the z-position of the active Brush. This is only available when **Can Change Z Position** is enabled for the active Brush. |
 
-{% embed url="https://blog.csdn.net/qq\_39162826/article/details/112144150" %}
+{% embed url="https://blog.csdn.net/qq_39162826/article/details/112144150" %}
 
 {% embed url="https://blog.csdn.net/seemeno/article/details/93136806" %}
 
-在代码中可以通过SetTile\(Vector3Int, Tile\)来往固定位置放瓦片。这里的固定位置是TileMap自己的一套坐标系，目前还不清楚是怎么计算的。2D情况下Vector3Int的z轴（第三维）取0。从Sprite加载Tile如下：
+在代码中可以通过SetTile(Vector3Int, Tile)来往固定位置放瓦片。这里的固定位置是TileMap自己的一套坐标系，目前还不清楚是怎么计算的。2D情况下Vector3Int的z轴（第三维）取0。从Sprite加载Tile如下：
 
 ```csharp
 Tile tile = ScriptableObject.CreateInstance<Tile>();
@@ -149,4 +149,3 @@ tile.sprite = tmp;
 ## **对象的布局 Layout**
 
 Inspector的rect transform可以看到有个方形图案指示的锚点位置设置，默认是锚点居中的，如果想填充父对象，可以选择在两个方向上stretch（最右下角的），并在右边的参数中把left right top bottom都改成0（这里和CSS很像）。高级布局需要借助layout，待补充
-

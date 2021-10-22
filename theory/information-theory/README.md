@@ -2,5 +2,4 @@
 
 ## Reference
 
-Thomas M. Cover, Joy A. Thomas, _Elements of information theory_ 2nd ed.
-
+Thomas M. Cover, Joy A. Thomas, _Elements of information theory _2nd ed.

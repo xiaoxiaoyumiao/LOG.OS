@@ -2,7 +2,7 @@
 
 ## 自定义Inspector
 
-{% embed url="https://blog.csdn.net/qq\_33337811/article/details/62042218" %}
+{% embed url="https://blog.csdn.net/qq_33337811/article/details/62042218" %}
 
 ## 在Inspector中添加按钮
 
@@ -31,7 +31,7 @@ public class ObjectBuilderEditor : Editor
 
 例如调出文件保存对话框，其标题为 `Save texture as PNG` ，默认文件名为贴图名，后缀为 .png ：
 
-```text
+```
 var path = EditorUtility.SaveFilePanel(
             "Save texture as PNG",
             "",
@@ -39,13 +39,13 @@ var path = EditorUtility.SaveFilePanel(
             "png");
 ```
 
-类似地还有调出保存路径、警告对话框等接口。详见 ref: \[2\]。
+类似地还有调出保存路径、警告对话框等接口。详见 ref: \[2]。
 
 ## 序列化
 
 为了让component的field能够在inspector中便捷地被访问和修改，需要在类前标注这是一个可序列化的类，并对不需要序列化的值标注非序列化。
 
-```text
+```
 [System.Serializable]
 public class BlockTypeParameter
 {
@@ -58,7 +58,6 @@ public class BlockTypeParameter
 
 ## References
 
-\[1\] [https://learn.unity.com/tutorial/editor-scripting\#5c7f8528edbc2a002053b5f9](https://learn.unity.com/tutorial/editor-scripting#5c7f8528edbc2a002053b5f9)
+\[1] [https://learn.unity.com/tutorial/editor-scripting#5c7f8528edbc2a002053b5f9](https://learn.unity.com/tutorial/editor-scripting#5c7f8528edbc2a002053b5f9)
 
-\[2\] [https://docs.unity3d.com/2019.4/Documentation/ScriptReference/EditorUtility.SaveFilePanel.html](https://docs.unity3d.com/2019.4/Documentation/ScriptReference/EditorUtility.SaveFilePanel.html)
-
+\[2] [https://docs.unity3d.com/2019.4/Documentation/ScriptReference/EditorUtility.SaveFilePanel.html](https://docs.unity3d.com/2019.4/Documentation/ScriptReference/EditorUtility.SaveFilePanel.html)

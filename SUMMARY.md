@@ -2,7 +2,7 @@
 
 * [HOME](README.md)
 
-## LOGOS <a id="diary"></a>
+## LOGOS <a href="diary" id="diary"></a>
 
 * [LOGOS](diary/logos/README.md)
   * [2021](diary/logos/2021/README.md)
@@ -10,6 +10,7 @@
     * [5](diary/logos/2021/5.md)
     * [6](diary/logos/2021/6.md)
     * [7](diary/logos/2021/7.md)
+    * [10](diary/logos/2021/10.md)
 
 ## THEORY
 
@@ -47,7 +48,12 @@
   * [Advanced Network](theory/network/advanced-network/README.md)
     * [Latency, Bandwidth & Loss](theory/network/advanced-network/latency-bandwidth-and-loss.md)
     * [Congestion Control](theory/network/advanced-network/congestion-control.md)
+    * [Topology](theory/network/advanced-network/topology.md)
     * [Open vSwitch](theory/network/advanced-network/open-vswitch.md)
+    * [NetworkX](theory/network/advanced-network/networkx/README.md)
+      * [Introduction](theory/network/advanced-network/networkx/introduction.md)
+      * [Basics](theory/network/advanced-network/networkx/basics.md)
+      * [Miscellaneous](theory/network/advanced-network/networkx/miscellaneous.md)
     * [Miscellaneous](theory/network/advanced-network/miscellaneous.md)
 
 ## Programming Languages
@@ -80,7 +86,7 @@
 * [C](programming-languages/c-c++/README.md)
   * [String](programming-languages/c-c++/string.md)
   * [Miscellaneous](programming-languages/c-c++/miscellaneous.md)
-* [C\#](programming-languages/c/README.md)
+* [C#](programming-languages/c/README.md)
   * [I/O](programming-languages/c/i-o.md)
   * [Miscellaneous](programming-languages/c/miscellaneous.md)
 * [C51](programming-languages/c51/README.md)
@@ -102,7 +108,7 @@
   * [Data Types](programming-languages/java/data-types.md)
   * [Control Flow](programming-languages/java/control-flow.md)
   * [String](programming-languages/java/string.md)
-  * [I&O](programming-languages/java/i-and-o.md)
+  * [I\&O](programming-languages/java/i-and-o.md)
   * [Classes & Data Structures](programming-languages/java/classes-and-data-structures.md)
   * [Miscellaneous](programming-languages/java/miscellaneous.md)
 * [JavaScript](programming-languages/javascript/README.md)
@@ -309,4 +315,3 @@
 * [WSL](architecture/wsl.md)
 * [CI/CD Server from start](architecture/ci-cd-server-from-start/README.md)
   * [Initialization](architecture/ci-cd-server-from-start/initialization.md)
-
