@@ -11,6 +11,7 @@
     * [6](diary/logos/2021/6.md)
     * [7](diary/logos/2021/7.md)
     * [10](diary/logos/2021/10.md)
+    * [11](diary/logos/2021/11.md)
 
 ## THEORY
 
@@ -64,6 +65,7 @@
     * [Time](programming-languages/python/operating-system/untitled.md)
     * [Argument Parsing](programming-languages/python/operating-system/argument-parsing.md)
     * [Logging](programming-languages/python/operating-system/logging.md)
+    * [Process](programming-languages/python/operating-system/process.md)
   * [Encoding & Decoding](programming-languages/python/encoding-and-decoding/README.md)
     * [String](programming-languages/python/encoding-and-decoding/string.md)
     * [Serialization](programming-languages/python/encoding-and-decoding/serialization.md)

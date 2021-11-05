@@ -28,13 +28,13 @@
     * 一个处于 running 状态的 container 是无法通过 `rm` 删除的，需要先停止或通过加 `-f` 来删除。
   * `docker stop <container_name>` 可以停止运行一个正在运行的 container
   * `docker login -u <user_name>` 可以在本地命令行登陆 Docker Hub，从而执行远程相关操作
-  * `docker tag` 可以为一个 image 添加新的名称（类似一个 URL 重定向？） 
+  * `docker tag` 可以为一个 image 添加新的名称（类似一个 URL 重定向？）&#x20;
   * `docker push <image_name>` 可以把一个本地的 image 推送到远端同名 repo
 * Container Volumes
   * container 可以通过 volume 将它的文件系统中特定的路径关联到 host 的路径，从而实现 container 的数据持久化。
   * named volumes 由 docker 维护存储，从而只需要通过 volume 的名字来操作它们。
   * `docker volme create <volume_name>` 可以创建一个指定名字的 named volume。
-  * `docker run` 的 `-v <volume_name>:<file_system_path>` 可以把一个 named volume mount 到 docker 的文件系统的指定路径上。
+  * `docker run` 的 `-v <volume_name>:<file_system_path>` 可以把一个 named volume mount 到 docker 的文件系统的指定路径上。需要挂载多个路径时，使用多个 `-v` 参数即可。（ref：\[2]）
   * 使用 `docker volume inspect <volume_name>` 可以看到 named volume 的信息，包括它的实际存储位置。
   * bind mount 则由 docker 使用者维护，这一种 volume 的存储路径可以自由指定，常用于和 container 进行数据交换。例如，把本地的代码 mount 到 container 上。
 
@@ -46,7 +46,7 @@ docker基础知识 [https://yq.aliyun.com/articles/734130?spm=5176.12281978.0.0.
 
 关于Dockerfile [https://yq.aliyun.com/articles/735190?spm=5176.12281978.0.0.37722232dFdRyd](https://yq.aliyun.com/articles/735190?spm=5176.12281978.0.0.37722232dFdRyd)
 
-\[1\] [https://docs.docker.com/desktop/dashboard/](https://docs.docker.com/desktop/dashboard/)
+\[1] [https://docs.docker.com/desktop/dashboard/](https://docs.docker.com/desktop/dashboard/)
 
-
+\[2] [https://stackoverflow.com/questions/18861834/mounting-multiple-volumes-on-a-docker-container/18861869](https://stackoverflow.com/questions/18861834/mounting-multiple-volumes-on-a-docker-container/18861869)
 
