@@ -100,7 +100,7 @@ plt.bar(x, y)
 plt.show()
 ```
 
-![](<../../.gitbook/assets/image (5).png>)\`\`\`
+![](<../../.gitbook/assets/image (5) (1).png>)\`\`\`
 
 ## Styling
 

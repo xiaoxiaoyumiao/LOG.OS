@@ -1,4 +1,3 @@
 # transformers
 
-🤗 transformers. \(an extended version of `pytorch-pretrained-bert` \)
-
+:hugging: transformers. (an extended version of `pytorch-pretrained-bert` )
