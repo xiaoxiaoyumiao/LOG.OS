@@ -2,7 +2,7 @@
 
 ## ArrayBuffer
 
-`ArrayBuffer` 对象是一个存储二进制数据的 buffer，无法直接操作，需要借助 DataView 或  TypedArray 对象来读写其值。
+`ArrayBuffer` 对象是一个存储二进制数据的 buffer，无法直接操作，需要借助 DataView 或 TypedArray 对象来读写其值。
 
 ```javascript
 // create an ArrayBuffer of length 8
@@ -23,7 +23,7 @@ var buffer = new ArrayBuffer(16);
 var view = new DataView(buffer, 0);
 
 // read buffer property to get the original buffer.
-var alsoBuffer = view.buffer;  // ArrayBuffer(16) {}
+var alsoBuffer = view.buffer;  // ArrayBuffer(16) {}
 
 // read byteLength property to get the length of this view
 const len = view.byteLength; // 16

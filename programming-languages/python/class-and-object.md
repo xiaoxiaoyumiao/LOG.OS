@@ -9,11 +9,11 @@ class className(Base):#如果要继承的话就写上Base，否则放空；支�
         self.data1 = args[0]
         self.data2 = args[1]
         #pass
-        
+
     def method1(self,x):
         self.data1 = x
         return x
-        
+
     def method2(self,x):
         x = x+1
         self.method1(x)
@@ -27,10 +27,10 @@ class FooParent(object):
     def __init__(self):
         self.parent = 'I\'m the parent.'
         print ('Parent')
-    
+
     def bar(self,message):
         print ("%s from Parent" % message)
- 
+
 class FooChild(FooParent):
     def __init__(self):
         # super(FooChild,self) 首先找到 FooChild 的父类（就是类 FooParent），然后把类 FooChild 的对象转换为类 FooParent 的对象

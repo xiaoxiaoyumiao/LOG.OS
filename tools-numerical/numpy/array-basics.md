@@ -131,7 +131,7 @@ a[[0,1,2],[0,1,0]] # [1,4,5]
 #数组Iteration:
 #nditer迭代
 for x in np.nditer(a):
-	#...
+    #...
 #默认按内存存储顺序访问，指定C风格为行优先，Fortran风格为列优先
 order = 'C'
 order = 'F'

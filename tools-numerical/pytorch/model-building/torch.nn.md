@@ -68,4 +68,3 @@ Output: (N, \prod *dims)(N,∏∗dims) (for the default case).
 \[1\] [https://pytorch.org/docs/stable/nn.html](https://pytorch.org/docs/stable/nn.html)
 
 #### 
-

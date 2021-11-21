@@ -45,7 +45,7 @@ def infinite_sequence():
 ```
 
 > If a container object’s [`__iter__()`](https://docs.python.org/3/reference/datamodel.html#object.__iter__) method is implemented as a generator, it will automatically return an iterator object \(technically, a generator object\) supplying the [`__iter__()`](https://docs.python.org/3/reference/datamodel.html#object.__iter__) and [`__next__()`](https://docs.python.org/3/reference/expressions.html#generator.__next__) methods.
-
+>
 > When `yield from <expr>` is used, the supplied expression must be an iterable. The values produced by iterating that iterable are passed directly to the caller of the current generator’s methods.
 
 ```python
@@ -65,6 +65,4 @@ def infinite_sequence():
 \[1\] [https://docs.python.org/3/library/stdtypes.html\#iterator-types](https://docs.python.org/3/library/stdtypes.html#iterator-types)
 
 \[2\] [https://docs.python.org/3/reference/expressions.html\#generator-expressions](https://docs.python.org/3/reference/expressions.html#generator-expressions)
-
-
 

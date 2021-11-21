@@ -70,8 +70,6 @@ function downloadFromCloud(url) {
 
 文件的 URL 在上传文件时就可以看到。
 
-
-
 ## Reference
 
 \[1\] [https://developers.weixin.qq.com/miniprogram/dev/framework/ability/storage.html](https://developers.weixin.qq.com/miniprogram/dev/framework/ability/storage.html)
@@ -81,6 +79,4 @@ function downloadFromCloud(url) {
 \[3\] [https://developers.weixin.qq.com/miniprogram/dev/wxcloud/reference-sdk-api/storage/Cloud.uploadFile.html](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/reference-sdk-api/storage/Cloud.uploadFile.html)
 
 \[4\] [https://blog.csdn.net/Panda325/article/details/108111212](https://blog.csdn.net/Panda325/article/details/108111212)
-
-
 

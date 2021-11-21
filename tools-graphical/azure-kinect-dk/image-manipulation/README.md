@@ -25,10 +25,10 @@ k4a 也提供了其他一些 image 变换的方法。
 ```cpp
 k4a_calibration_t calibration;
 if (K4A_FAILED(k4a_device_get_calibration(device, config.depth_mode, config.color_resolution, &calibration))) {
-	printf("Failed to get calibration.\n");
-	k4a_device_stop_cameras(device);
-	k4a_device_close(device);
-	return 1;
+    printf("Failed to get calibration.\n");
+    k4a_device_stop_cameras(device);
+    k4a_device_close(device);
+    return 1;
 }
 
 int colorWidth = calibration.color_camera_calibration.resolution_width;
@@ -40,10 +40,10 @@ int colorHeight = calibration.color_camera_calibration.resolution_height;
 ```cpp
 k4a_transformation_t transformation = k4a_transformation_create(&calibration);
 if (transformation == NULL) {
-	printf("Failed to get tranformation.\n");
-	k4a_device_stop_cameras(device);
-	k4a_device_close(device);
-	return 1;
+    printf("Failed to get tranformation.\n");
+    k4a_device_stop_cameras(device);
+    k4a_device_close(device);
+    return 1;
 }
 
 ...
@@ -57,9 +57,9 @@ k4a_image_t rgbdImage;
 // int height_pixels  height in pixels
 // int stride_bytes  0 for reasoning from format and width
 // k4a_image_t* image_handle 
-)	
+)    
 if (K4A_FAILED(k4a_image_create(K4A_IMAGE_FORMAT_DEPTH16, colorWidth, colorHeight, 0, &rgbdImage))) {
-	printf("failed to create rgbd image.\n");
+    printf("failed to create rgbd image.\n");
 }
 
 k4a_transformation_depth_image_to_color_camera(transformation, depthImage, rgbdImage);

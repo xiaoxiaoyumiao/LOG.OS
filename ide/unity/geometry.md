@@ -80,7 +80,7 @@ ref: [https://blog.csdn.net/xiaomuzi0802/article/details/42214067](https://blog.
 
 
 
-{% embed url="https://blog.csdn.net/u010718707/article/details/42111567" %}
+{% embed url="https://blog.csdn.net/u010718707/article/details/42111567" caption="" %}
 
 ## **NavMesh 寻路**
 
@@ -136,7 +136,7 @@ tile.sprite = tmp;
 
 但值得注意的是，这里创建的是一个模板，我们依然无法让2个一样模板的tile状态不同。（？）
 
-{% embed url="https://www.cnblogs.com/beatless/p/11623709.html" %}
+{% embed url="https://www.cnblogs.com/beatless/p/11623709.html" caption="" %}
 
 有一个官方开发的2d-extras仓库用来扩展 tilemap 功能，例如规则瓦片、随机瓦片、动画瓦片
 

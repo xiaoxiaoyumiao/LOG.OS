@@ -26,15 +26,15 @@ public class test : MonoBehavior {
 
 **注意对Prefab的嵌套可能出现子Prefab的关联丢失的问题：**
 
-{% embed url="https://blog.csdn.net/zhenghongzhi6/article/details/84068691" %}
+{% embed url="https://blog.csdn.net/zhenghongzhi6/article/details/84068691" caption="" %}
 
 似乎能解决这个问题的轮子：
 
-{% embed url="http://www.xuanyusong.com/archives/3042" %}
+{% embed url="http://www.xuanyusong.com/archives/3042" caption="" %}
 
 ## **资源加载**
 
-{% embed url="https://www.cnblogs.com/zhepama/p/4362312.html" %}
+{% embed url="https://www.cnblogs.com/zhepama/p/4362312.html" caption="" %}
 
 加载的资源必须在Assets/Resources路径下，查询（Load）时使用项目中该目录下的相对路径。例如Resources/Time.png会被项目加载成Resources目录下的一个资源Time，于是load时传一个”Time“就能索引到这个资源。
 
@@ -58,11 +58,11 @@ foreach (string ele in names)
 
 ## **场景加载和进度条**
 
-{% embed url="https://blog.csdn.net/huang9012/article/details/38659011" %}
+{% embed url="https://blog.csdn.net/huang9012/article/details/38659011" caption="" %}
 
 {% embed url="https://blog.csdn.net/weixin_42552233/article/details/81017332" %}
 
-{% embed url="https://www.cnblogs.com/hutuzhu/p/9804348.html" %}
+{% embed url="https://www.cnblogs.com/hutuzhu/p/9804348.html" caption="" %}
 
 * 需要引用`UnityEngine.SceneManagement`
 * 同步加载用`SceneManager.LoadScene(sceneName)`
@@ -84,13 +84,13 @@ CSV 加载的轮子列表：
 亲测基本可用
 {% endembed %}
 
-{% embed url="https://www.cnblogs.com/wuzhang/p/wuzhang20150511.html" %}
+{% embed url="https://www.cnblogs.com/wuzhang/p/wuzhang20150511.html" caption="" %}
 
-{% embed url="https://blog.csdn.net/musicvs/article/details/73135681" %}
+{% embed url="https://blog.csdn.net/musicvs/article/details/73135681" caption="" %}
 
 ## **数据存储方式**
 
-{% embed url="https://blog.csdn.net/billcyj/article/details/79888614" %}
+{% embed url="https://blog.csdn.net/billcyj/article/details/79888614" caption="" %}
 
 ## **运行时数据可持久化**
 

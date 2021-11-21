@@ -104,7 +104,6 @@ result = global_tokenizer(hamlet,
 print(result)
 {'input_ids': [101, 2000, 2022, 2030, 2025, 2000, 2022, 1010, 2008, 2003, 
 1996, 3160, 1012, 102]}
-
 ```
 
 由于 bert tokenizer 会把词切分为字词，因此 token 在文本中的 index 在 tokenize 后会发生变化（从单个 token 到一个 token 子序列的映射）。transformer 没有提供生成索引映射的接口，这一映射可以通过类似如下的逻辑维护：

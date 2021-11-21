@@ -42,7 +42,6 @@ object.__setitem__(self, key, value)
 # that can iterate over all the objects in the container. 
 # For mappings, it should iterate over the keys of the container.
 object.__iter__(self)
-
 ```
 
 ## Reference

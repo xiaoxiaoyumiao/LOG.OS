@@ -35,6 +35,5 @@ GraphDef
          |- ListValue list # a list of something
             |- repeated <one_of_types_above> <val_name>
          |- string placeholder
-         
 ```
 

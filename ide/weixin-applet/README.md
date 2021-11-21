@@ -1,4 +1,2 @@
 # WeChat Mini Program DK
 
-#### 
-

@@ -2,7 +2,7 @@
 
 ## Installation
 
-{% embed url="https://docs.microsoft.com/zh-cn/windows/wsl/install-win10" %}
+{% embed url="https://docs.microsoft.com/zh-cn/windows/wsl/install-win10" caption="" %}
 
 ## Miscellaneous
 

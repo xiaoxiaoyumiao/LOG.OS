@@ -40,7 +40,6 @@
 * 方便的目录栈：dirs, pushd, popd
   * [https://www.linuxprobe.com/linux-change-dir.html](https://www.linuxprobe.com/linux-change-dir.html)
 * tail：快速浏览文件内容
-
   * 一般而言可以使用 tail 查看文件结尾的一段内容
   * tail -f（follow）参数可以将一个文件中追加写入的内容实时输出
   * ref：[https://www.cnblogs.com/fps2tao/p/8535519.html](https://www.cnblogs.com/fps2tao/p/8535519.html)

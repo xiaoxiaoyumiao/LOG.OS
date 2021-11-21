@@ -28,11 +28,11 @@ def train(dataloader, model, loss_fn, optimizer):
     size = len(dataloader.dataset)
     for batch, (X, y) in enumerate(dataloader):
         X, y = X.to(device), y.to(device)
-        
+
         # Compute prediction error
         pred = model(X)
         loss = loss_fn(pred, y)
-        
+
         # Backpropagation
         optimizer.zero_grad()
         loss.backward()

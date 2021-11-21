@@ -115,13 +115,3 @@ ProxyCommand /path/to/openSSH/ssh.exe -W %h:%p host
 
 \[11] [https://www.cyberciti.biz/faq/ubuntu-18-04-setup-ssh-public-key-authentication/](https://www.cyberciti.biz/faq/ubuntu-18-04-setup-ssh-public-key-authentication/)
 
-
-
-
-
-
-
-
-
-
-

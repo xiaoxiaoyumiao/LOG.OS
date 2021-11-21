@@ -2,9 +2,9 @@
 
 可以用来对碰撞体分组。
 
-{% embed url="https://docs.unity3d.com/Manual/LayerBasedCollision.html" %}
+{% embed url="https://docs.unity3d.com/Manual/LayerBasedCollision.html" caption="" %}
 
-{% embed url="https://blog.csdn.net/lishangke/article/details/100320921" %}
+{% embed url="https://blog.csdn.net/lishangke/article/details/100320921" caption="" %}
 
 关于渲染先后时的Layer：通过Sorting Layer和Order in Layer可以设置渲染层级。这两个量可以在Inspector查到。前一个优先级高，相同Layer时order更小的更先被渲染（可以是负数），于是会在画面的底部；后渲染的覆盖先渲染的。在代码中设置sprite renderer的SortingOrder成员变量就相当于修改Order in layer。
 

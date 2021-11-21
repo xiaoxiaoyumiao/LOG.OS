@@ -65,7 +65,6 @@ b = torch.tensor([1,2,3], device=cuda)
 c = b.clone()
 print(c)
 # output: tensor([1, 2, 3], device='cuda:0')
-```
 
 ### Shape Manipulation
 
@@ -75,7 +74,7 @@ data = torch.tensor([[[1],[2],[3]]])
 torch.squeeze(data) # tensor([1,2,3])
 
 # torch.unsqueeze()
-    
+
 # flatten: reshape tensor to 1d tensor
 torch.flatten(input, start_dim=0, end_dim=-1)
 # If start_dim or end_dim are passed, 
@@ -162,8 +161,6 @@ torch.sum(input, dim, keepdim=False, *, dtype=None)
 ### Conditional Ops
 
 ```python
-
-
 # a list of indices of which elements in inpus are non-zero
 torch.nonzero(input, *, out=None, as_tuple=False)s
 ```

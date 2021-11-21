@@ -44,7 +44,7 @@ float vertices[] = {
 
 为了让 OpenGL 能够使用这个字节序列，需要把字节序列填充到一个 OpenGL 对象里。
 
-buffer object  是可以维护缓存的对象，通过 `glGenBuffers` 可以获取到一个 buffer object。准确来说，获取到的是对象的一个 unique ID，因此是 unsigned int 类型的。
+buffer object 是可以维护缓存的对象，通过 `glGenBuffers` 可以获取到一个 buffer object。准确来说，获取到的是对象的一个 unique ID，因此是 unsigned int 类型的。
 
 OpenGL 是一个巨大的状态机，为了能够执行操作，需要先设定好 context。为了操作一个 buffer object，也需要在 context 中指定这个 object。
 
@@ -79,7 +79,6 @@ glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 定义一个 shader 分为两步：使用 GLSL 编写一个 shader；使用 OpenGL 接口编译这个 shader。这里暂时不展开 GLSL 的编写，而只给出样例和简单的解释：
 
 ```cpp
-
 #version 330 core
 layout (location = 0) in vec3 aPos;
 
@@ -111,7 +110,7 @@ const char *vertexShaderSource = "#version 330 core\n"
     "{\n"
     "   gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
     "}\0";
-    
+
 // get a shader
 unsigned int vertexShader;
 vertexShader = glCreateShader(GL_VERTEX_SHADER);
@@ -146,7 +145,7 @@ out vec4 FragColor;
 void main()
 {
     FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);
-} 
+}
 ```
 
 * 注意这里我们使用 out 关键字定义了一个输出变量。
@@ -188,7 +187,7 @@ glUseProgram(shaderProgram);
 
 // we can delete the shader objects now
 glDeleteShader(vertexShader);
-glDeleteShader(fragmentShader);  
+glDeleteShader(fragmentShader);
 ```
 
 ### Linking Vertex Attributes
@@ -217,7 +216,7 @@ glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 // enable attribute array for a provided index
 // when enabled, the data in the bound buffer will be used for rendering
 // 0 indicating location of the variable, so it's aPos here
-glEnableVertexAttribArray(0);  
+glEnableVertexAttribArray(0);
 ```
 
 创建和绑定 vertex attribute 的整个过程显得较为繁琐。使用 Vertex Array Object 可以帮助保存相关的上下文配置，节省绑定需要的代码量。
@@ -324,7 +323,7 @@ glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 glEnableVertexAttribArray(0);  
 
 [...]
-  
+
 // ..:: Drawing code (in render loop) :: ..
 glUseProgram(shaderProgram);
 glBindVertexArray(VAO);
