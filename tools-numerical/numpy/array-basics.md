@@ -1,6 +1,6 @@
 # Array Basics
 
-```text
+```python
 import numpy as np
 ```
 
@@ -40,6 +40,9 @@ np.fromfunction(lambda i, j: i == j, (3, 3), dtype=int)
 array([[ True, False, False],
        [False,  True, False],
        [False, False,  True]])
+       
+# use astype() to do type casting
+c = a.astype(np.float32)
 ```
 
 ## Properties
@@ -100,6 +103,16 @@ np.fromiter(iterable)
 
 ## Indexing, Slicing & Iterating
 
+执行 slicing 时，获取到的是 array 的一个 view；也就是说数据并不会被拷贝。
+
+对 array 对象进行切片时，事实上传入的是一个 python 的 `slice` 对象。当在多个维度上切片时，传入的是 `slice` 对象构成的一个元组。因此如果希望对多个 array 应用一个相同的切片，可以将索引本身保存为对象，然后用于索引。
+
+```python
+# a piece of example code
+roi = (slice(j, j+chunk), slice(i, i+chunk))
+float_image[roi] = dct_image[roi] * self.q_scaling * self.q_table
+```
+
 ```python
 a = np.array([[1,2],[3,4],[5,6]])
 
@@ -126,7 +139,22 @@ order = 'F'
 op_flags=['readwrite']
 #flat迭代
 for x in a.flat:
-    #...
+	#...
+	
+# masked select:
+
+# do indexing directly:
+a = np.array([True, True, True, False, False])
+b = np.array([[1,2,3,4,5], [1,2,3,4,5]])
+b[:,a]
+# array([[1, 2, 3],
+#        [1, 2, 3]])
+# use .compress:
+numpy.compress(condition, a, axis=None, out=None)
+a = np.array([[1, 2], [3, 4], [5, 6]])
+np.compress([False, True, True], a, axis=0)
+# array([[3, 4],
+#        [5, 6]])
 ```
 
 ## Arithmetic Operations
@@ -153,7 +181,12 @@ np.linalg.det(a)
 np.linalg.solve(a)
 np.linalg.inv(a)
 
+# 取和
 np.sum(a, axis=None, dtype=None, out=None, keepdims=np._NoValue)
+
+# 取最小值
+numpy.amin(a, axis=None, out=None, keepdims=<no value>, 
+    initial=<no value>, where=<no value>)
 ```
 
 See also [Python - Emulating numeric types](../../programming-languages/python/numerical.md#emulating-numbers).
@@ -161,4 +194,8 @@ See also [Python - Emulating numeric types](../../programming-languages/python/n
 ## Reference
 
 \[1\] [https://numpy.org/devdocs/user/quickstart.html](https://numpy.org/devdocs/user/quickstart.html)
+
+\[2\] [https://numpy.org/doc/stable/reference/index.html](https://numpy.org/doc/stable/reference/index.html)
+
+\[3\] [https://stackoverflow.com/questions/19984102/select-elements-of-numpy-array-via-boolean-mask-array](https://stackoverflow.com/questions/19984102/select-elements-of-numpy-array-via-boolean-mask-array)
 

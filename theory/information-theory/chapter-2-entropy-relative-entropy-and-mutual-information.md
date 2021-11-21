@@ -1,7 +1,7 @@
 # Chapter 2 Entropy, Relative Entropy & Mutual Information
 
-* **DEF** **Entropy** $$H(x)$$ of a discrete random variable X is defined by $$H(X) = - \sum p(x) \log p(x)$$ 
-  * **PROP** $$H(X)\geq 0$$ 
+* **DEF** **Entropy** $$H(x)$$ of a discrete random variable X is defined by $$H(X) = - \sum p(x) \log p(x)$$&#x20;
+  * **PROP** $$H(X)\geq 0$$&#x20;
 * **DEF** **Joint Entropy** $$H(X,Y)$$ of a pair of discrete random variables $$(X, Y)$$with a joint distribution $$p(x,y)$$is defined as $$H(X,Y) = -\sum_{x,y} p(x,y)\log p(x,y)$$.
 * **DEF** **Conditional Entropy** $$H(Y|X)$$is defined as: $$H(Y|X) = \sum p(x)H(Y|X=x) = -\sum p(x) \sum p(y|x) \log p(y|x) = - \sum_{x,y} p(x,y) \log p(y|x)$$
 * **THEOREM** $$H(X,Y) = H(X)+H(Y|X)$$.

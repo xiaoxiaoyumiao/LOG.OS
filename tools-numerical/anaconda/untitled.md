@@ -65,6 +65,15 @@ conda env config vars set my_var=value
 
 使用以上命令可以在当前虚拟环境中设置环境变量，它可以在虚拟环境启动时自动设置。首次设置后需要重启虚拟环境生效。
 
+## Activate in bash scripts
+
+conda 在脚本中的初始化似乎非常鬼畜，往往`. ~/.bashrc` 或 `conda init` 等都不能正确初始化。对于较新版本的 conda，以下的初始化和环境激活代码可以解决一部分初始化问题，原因不明：
+
+```bash
+eval "$(conda shell.bash hook)"
+conda activate <env-name>
+```
+
 ## Reference
 
 \[1\] [https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
@@ -72,4 +81,6 @@ conda env config vars set my_var=value
 \[2\] [https://stackoverflow.com/questions/41060382/using-pip-to-install-packages-to-anaconda-environment](https://stackoverflow.com/questions/41060382/using-pip-to-install-packages-to-anaconda-environment)
 
 \[3\] [https://blog.csdn.net/robot8me/article/details/109471568](https://blog.csdn.net/robot8me/article/details/109471568)
+
+\[4\] [https://stackoverflow.com/questions/34534513/calling-conda-source-activate-from-bash-script](https://stackoverflow.com/questions/34534513/calling-conda-source-activate-from-bash-script)
 

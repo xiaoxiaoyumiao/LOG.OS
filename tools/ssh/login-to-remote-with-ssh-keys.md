@@ -5,7 +5,7 @@
 * 以 Linux 环境为例，其他 OS 上过程基本相同。
 * 基本运作原理是：通过 ssh-keygen 工具创建一对公私钥，把私钥保存在 local 机器上，把公钥保存在 host 机器上，从 local 登录到远程的 host 时，将私钥位置告知 ssh，ssh 利用给定的私钥完成认证。
 * TODO：ssh-agent 自启动
-  * [http://mah.everybody.org/docs/ssh\#run-ssh-agent](http://mah.everybody.org/docs/ssh#run-ssh-agent)
+  * [http://mah.everybody.org/docs/ssh#run-ssh-agent](http://mah.everybody.org/docs/ssh#run-ssh-agent)
   * [https://stackoverflow.com/questions/18880024/start-ssh-agent-on-login](https://stackoverflow.com/questions/18880024/start-ssh-agent-on-login)
 
 ```bash
@@ -28,6 +28,7 @@ ssh-keygen -t rsa
 # 可以通过 scp 等直接复制粘贴，也可以使用 ssh-copy-id 工具：
 ssh-copy-id -i /path/to/pub-key.pub user@server
 # 当然此时仍然需要输入登录 host 的密码。
+# 如果拥有此 server 上的 root 权限，就可以为别的 user 添加公钥。
 
 # 此时你就可以使用 ssh 配合私钥登录服务器了。
 # ssh 的 -i 参数接受一个 identity file 的路径，
@@ -86,29 +87,31 @@ ssh -o ProxyCommand="ssh -W %h:%p host" user2@target
     * [https://stackoverflow.com/questions/60335069/vscode-remote-connection-error-the-process-tried-to-write-to-a-nonexistent-pipe](https://stackoverflow.com/questions/60335069/vscode-remote-connection-error-the-process-tried-to-write-to-a-nonexistent-pipe)
     * VS Code 的 remote SSH 工具可以使用 ssh 和 config file 实现在编辑器中操作远程服务器的内容，但其默认 ssh 工具实现上有一些问题，在 Windows 上可以安装 OpenSSH 并使用其提供的 ssh 工具来做转发。在配置中可以这样写：
 
-```text
+```
 ProxyCommand /path/to/openSSH/ssh.exe -W %h:%p host
 ```
 
-## Reference
+## Reference&#x20;
 
-\[1\] [https://upcloud.com/community/tutorials/use-ssh-keys-authentication/](https://upcloud.com/community/tutorials/use-ssh-keys-authentication/)
+\[1] [https://upcloud.com/community/tutorials/use-ssh-keys-authentication/](https://upcloud.com/community/tutorials/use-ssh-keys-authentication/)
 
-\[2\] [https://www.cyberciti.biz/faq/linux-unix-ssh-proxycommand-passing-through-one-host-gateway-server/](https://www.cyberciti.biz/faq/linux-unix-ssh-proxycommand-passing-through-one-host-gateway-server/)
+\[2] [https://www.cyberciti.biz/faq/linux-unix-ssh-proxycommand-passing-through-one-host-gateway-server/](https://www.cyberciti.biz/faq/linux-unix-ssh-proxycommand-passing-through-one-host-gateway-server/)
 
-\[3\] [https://code.visualstudio.com/docs/remote/troubleshooting](https://code.visualstudio.com/docs/remote/troubleshooting)
+\[3] [https://code.visualstudio.com/docs/remote/troubleshooting](https://code.visualstudio.com/docs/remote/troubleshooting)
 
-\[4\] [https://serverfault.com/questions/827361/ssh-jump-host-without-agent-forwarding](https://serverfault.com/questions/827361/ssh-jump-host-without-agent-forwarding)
+\[4] [https://serverfault.com/questions/827361/ssh-jump-host-without-agent-forwarding](https://serverfault.com/questions/827361/ssh-jump-host-without-agent-forwarding)
 
-\[5\] [https://serverfault.com/questions/934642/ssh-from-a-through-b-to-c-using-private-key-on-a](https://serverfault.com/questions/934642/ssh-from-a-through-b-to-c-using-private-key-on-a)
+\[5] [https://serverfault.com/questions/934642/ssh-from-a-through-b-to-c-using-private-key-on-a](https://serverfault.com/questions/934642/ssh-from-a-through-b-to-c-using-private-key-on-a)
 
-\[6\] [https://unix.stackexchange.com/questions/494483/specifying-an-identityfile-with-ssh](https://unix.stackexchange.com/questions/494483/specifying-an-identityfile-with-ssh)
+\[6] [https://unix.stackexchange.com/questions/494483/specifying-an-identityfile-with-ssh](https://unix.stackexchange.com/questions/494483/specifying-an-identityfile-with-ssh)
 
-\[7\] [https://code.visualstudio.com/blogs/2019/10/03/remote-ssh-tips-and-tricks](https://code.visualstudio.com/blogs/2019/10/03/remote-ssh-tips-and-tricks)
+\[7] [https://code.visualstudio.com/blogs/2019/10/03/remote-ssh-tips-and-tricks](https://code.visualstudio.com/blogs/2019/10/03/remote-ssh-tips-and-tricks)
 
-\[8\] [https://www.tecmint.com/access-linux-server-using-a-jump-host/](https://www.tecmint.com/access-linux-server-using-a-jump-host/)
+\[8] [https://www.tecmint.com/access-linux-server-using-a-jump-host/](https://www.tecmint.com/access-linux-server-using-a-jump-host/)
 
-\[9\] [https://blog.csdn.net/weixin\_42096901/article/details/105193366](https://blog.csdn.net/weixin_42096901/article/details/105193366)
+\[9] [https://blog.csdn.net/weixin\_42096901/article/details/105193366](https://blog.csdn.net/weixin\_42096901/article/details/105193366)
 
-\[10\] [https://docs.microsoft.com/zh-cn/windows-server/administration/openssh/openssh\_overview](https://docs.microsoft.com/zh-cn/windows-server/administration/openssh/openssh_overview)
+\[10] [https://docs.microsoft.com/zh-cn/windows-server/administration/openssh/openssh\_overview](https://docs.microsoft.com/zh-cn/windows-server/administration/openssh/openssh\_overview)
+
+\[11] [https://www.cyberciti.biz/faq/ubuntu-18-04-setup-ssh-public-key-authentication/](https://www.cyberciti.biz/faq/ubuntu-18-04-setup-ssh-public-key-authentication/)
 

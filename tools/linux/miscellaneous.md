@@ -1,5 +1,11 @@
 # Miscellaneous
 
+* cp
+  * 最常用的文件复制工具。
+  * 使用通配符\*可以匹配任意长度的任意字符串。
+  * 使用 {} 可以指定一个数字范围，在复制已编号的文件时非常有用。例如：
+    * `cp P10802{75..83}.JPG ~/Images` 
+  * ref：[https://serverfault.com/questions/370403/copy-a-range-of-files-in-command-line-zsh-bash](https://serverfault.com/questions/370403/copy-a-range-of-files-in-command-line-zsh-bash)
 * oneko
   * 可以在桌面生成一只会追逐鼠标的猫。
 * man &lt;command&gt;
@@ -37,4 +43,5 @@
   * 一般而言可以使用 tail 查看文件结尾的一段内容
   * tail -f（follow）参数可以将一个文件中追加写入的内容实时输出
   * ref：[https://www.cnblogs.com/fps2tao/p/8535519.html](https://www.cnblogs.com/fps2tao/p/8535519.html)
+  * ref：[https://serverfault.com/questions/1669/shell-command-to-monitor-changes-in-a-file/1670](https://serverfault.com/questions/1669/shell-command-to-monitor-changes-in-a-file/1670)
 
