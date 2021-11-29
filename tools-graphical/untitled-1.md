@@ -2,7 +2,7 @@
 
 ## Introduction
 
-![](<../.gitbook/assets/image (5).png>)
+![](<../.gitbook/assets/image (5) (2).png>)
 
 （source: [https://en.wikipedia.org/wiki/X\_Window\_System\_protocols\_and\_architecture](https://en.wikipedia.org/wiki/X\_Window\_System\_protocols\_and\_architecture)）
 
@@ -34,7 +34,7 @@ TODO
 
 \[3] [https://en.wikipedia.org/wiki/X\_Window\_System\_protocols\_and\_architecture](https://en.wikipedia.org/wiki/X\_Window\_System\_protocols\_and\_architecture)
 
-\[4] [https://magcius.github.io/xplain/article/x-basics.html](https://magcius.github.io/xplain/article/x-basics.html)&#x20;
+\[4] [https://magcius.github.io/xplain/article/x-basics.html](https://magcius.github.io/xplain/article/x-basics.html)
 
 \[5] [https://superuser.com/questions/1217280/why-is-x11-forwarding-so-inefficient](https://superuser.com/questions/1217280/why-is-x11-forwarding-so-inefficient)
 

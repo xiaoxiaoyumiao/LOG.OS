@@ -2,7 +2,7 @@
 
 * [HOME](README.md)
 
-## LOGOS <a href="diary" id="diary"></a>
+## LOGOS <a href="#diary" id="diary"></a>
 
 * [LOGOS](diary/logos/README.md)
   * [2021](diary/logos/2021/README.md)
@@ -247,7 +247,7 @@
   * [transformers](tools-numerical/auxiliary/transformers/README.md)
     * [Tokenizer](tools-numerical/auxiliary/transformers/tokenizer.md)
     * [Models](tools-numerical/auxiliary/transformers/models.md)
-    * [Miscellaneous](tools-numerical/auxiliary/transformers/miscellaneous.md)
+    *
 
 ## TOOLS - MEDIA
 
