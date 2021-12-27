@@ -8,8 +8,6 @@
 
 同理字典：`{value_exp : key_exp for key,value in dict}`
 
-集合：`{ ele for ele in list }` 
-
 ```python
 nums = [n*2 for n in numbers]   #单层循环
 words = [word for sent in document for word in sent] #嵌套循环，注意顺序
@@ -23,10 +21,6 @@ nums = [n*2
 >>> tmp = {index:value for index,value in enumerate(str)}
 >>> tmp
 {0: 'w', 1: 'h', 2: 'a', 3: 't'}
-
->>> a = {x for x in 'abracadabra' if x not in 'abc'}
->>> a
-{'r', 'd'}
 ```
 
 ## Built-in Functions for Iterables
@@ -49,6 +43,4 @@ filter(function, iterable)
 \[1\] [https://stackoverflow.com/questions/25082410/apply-function-to-each-element-of-a-list](https://stackoverflow.com/questions/25082410/apply-function-to-each-element-of-a-list)
 
 \[2\] [https://docs.python.org/3/library/functions.html](https://docs.python.org/3/library/functions.html)
-
-\[3\] [https://docs.python.org/3/tutorial/datastructures.html](https://docs.python.org/3/tutorial/datastructures.html)
 

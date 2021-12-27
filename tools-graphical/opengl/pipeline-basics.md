@@ -7,7 +7,7 @@
 * 具体而言，在 pipeline 的每一个阶段，显卡都（常常是高度并行地）对图形数据（的每个基本元素）执行一个特定的程序，这个程序称作 shader。
 * 开发者可以使用 **OpenGL Shading Language / GLSL** 重新编写其中一些阶段的 shader，这为图形渲染实现提供了极高的灵活性。
 * pipeline 一般而言（按阶段的执行顺序）如下构成：
-  * **Vertex Data **-** **输入，顶点数据集合（其实并不是一个阶段）
+  * **Vertex Data** - _\*\*_输入，顶点数据集合（其实并不是一个阶段）
   * **Vertex Shader** - 接受一个 vertex 的数据，执行坐标变换和其他对顶点数据的基本操作
   * **Primitive Assembly** - 接受所有 vertex 的数据，将顶点组织为 primitive，例如三角形。
   * **Geometry Shader** - 接受构成一个 primitive 的顶点数据，能够重构 primitive 的几何形状。
@@ -36,7 +36,7 @@ float vertices[] = {
 }
 ```
 
-* **normalized device coordinates / NDC** 注意到每个坐标分量都设定成了 (-1, 1) 之间的浮点数。这里的坐标采用的是 normalized device coordinates / NDC，坐标系的原点在屏幕正中央，向右为 x 轴正方向，向上为 y 轴正方向，坐标轴与屏幕边界的交点到原点的距离取为相应坐标轴的单位 1。因此在对顶点做坐标变换后，坐标分量 (-1, 1) 范围以外的坐标都会被丢弃。
+* **normalized device coordinates / NDC** 注意到每个坐标分量都设定成了 \(-1, 1\) 之间的浮点数。这里的坐标采用的是 normalized device coordinates / NDC，坐标系的原点在屏幕正中央，向右为 x 轴正方向，向上为 y 轴正方向，坐标轴与屏幕边界的交点到原点的距离取为相应坐标轴的单位 1。因此在对顶点做坐标变换后，坐标分量 \(-1, 1\) 范围以外的坐标都会被丢弃。
   * 接下来我们不会对坐标做实质性的变换，所以在这里直接将坐标设置为 NDC 下三角形的期望位置。
   * 我们已经使用过 `glViewport` 来设置显示区域的大小。NDC 下的坐标会根据这一信息，经过 viewport transform 变换到实际的屏幕坐标系。fragments 使用的就是屏幕坐标系。
 
@@ -333,6 +333,7 @@ glBindVertexArray(0);
 
 ## Reference
 
-\[1] [https://learnopengl.com/Getting-started/Hello-Triangle](https://learnopengl.com/Getting-started/Hello-Triangle)
+\[1\] [https://learnopengl.com/Getting-started/Hello-Triangle](https://learnopengl.com/Getting-started/Hello-Triangle)
 
-\[2] [https://www.khronos.org/registry/OpenGL-Refpages/es2.0/xhtml/glEnableVertexAttribArray.xml](https://www.khronos.org/registry/OpenGL-Refpages/es2.0/xhtml/glEnableVertexAttribArray.xml)
+\[2\] [https://www.khronos.org/registry/OpenGL-Refpages/es2.0/xhtml/glEnableVertexAttribArray.xml](https://www.khronos.org/registry/OpenGL-Refpages/es2.0/xhtml/glEnableVertexAttribArray.xml)
+

@@ -14,15 +14,11 @@ x_np = torch.from_numpy(np_array)
 # construct special tensors from a shape
 shape = (2,3,)
 rand_tensor = torch.rand(shape) # random float in (0,1)
-randint_tensor = torch.randint(low, high, shape) # random int in [low, high)
 ones_tensor = torch.ones(shape) # all ones
 zeros_tensor = torch.zeros(shape) # all zeros
-range_tensor = torch.arange(0, 5) # generate sequence [0, 5)
 
 # construct special tensors like a given tensor
-# (device, etc. will be inherited by default)
-x_ones = torch.ones_like(x_data) # all ones 
-x_zeros = torch.zeros_like(x_data) # all zeros
+x_ones = torch.ones_like(x_data) # all ones
 x_rand = torch.rand_like(x_data, dtype=torch.float) # all random and of float type
 
 # get shape, data type and device the tensor is stored on
@@ -30,16 +26,9 @@ tensor = torch.rand(3,4)
 print(f"Shape of tensor: {tensor.shape}")
 print(f"Datatype of tensor: {tensor.dtype}")
 print(f"Device tensor is stored on: {tensor.device}")
-
-# type casting
-float_tensor = tensor.float()
-bool_tensor = tensor.bool()
 ```
 
 ## Frequently Used Ops
-
-* tips
-  * 方法要求传入 dim 时，一般设定为 -1 可以选择到倒数第一个维度，其余类推，类似 python 的 indexing。
 
 ### Normal Math
 
@@ -58,13 +47,7 @@ F.log_softmax(data,dim=0)
 # real cross entropy implementation
 def cross_entropy(pred, soft_targets):
     return torch.mean(torch.sum(- soft_targets * F.log_softmax(pred), 1))
-
-# Clone a tensor. A differentiable 'assignment' operation.
-cuda = torch.device('cuda')  
-b = torch.tensor([1,2,3], device=cuda)
-c = b.clone()
-print(c)
-# output: tensor([1, 2, 3], device='cuda:0')
+```
 
 ### Shape Manipulation
 
@@ -133,18 +116,6 @@ torch.scatter(tensor, dim, index, src, reduce=None)
 # gather: gather data from input, position determined by dim and index
 # tensor[x_1...x_n] = input[x_1...x_{dim-1}][index[x_1...x_n]][x_{dim+1}...x_n]
 torch.gather(input, dim, index, *, sparse_grad=False, out=None)
-
-# split: split tensor into chunks of given width along specified dim
-# split_size_or_sections can be a size(scalar) or sections(list)
-# be careful when split size is 1. The singleton dim will remain.
-torch.split(tensor, split_size_or_sections, dim=0)
-
-
-# Concatenates the given sequence of seq tensors in the given dimension. 
-# All tensors must either have the same shape 
-# (except in the concatenating dimension) or be empty.
-torch.cat(tensors, dim=0, *, out=None) → Tensor
-
 ```
 
 ### Reduction Ops

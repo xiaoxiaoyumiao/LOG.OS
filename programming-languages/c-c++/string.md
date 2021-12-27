@@ -131,7 +131,6 @@ puts(dest); // output: I have 2 apple(s)
 /* declaration */
 int       atoi( const char *str );
 long      atol( const char *str );
-double    atof( const char* str );
 // (since C99)
 long long atoll( const char *str );
 

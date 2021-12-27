@@ -62,7 +62,7 @@ gameObject.transform.position = new Vector...
 >
 > 正常的一个父物体A=（0.5,0.5,0.5） 子物体B（1,1,1）
 >
-> 如果我是使用instantiate(B,A) //实例化子物体B，同时指定B的父物体是A。
+> 如果我是使用instantiate\(B,A\) //实例化子物体B，同时指定B的父物体是A。
 >
 > 这时子物体B的localscale仍是（1,1,1），但是我发现B物体的absscale变了，现在是（0.5,0.5,0.5,）
 >
@@ -74,11 +74,9 @@ gameObject.transform.position = new Vector...
 >
 > 这样子物体B的localscale会变成（2,2,2） ， 这样子就没有改变他的absscale。
 
-矩形变换 `RectTransform` 组件中的宽和高可以通过 `rectTransform.sizeDelta` 2D 向量来设置。
+## **Ray**
 
-ref: [https://blog.csdn.net/xiaomuzi0802/article/details/42214067](https://blog.csdn.net/xiaomuzi0802/article/details/42214067)
-
-
+使用Raycast可以方便地绘制射线、完成线和碰撞体的碰撞检测。
 
 {% embed url="https://blog.csdn.net/u010718707/article/details/42111567" caption="" %}
 
@@ -97,32 +95,9 @@ agent.remainingDistance; // 用于获取剩余距离
 
 ## **TileMap**
 
-TileMap 是一种处理栅格布局（如各种经典2D横版过关冒险游戏）地图的组件，因其便利已经成为了 Unity 项目的默认插件之一。其基本使用方法为：
+{% embed url="https://blog.csdn.net/seemeno/article/details/93136806" caption="" %}
 
-1. 使用 Sprite Editor 将 Sprite 切割为瓦片（Tile）；
-2. 将 Tile 导入瓦片调色板（Tile Palette）；
-3. 使用调色板在 TileMap 对象中绘制地图。
-
-瓦片是构成 TileMap 地图的基本单元。创建 TileMap 对象并选中时可以看到网格，每个网格就可以放置一个瓦片。用于制作瓦片的 Sprite 一般包含了多种瓦片（比如一种地形的四个边、四个角和内部的图样），在 Sprite 的 Inspector 中可以将其 Sprite Mode 设置为 Multiple 的，表明其包含了复数个 Sprite；通过 Sprite Editor （通过 Inspector 中的按钮可以打开）则可以将其切割。Sprite Editor 中可以设置不同的切割模式，如 Automatic 会根据非透明区域等自动切割，Grid by Cell Size 则会按照一定的尺寸（Pixel Size）切割。通过 Pixels Per Unit 和切割模式的设置可以得到合适大小的瓦片。
-
-通过 Window - 2D - Tile Palette 可以调出瓦片调色板。通过 Create New Palette 创建一个新的调色板（这是一种 asset），将 Sprite 直接拖入调色板窗口即可得到可用于绘制地图的瓦片。上方的工具栏中，刷子用于绘制，橡皮擦等则可以擦除。按下上方的 Edit 进入编辑模式，即可以对调色板进行修改（似乎需要先选中瓦片然后进入编辑模式）。选中多个瓦片就可以一次绘制更大的区域。
-
-绘制时瓦片旋转相关快捷键：（ref：[https://docs.unity3d.com/Manual/Tilemap-Painting.html](https://docs.unity3d.com/Manual/Tilemap-Painting.html)）
-
-| Shortcut Key                                            | Function                                                                                                                            |
-| ------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| \[                                                      | Rotate the active Brush clockwise.                                                                                                  |
-| ]                                                       | Rotate the active Brush anti-clockwise.                                                                                             |
-| Shift + \[                                              | Flip the active Brush along the x-axis.                                                                                             |
-| Shift + ]                                               | Flip the active Brush along the y-axis.                                                                                             |
-| - (Available when **Can Change Z Position** is enabled) | Increase the z-position of the active Brush. This is only available when **Can Change Z Position** is enabled for the active Brush. |
-| = (Available when **Can Change Z Position** is enabled) | Decrease the z-position of the active Brush. This is only available when **Can Change Z Position** is enabled for the active Brush. |
-
-{% embed url="https://blog.csdn.net/qq_39162826/article/details/112144150" %}
-
-{% embed url="https://blog.csdn.net/seemeno/article/details/93136806" %}
-
-在代码中可以通过SetTile(Vector3Int, Tile)来往固定位置放瓦片。这里的固定位置是TileMap自己的一套坐标系，目前还不清楚是怎么计算的。2D情况下Vector3Int的z轴（第三维）取0。从Sprite加载Tile如下：
+一种处理栅格布局（如各种经典2D横版过关冒险游戏）地图的组件，基本元素是瓦片Tile，在代码中可以通过SetTile\(Vector3Int, Tile\)来往固定位置放瓦片。这里的固定位置是TileMap自己的一套坐标系，目前还不清楚是怎么计算的。2D情况下Vector3Int的z轴（第三维）取0。从Sprite加载Tile如下：
 
 ```csharp
 Tile tile = ScriptableObject.CreateInstance<Tile>();
@@ -149,3 +124,4 @@ tile.sprite = tmp;
 ## **对象的布局 Layout**
 
 Inspector的rect transform可以看到有个方形图案指示的锚点位置设置，默认是锚点居中的，如果想填充父对象，可以选择在两个方向上stretch（最右下角的），并在右边的参数中把left right top bottom都改成0（这里和CSS很像）。高级布局需要借助layout，待补充
+
