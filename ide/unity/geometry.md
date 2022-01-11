@@ -62,7 +62,7 @@ gameObject.transform.position = new Vector...
 >
 > 正常的一个父物体A=（0.5,0.5,0.5） 子物体B（1,1,1）
 >
-> 如果我是使用instantiate\(B,A\) //实例化子物体B，同时指定B的父物体是A。
+> 如果我是使用instantiate(B,A) //实例化子物体B，同时指定B的父物体是A。
 >
 > 这时子物体B的localscale仍是（1,1,1），但是我发现B物体的absscale变了，现在是（0.5,0.5,0.5,）
 >
@@ -78,7 +78,7 @@ gameObject.transform.position = new Vector...
 
 使用Raycast可以方便地绘制射线、完成线和碰撞体的碰撞检测。
 
-{% embed url="https://blog.csdn.net/u010718707/article/details/42111567" caption="" %}
+{% embed url="https://blog.csdn.net/u010718707/article/details/42111567" %}
 
 ## **NavMesh 寻路**
 
@@ -95,9 +95,9 @@ agent.remainingDistance; // 用于获取剩余距离
 
 ## **TileMap**
 
-{% embed url="https://blog.csdn.net/seemeno/article/details/93136806" caption="" %}
+{% embed url="https://blog.csdn.net/seemeno/article/details/93136806" %}
 
-一种处理栅格布局（如各种经典2D横版过关冒险游戏）地图的组件，基本元素是瓦片Tile，在代码中可以通过SetTile\(Vector3Int, Tile\)来往固定位置放瓦片。这里的固定位置是TileMap自己的一套坐标系，目前还不清楚是怎么计算的。2D情况下Vector3Int的z轴（第三维）取0。从Sprite加载Tile如下：
+一种处理栅格布局（如各种经典2D横版过关冒险游戏）地图的组件，基本元素是瓦片Tile，在代码中可以通过SetTile(Vector3Int, Tile)来往固定位置放瓦片。这里的固定位置是TileMap自己的一套坐标系，目前还不清楚是怎么计算的。2D情况下Vector3Int的z轴（第三维）取0。从Sprite加载Tile如下：
 
 ```csharp
 Tile tile = ScriptableObject.CreateInstance<Tile>();
@@ -111,17 +111,39 @@ tile.sprite = tmp;
 
 但值得注意的是，这里创建的是一个模板，我们依然无法让2个一样模板的tile状态不同。（？）
 
-{% embed url="https://www.cnblogs.com/beatless/p/11623709.html" caption="" %}
+{% embed url="https://www.cnblogs.com/beatless/p/11623709.html" %}
 
 有一个官方开发的2d-extras仓库用来扩展 tilemap 功能，例如规则瓦片、随机瓦片、动画瓦片
 
 当 tilemap 显示粉红色的时候，检查一下 tilemap 组件的材质属性。
 
-## **血条实现**
+## **血条 & 进度条实现**
 
-有 FillAmount 和 localScale 两种手段，但前者会导致反复重绘，后者性能更优
+有 FillAmount 和 localScale 两种手段，前者支持的效果更丰富，但会导致反复重绘；后者在实现简单长条进度时性能更优。
+
+### FillAmount 实现
+
+在 Image 组件中可以设置组件的填充方式。在 Inspector 中设置 Image Type 为 Filled，即可以通过数值控制填充的面积。选择 Filled 模式后会出现以下参数：
+
+* Fill Method：控制填充的形式，可以选择水平、垂直、环形填充等；
+* Fill Origin：填充的起点位置；
+* Fill Amount：填充的面积比。
+* 在选择环形填充时，还会出现 Clockwise 选项以控制沿顺时针还是逆时针填充。
+
+如此填充可以得到扇形，环形效果可以通过在中央放置一个 mask object 来实现。
+
+### localScale 实现
+
+把长条的 anchor 移动到它的一个短边，这样修改 localScale 就可以让长条呈现以这一短边为起点伸缩填充的效果。
 
 ## **对象的布局 Layout**
 
-Inspector的rect transform可以看到有个方形图案指示的锚点位置设置，默认是锚点居中的，如果想填充父对象，可以选择在两个方向上stretch（最右下角的），并在右边的参数中把left right top bottom都改成0（这里和CSS很像）。高级布局需要借助layout，待补充
+Inspector的rect transform可以看到有个方形图案指示的锚点位置设置，默认是锚点居中的，如果想填充父对象，可以选择在两个方向上stretch（最右下角的），并在右边的参数中把left right top bottom都改成0（这里和CSS很像）。
 
+高级布局需要借助layout。例如使用 HorizontalLayoutGroup 组件可以实现子对象之间、以及子对象相对自身的多种对齐样式。
+
+## References
+
+\[1] [https://fractalpixels.com/devblog/unity-2D-radial-progress-bars](https://fractalpixels.com/devblog/unity-2D-radial-progress-bars)
+
+\[2] layout group: [https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/script-HorizontalLayoutGroup.html](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/script-HorizontalLayoutGroup.html)

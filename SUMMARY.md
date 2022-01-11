@@ -202,6 +202,10 @@
   * [Basics](tools-virtualized/docker/basics.md)
 * [VirtualBox](tools-virtualized/virtualbox.md)
 
+## TOOLS - NETWORKING
+
+* [Flask](tools-networking/flask.md)
+
 ## IDE
 
 * [Visual Studio 2017](ide/visual-studio-2017/README.md)
@@ -212,6 +216,9 @@
   * [Assets and Scenes](ide/unity/assets-and-scenes.md)
   * [Layers](ide/unity/layers.md)
   * [Camera](ide/unity/camera.md)
+  * [Environment & Platform](ide/unity/environment-and-platform.md)
+  * [Serialization](ide/unity/serialization.md)
+  * [Networking](ide/unity/networking.md)
   * [Miscellaneous](ide/unity/miscellaneous.md)
 * [Keil μvision4](ide/keil-mvision4.md)
 * [Simplicity Studio](ide/simplicity-studio.md)
