@@ -142,8 +142,18 @@ Inspector的rect transform可以看到有个方形图案指示的锚点位置设
 
 高级布局需要借助layout。例如使用 HorizontalLayoutGroup 组件可以实现子对象之间、以及子对象相对自身的多种对齐样式。
 
+## RectTransform
+
+关于如何基于 RectTransform 组件修改对象的尺寸：
+
+该组件提供了一个 `SetSizeWithCurrentAnchors` 方法，可以用于改变大小。
+
+通过设置 `sizeDelta` 改变尺寸似乎也可行，但有人认为这种方法未考虑 anchor 分布而不鲁棒。讨论详见 ref: \[3]。
+
 ## References
 
 \[1] [https://fractalpixels.com/devblog/unity-2D-radial-progress-bars](https://fractalpixels.com/devblog/unity-2D-radial-progress-bars)
 
 \[2] layout group: [https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/script-HorizontalLayoutGroup.html](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/script-HorizontalLayoutGroup.html)
+
+\[3] [https://forum.unity.com/threads/modify-the-width-and-height-of-recttransform.270993/](https://forum.unity.com/threads/modify-the-width-and-height-of-recttransform.270993/)

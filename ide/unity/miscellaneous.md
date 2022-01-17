@@ -12,6 +12,7 @@
 > You have to enable the "Access to project properties" option in the Tools>Options>Tools for Unity>General" section.   (ref: \[3])
 
 * 使用 transform.parent 获取父对象。
+* 如果想在查看场景时让场景视角绕一个物体旋转，可选定该物体后按 Alt + 鼠标左键拖动即可。(ref: \[5])
 
 ## References
 
@@ -22,3 +23,5 @@
 \[3] [https://developercommunity.visualstudio.com/t/project-properties-cant-be-opened-for-unity-projec/13766](https://developercommunity.visualstudio.com/t/project-properties-cant-be-opened-for-unity-projec/13766)
 
 \[4] [https://answers.unity.com/questions/33552/gameobjectparent.html](https://answers.unity.com/questions/33552/gameobjectparent.html)
+
+\[5] [https://forum.unity.com/threads/how-do-i-make-unity-rotate-a-scene-around-selection.77209/](https://forum.unity.com/threads/how-do-i-make-unity-rotate-a-scene-around-selection.77209/)

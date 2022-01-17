@@ -105,8 +105,13 @@
   * [Miscellaneous](programming-languages/bash/miscellaneous.md)
 * [CMD & PowerShell](programming-languages/cmd/README.md)
   * [Miscellaneous](programming-languages/cmd/miscellaneous.md)
+* [Rust](programming-languages/rust/README.md)
+  * [Basics](programming-languages/rust/basics.md)
+  * [IO & String](programming-languages/rust/io-and-string.md)
+  * [OOP](programming-languages/rust/oop.md)
+  * [Miscellaneous](programming-languages/rust/miscellaneous.md)
 
-## Tools
+## TOOLS - META <a href="#tools" id="tools"></a>
 
 * [Bash Tools](tools/linux/README.md)
   * [find](tools/linux/find.md)
@@ -137,6 +142,7 @@
 
 * [X11](tools-graphical/untitled-1.md)
 * [VNCServer](tools-graphical/vncserver.md)
+* [scrcpy](tools-graphical/scrcpy.md)
 * [OpenCV](tools-graphical/opencv/README.md)
   * [Installation](tools-graphical/opencv/installation.md)
   * [Hello World](tools-graphical/opencv/hello-world.md)
@@ -216,9 +222,13 @@
   * [Assets and Scenes](ide/unity/assets-and-scenes.md)
   * [Layers](ide/unity/layers.md)
   * [Camera](ide/unity/camera.md)
+  * [User Interaction](ide/unity/user-interaction.md)
+  * [Advanced Graphics](ide/unity/advanced-graphics.md)
   * [Environment & Platform](ide/unity/environment-and-platform.md)
   * [Serialization](ide/unity/serialization.md)
   * [Networking](ide/unity/networking.md)
+  * [Concurrency](ide/unity/concurrency.md)
+  * [Unity on Android](ide/unity/unity-on-android.md)
   * [Miscellaneous](ide/unity/miscellaneous.md)
 * [Keil μvision4](ide/keil-mvision4.md)
 * [Simplicity Studio](ide/simplicity-studio.md)
