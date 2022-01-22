@@ -23,7 +23,19 @@ src目录用来包含所有的代码文件。
 构建运行cargo项目（假设项目名为hello\_cargo）：
 
 ```
-PS cargo build  Compiling hello_cargo v0.1.0 (DIRECTORY\hello_cargo)    Finished dev [unoptimized + debuginfo] target(s) in 0.56s    # 目标hello_cargo构建到target/debug/中PS cargo run # 一条龙构建运行PS cargo check # 检查可编译性但不生成可执行文件PS cargo build --release # 构建release文件到target/release/中
+# 目标hello_cargo构建到target/debug/中
+PS cargo build  
+Compiling hello_cargo v0.1.0 (DIRECTORY\hello_cargo)    
+Finished dev [unoptimized + debuginfo] target(s) in 0.56s    
+
+# 一条龙构建运行
+PS cargo run 
+
+# 检查可编译性但不生成可执行文件
+PS cargo check 
+
+# 构建release文件到target/release/中
+PS cargo build --release
 ```
 
 [https://learnku.com/rust/t/39451](https://learnku.com/rust/t/39451)

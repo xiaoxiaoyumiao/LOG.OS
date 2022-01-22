@@ -40,7 +40,10 @@
     * [6.1 Lexical Semantics](theory/language-processing/chapter-6-vector-semantics-and-embeddings/6.1-lexical-semantics.md)
   * [Miscellaneous](theory/language-processing/miscellaneous.md)
 * [Algorithms](theory/algorithms/README.md)
+  * [LeetCode Notebook](theory/algorithms/leetcode-notebook.md)
   * [Miscellaneous](theory/algorithms/miscellaneous.md)
+* [HCI Toolbox](theory/hci-toolbox/README.md)
+  * [Miscellaneous](theory/hci-toolbox/miscellaneous.md)
 
 ## Programming Languages
 
